@@ -37,7 +37,6 @@
       <property name="&lt;Super&gt;comma" type="string" value="xfce4-popup-whiskermenu">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Super&gt;l" type="string" value="i3lock -f -e --image=&quot;/home/prot/Pictures/forest.png&quot;"/>
       <property name="&lt;Alt&gt;q" type="string" value="xfce4-terminal --drop-down"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;q" type="string" value="xfce4-session-logout"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;w" type="string" value="xfce4-session-logout --logout"/>
@@ -46,11 +45,13 @@
       <property name="&lt;Alt&gt;a" type="string" value="cmus-remote --pause"/>
       <property name="&lt;Alt&gt;5" type="string" value="exo-open --launch TerminalEmulator nvim"/>
       <property name="&lt;Alt&gt;4" type="string" value="exo-open --launch TerminalEmulator mutt"/>
-      <property name="&lt;Alt&gt;1" type="string" value="exo-open --launch TerminalEmulator ranger"/>
       <property name="&lt;Alt&gt;6" type="string" value="exo-open --launch TerminalEmulator cmus"/>
       <property name="&lt;Alt&gt;0" type="string" value="exo-open --launch TerminalEmulator htop"/>
       <property name="&lt;Alt&gt;w" type="string" value="exo-open --launch TerminalEmulator"/>
       <property name="&lt;Alt&gt;3" type="string" value="exo-open --launch TerminalEmulator newsbeuter"/>
+      <property name="&lt;Alt&gt;1" type="string" value="exo-open --launch FileManager"/>
+      <property name="&lt;Alt&gt;grave" type="string" value="xfce4-settings-manager"/>
+      <property name="&lt;Super&gt;l" type="string" value="i3lock -f -e"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

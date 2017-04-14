@@ -12,8 +12,9 @@
       <property name="size" type="uint" value="24"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="1"/>
-        <value type="int" value="9"/>
+        <value type="int" value="7"/>
         <value type="int" value="15"/>
+        <value type="int" value="2"/>
         <value type="int" value="6"/>
         <value type="int" value="3"/>
         <value type="int" value="5"/>
@@ -22,7 +23,7 @@
       <property name="background-alpha" type="uint" value="80"/>
       <property name="background-style" type="uint" value="0"/>
       <property name="enter-opacity" type="uint" value="100"/>
-      <property name="leave-opacity" type="uint" value="50"/>
+      <property name="leave-opacity" type="uint" value="20"/>
     </property>
     <property name="panel-2" type="empty">
       <property name="position" type="string" value="p=10;x=711;y=872"/>
@@ -33,7 +34,6 @@
         <value type="int" value="20"/>
         <value type="int" value="19"/>
         <value type="int" value="17"/>
-        <value type="int" value="8"/>
       </property>
       <property name="position-locked" type="bool" value="true"/>
       <property name="length-adjust" type="bool" value="true"/>
@@ -53,6 +53,7 @@
       <property name="digital-format" type="string" value="%A, %Y-%m-%d, %R"/>
       <property name="tooltip-format" type="string" value="Week %V"/>
       <property name="mode" type="uint" value="2"/>
+      <property name="timezone" type="string" value="Asia/Nicosia"/>
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
@@ -60,10 +61,6 @@
       </property>
       <property name="names-hidden" type="array">
         <value type="string" value="xfce terminal"/>
-        <value type="string" value="kgpg"/>
-        <value type="string" value="xfce4-power-manager"/>
-        <value type="string" value="pamac-tray"/>
-        <value type="string" value="pasystray"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="size-max" type="uint" value="22"/>
@@ -89,13 +86,10 @@
     </property>
     <property name="plugin-1" type="string" value="whiskermenu"/>
     <property name="plugin-3" type="string" value="xkb-plugin"/>
-    <property name="plugin-8" type="string" value="windowmenu">
-      <property name="style" type="uint" value="1"/>
-      <property name="workspace-actions" type="bool" value="false"/>
-    </property>
-    <property name="plugin-9" type="string" value="directorymenu">
-      <property name="base-directory" type="string" value="/home/prot"/>
-      <property name="icon-name" type="string" value="system-file-manager-symbolic"/>
+    <property name="plugin-7" type="string" value="weather"/>
+    <property name="plugin-2" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="show-notifications" type="bool" value="true"/>
     </property>
   </property>
 </channel>
