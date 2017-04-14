@@ -1,0 +1,13 @@
+# Just dummy content
+
+# Feeds -----------------------------------------
+
+https://blog.xfce.org/feed/ "Linux"
+https://www.archlinux.org/feeds/news/ "Linux"
+
+https://protesilaos.com/feed.xml "MyEUpolitics"
+https://protesilaos.com/codelog.xml "MyCode"
+
+# Filters ---------------------------------------
+"query:Unread Articles:unread = \"yes\""
+

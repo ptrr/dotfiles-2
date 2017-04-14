@@ -1,0 +1,3 @@
+# Taskwarrior theme
+
+The actual path may vary, since it is sourced in the `.taskrc` via the `include` directive.

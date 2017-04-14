@@ -1,0 +1,34 @@
+# General ----------------------------------------
+max-items 100
+auto-reload yes
+reload-time 30
+cleanup-on-quit yes
+refresh-on-startup yes
+show-read-articles no
+show-read-feeds no
+prepopulate-query-feeds yes
+feed-sort-order name
+show-keymap-hint false
+swap-title-and-hints false
+browser firefox %u
+
+# Key bindings ----------------------------------
+bind-key j next
+bind-key k prev
+bind-key J next-feed
+bind-key K prev-feed
+bind-key j down article
+bind-key k up article
+bind-key J next article
+bind-key K prev article
+
+# Colours ----------------------------------------
+# Tested with dark variants of Prot16 schemes <https://protesilaos.com/schemes>
+color listnormal default default
+color listfocus color7 color2
+color listnormal_unread default default
+color listfocus_unread color7 color2
+color info color10 default
+color article default default
+
+highlight article "^(Feed|Title|Author|Link|Date):.*" color11 default
