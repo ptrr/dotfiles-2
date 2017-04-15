@@ -1,5 +1,7 @@
-neomutt 20170306-1
-papirus-icon-theme-git 1:r953.5b4f07795-1
-ttf-iosevka-term-zshaped 1.12.5-1
-xfce4-volumed-pulse 0.2.2-1
-xfce4-weather-mono-icons-git 0.r8.558c0a8-1
+arc-firefox-theme
+breeze-default-cursor-theme
+neomutt
+papirus-icon-theme-git
+ttf-iosevka-term-zshaped
+xfce4-volumed-pulse
+xfce4-weather-mono-icons-git
