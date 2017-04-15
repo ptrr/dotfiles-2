@@ -34,6 +34,7 @@ breeze-default-cursor-theme
 btrfs-progs
 bzip2
 bzr
+c-ares
 ca-certificates
 ca-certificates-cacert
 ca-certificates-mozilla
@@ -151,6 +152,7 @@ harfbuzz-icu
 haveged
 hdf5
 hicolor-icon-theme
+http-parser
 hunspell
 hwids
 i3lock
@@ -522,14 +524,17 @@ nfs-utils
 nfsidmap
 nilfs-utils
 nm-connection-editor
+nodejs
 notmuch-runtime
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 npth
 nspr
 nss
 ntfs-3g
+ntp
 opencore-amr
 openexr
 openjpeg2
@@ -602,6 +607,7 @@ schroedinger
 scrnsaverproto
 sdl2
 sed
+semver
 shadow
 shared-mime-info
 sharutils
