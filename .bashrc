@@ -25,6 +25,7 @@ alias pD="sudo pacman -D" # control package install state with `--asdeps` or `--
 
 alias pS="pacaur -S" # sync download
 alias pSs="sudo pacman -Ss" # query database for package
+alias ps="pacaur --search" # search aur
 alias pRs="pacaur -Rs" # remove unless conflicting deps
 alias pRnsc="sudo pacman -Rnsc" # remove recursively
 alias pRnscQqdt="sudo pacman -Rnsc $(pacman -Qqdt)" # remove orphans
@@ -36,6 +37,14 @@ alias pQdt="sudo pacman -Qdt" # list orphans
 
 alias pcache1="sudo paccache -rk 1" # remove cache except last item
 alias pcache0="sudo paccache -ruk0" # remove all cache
+
+# Admin - backups
+alias pQqback="sudo pacman -Qq > packages-all.txt"
+alias pQnqback="sudo pacman -Qnq > packages-native.txt"
+alias pQmqback="sudo pacman -Qmq > packages-foreign.txt"
+
+# Sessions
+alias xfcegui="exec startxfce4"
 
 # Git
 alias gadd="git add"
