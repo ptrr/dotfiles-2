@@ -1,7 +1,10 @@
 arc-firefox-theme
 breeze-default-cursor-theme
+lightdm-flexiserver
+mugshot
 neomutt
 papirus-icon-theme-git
+thunar-extended
 ttf-iosevka-term-zshaped
 xfce4-volumed-pulse
 xfce4-weather-mono-icons-git
