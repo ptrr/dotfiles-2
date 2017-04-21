@@ -1,0 +1,57 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>preferences-system-search-symbolic</icon>
+	<name>Search files and folders</name>
+	<unique-id>1492779363897602-3</unique-id>
+	<command>catfish --path=%f</command>
+	<description>Conducts a search query</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>file-roller-symbolic</icon>
+	<name>Flatten Folder</name>
+	<unique-id>1492780052566243-6</unique-id>
+	<command>find . -mindepth 2 -type f -exec mv &quot;{}&quot; . \; &amp;&amp; find . -type d -empty -delete</command>
+	<description>Moves all files from sub-folders to parent (current) folder, then removes all empty folders inside the current folder.</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>web-browser-symbolic</icon>
+	<name>Slugify Name</name>
+	<unique-id>1492780169588072-10</unique-id>
+	<command>for file in %N; do mv &quot;$file&quot; &quot;$(echo &quot;$file&quot; | tr -s &apos; &apos; | tr &apos; A-Z&apos; &apos;-a-z&apos; | tr -s &apos;-&apos; | tr -c &apos;[:alnum:][:cntrl:].&apos; &apos;-&apos;)&quot;; done</command>
+	<description>Rename the selected items, making the filenames lower-case &amp; replacing spaces with dashes.</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>clipman-symbolic</icon>
+	<name>Copy Content</name>
+	<unique-id>1492780290441767-11</unique-id>
+	<command>cat &quot;%F&quot; | xclip -i -selection clipboard</command>
+	<description>Copies the content of the selected file to the clipboard</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*</patterns>
+	<text-files/>
+</action>
+</actions>
