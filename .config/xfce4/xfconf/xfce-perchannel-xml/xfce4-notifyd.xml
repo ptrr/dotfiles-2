@@ -19,4 +19,5 @@
   <property name="primary-monitor" type="uint" value="1"/>
   <property name="initial-opacity" type="double" value="0.700000"/>
   <property name="expire-timeout" type="int" value="3"/>
+  <property name="theme" type="string" value="termina-dark"/>
 </channel>

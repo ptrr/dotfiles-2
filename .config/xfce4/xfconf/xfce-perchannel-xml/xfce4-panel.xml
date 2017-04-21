@@ -58,9 +58,12 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
         <value type="string" value="networkmanager applet"/>
+        <value type="string" value="task manager"/>
+        <value type="string" value="thunar"/>
       </property>
       <property name="names-hidden" type="array">
         <value type="string" value="xfce terminal"/>
+        <value type="string" value="google-musicmanager"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="size-max" type="uint" value="22"/>
@@ -81,7 +84,7 @@
       <property name="sort-order" type="uint" value="3"/>
       <property name="grouping" type="uint" value="0"/>
       <property name="show-wireframes" type="bool" value="false"/>
-      <property name="window-scrolling" type="bool" value="false"/>
+      <property name="window-scrolling" type="bool" value="true"/>
       <property name="middle-click" type="uint" value="2"/>
     </property>
     <property name="plugin-1" type="string" value="whiskermenu"/>
