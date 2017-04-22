@@ -50,7 +50,7 @@
       <property name="&lt;Alt&gt;3" type="string" value="exo-open --launch TerminalEmulator newsbeuter"/>
       <property name="&lt;Alt&gt;1" type="string" value="exo-open --launch FileManager"/>
       <property name="&lt;Alt&gt;grave" type="string" value="xfce4-settings-manager"/>
-      <property name="&lt;Super&gt;l" type="string" value="i3lock -f -e -c 728852 --image=&quot;/home/prot/Pictures/i3lock_arch.png&quot;"/>
+      <property name="&lt;Super&gt;l" type="string" value="i3lock -f -e -c 597899 --image=&quot;/home/prot/Pictures/arch_wp.png&quot;"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
