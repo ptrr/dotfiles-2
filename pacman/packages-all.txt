@@ -129,7 +129,6 @@ gnome-themes-standard
 gnupg
 gnutls
 gobject-introspection-runtime
-google-musicmanager
 gperf
 gpgme
 gpm
@@ -638,8 +637,6 @@ python2
 python2-cairo
 python2-gobject2
 qrencode
-qt4
-qtwebkit
 randrproto
 re2
 readline
