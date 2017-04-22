@@ -7,7 +7,6 @@ acpid
 adwaita-icon-theme
 alsa-lib
 alsa-utils
-arc-firefox-theme
 arc-gtk-theme
 archlinux-keyring
 aspell
@@ -70,6 +69,7 @@ dialog
 diffutils
 ding-libs
 dmraid
+dmxproto
 dnssec-anchors
 docbook-xml
 docbook-xsl
@@ -336,6 +336,7 @@ libcups
 libdaemon
 libdatrie
 libdiscid
+libdmx
 libdrm
 libdv
 libdvdread
@@ -482,6 +483,7 @@ libxt
 libxtst
 libxv
 libxvmc
+libxxf86dga
 libxxf86vm
 libyaml
 licenses
@@ -530,6 +532,7 @@ mtdev
 mugshot
 nano
 ncurses
+neofetch
 neomutt
 neovim
 net-tools
@@ -703,6 +706,7 @@ usbutils
 util-linux
 uudeview
 v4l-utils
+vertex-themes
 vi
 vid.stab
 videoproto
@@ -739,6 +743,7 @@ xextproto
 xf86-input-libinput
 xf86-video-ati
 xf86-video-intel
+xf86dgaproto
 xf86vidmodeproto
 xfburn
 xfce4-appfinder
@@ -801,6 +806,7 @@ xorg-server-common
 xorg-server-xephyr
 xorg-setxkbmap
 xorg-xauth
+xorg-xdpyinfo
 xorg-xinit
 xorg-xkbcomp
 xorg-xmodmap
