@@ -24,12 +24,19 @@
       <property name="background-style" type="uint" value="0"/>
       <property name="enter-opacity" type="uint" value="100"/>
       <property name="leave-opacity" type="uint" value="20"/>
+      <property name="background-image" type="string" value=""/>
+      <property name="background-color" type="array">
+        <value type="uint" value="56540"/>
+        <value type="uint" value="56026"/>
+        <value type="uint" value="54741"/>
+        <value type="uint" value="65535"/>
+      </property>
     </property>
     <property name="panel-2" type="empty">
       <property name="position" type="string" value="p=10;x=711;y=872"/>
       <property name="length" type="uint" value="100"/>
       <property name="autohide-behavior" type="uint" value="1"/>
-      <property name="background-alpha" type="uint" value="60"/>
+      <property name="background-alpha" type="uint" value="79"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="20"/>
         <value type="int" value="19"/>
@@ -38,10 +45,16 @@
       <property name="position-locked" type="bool" value="true"/>
       <property name="length-adjust" type="bool" value="true"/>
       <property name="size" type="uint" value="24"/>
-      <property name="background-style" type="uint" value="0"/>
+      <property name="background-style" type="int" value="0"/>
       <property name="enter-opacity" type="uint" value="100"/>
       <property name="leave-opacity" type="uint" value="10"/>
       <property name="background-image" type="string" value="/home/prot/Pictures/carmine-de-fazio-31543.jpg"/>
+      <property name="background-color" type="array">
+        <value type="uint" value="56540"/>
+        <value type="uint" value="56026"/>
+        <value type="uint" value="54741"/>
+        <value type="uint" value="65535"/>
+      </property>
     </property>
   </property>
   <property name="plugins" type="empty">
