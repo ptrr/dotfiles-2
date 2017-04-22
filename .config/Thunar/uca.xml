@@ -1,17 +1,6 @@
 <?xml encoding="UTF-8" version="1.0"?>
 <actions>
 <action>
-	<icon>preferences-system-search-symbolic</icon>
-	<name>Search</name>
-	<unique-id>1492840826514551-1</unique-id>
-	<command>catfish --path=%f</command>
-	<description>Conducts a search query</description>
-	<upper>-1</upper>
-	<lower>-1</lower>
-	<patterns>*</patterns>
-	<directories/>
-</action>
-<action>
 	<icon>utilities-terminal-symbolic</icon>
 	<name>Copy Path</name>
 	<unique-id>1492847315113323-3</unique-id>
@@ -39,6 +28,61 @@
 	<text-files/>
 </action>
 <action>
+	<icon>file-roller-symbolic</icon>
+	<name>Flatten Folder</name>
+	<unique-id>1492780052566243-6</unique-id>
+	<command>find . -mindepth 2 -type f -exec mv &quot;{}&quot; . \; &amp;&amp; find . -type d -empty -delete</command>
+	<description>Moves all files from sub-folders to parent (current) folder, then removes all empty folders inside the current folder.</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>libreoffice-base-symbolic</icon>
+	<name>Prune</name>
+	<unique-id>1492850271117318-13</unique-id>
+	<command>find . -type d -empty -delete</command>
+	<description>Deletes all empty folders</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>password-manager-symbolic</icon>
+	<name>Root File Access</name>
+	<unique-id>1492850002667425-9</unique-id>
+	<command>pkexec mousepad %f</command>
+	<description>Open selected text file with root privileges</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*</patterns>
+	<text-files/>
+</action>
+<action>
+	<icon>password-manager-symbolic</icon>
+	<name>Root Folder Access</name>
+	<unique-id>1492850010059075-10</unique-id>
+	<command>pkexec thunar %f</command>
+	<description>Open selected folder with root privileges</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>preferences-system-search-symbolic</icon>
+	<name>Search</name>
+	<unique-id>1492850855200546-17</unique-id>
+	<command>catfish --path=%f</command>
+	<description>Conducts a search query</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
 	<icon>web-browser-symbolic</icon>
 	<name>Slugify Name</name>
 	<unique-id>1492780169588072-10</unique-id>
@@ -55,30 +99,14 @@
 	<video-files/>
 </action>
 <action>
-	<icon>file-roller-symbolic</icon>
-	<name>Flatten Folder</name>
-	<unique-id>1492780052566243-6</unique-id>
-	<command>find . -mindepth 2 -type f -exec mv &quot;{}&quot; . \; &amp;&amp; find . -type d -empty -delete</command>
-	<description>Moves all files from sub-folders to parent (current) folder, then removes all empty folders inside the current folder.</description>
-	<upper>-1</upper>
-	<lower>-1</lower>
-	<patterns>*</patterns>
-	<directories/>
-</action>
-<action>
 	<icon>utilities-system-monitor-symbolic</icon>
 	<name>Virus scan</name>
-	<unique-id>1492780994676753-2</unique-id>
+	<unique-id>1492850032706652-11</unique-id>
 	<command>clamtk %F</command>
 	<description>Search for malicious files</description>
 	<upper>-1</upper>
 	<lower>-1</lower>
 	<patterns>*</patterns>
 	<directories/>
-	<audio-files/>
-	<image-files/>
-	<other-files/>
-	<text-files/>
-	<video-files/>
 </action>
 </actions>
