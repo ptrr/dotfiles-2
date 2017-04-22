@@ -26,4 +26,4 @@ set ssl_force_tls = yes
 unset ssl_starttls
 
 ## Hook -- IMPORTANT!
-account-hook *email1@protesilaos.com "set imap_user=email1@protesilaos.com imap_pass=$my_secret_pass"
+account-hook $folder "set imap_user=email1@protesilaos.com imap_pass=$my_secret_pass"
