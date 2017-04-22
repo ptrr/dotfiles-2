@@ -52,8 +52,8 @@
 <action>
 	<icon>password-manager-symbolic</icon>
 	<name>Root File Access</name>
-	<unique-id>1492850002667425-9</unique-id>
-	<command>pkexec mousepad %f</command>
+	<unique-id>1492855846406604-25</unique-id>
+	<command>xfce4-terminal -e &apos;sudo nvim %f&apos;</command>
 	<description>Open selected text file with root privileges</description>
 	<upper>-1</upper>
 	<lower>-1</lower>
@@ -81,6 +81,17 @@
 	<lower>-1</lower>
 	<patterns>*</patterns>
 	<directories/>
+</action>
+<action>
+	<icon>preferences-desktop-wallpaper-symbolic</icon>
+	<name>Set Wallpaper</name>
+	<unique-id>1492854856531482-21</unique-id>
+	<command>xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace1/last-image -s %f</command>
+	<description>Sets the current image as the desktop wallpaper</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*</patterns>
+	<image-files/>
 </action>
 <action>
 	<icon>web-browser-symbolic</icon>
