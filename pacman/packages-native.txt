@@ -20,6 +20,7 @@ automake
 avahi
 b43-fwcutter
 babl
+baobab
 bash
 bash-completion
 bind-tools
@@ -153,6 +154,7 @@ gtk3
 gtkmm3
 gtksourceview2
 guile
+gulp
 gvfs
 gzip
 harfbuzz
@@ -170,6 +172,7 @@ iana-etc
 icu
 idnkit
 ilmbase
+imagemagick
 imlib2
 inetutils
 inputproto
@@ -186,6 +189,7 @@ jansson
 jasper
 jemalloc
 jfsutils
+jpegoptim
 js
 json-c
 json-glib
@@ -366,6 +370,7 @@ libkeybinder2
 libkeybinder3
 libksba
 libldap
+liblqr
 libmad
 libmbim
 libmm-glib
@@ -549,6 +554,7 @@ nspr
 nss
 ntfs-3g
 ntp
+ocl-icd
 opencore-amr
 openexr
 openjpeg2

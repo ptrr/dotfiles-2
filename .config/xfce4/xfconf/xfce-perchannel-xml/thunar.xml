@@ -23,7 +23,7 @@
   <property name="last-menubar-visible" type="bool" value="true"/>
   <property name="shortcuts-icon-emblems" type="bool" value="true"/>
   <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_SMALL"/>
-  <property name="misc-single-click-timeout" type="uint" value="306"/>
+  <property name="misc-single-click-timeout" type="uint" value="100"/>
   <property name="misc-file-size-binary" type="bool" value="false"/>
   <property name="misc-folders-first" type="bool" value="true"/>
   <property name="last-sort-column" type="string" value="THUNAR_COLUMN_NAME"/>

@@ -1,11 +1,33 @@
 <?xml encoding="UTF-8" version="1.0"?>
 <actions>
 <action>
+	<icon>format-convert-to-path</icon>
+	<name>Convert JPG to PNG</name>
+	<unique-id>1492891344274066-43</unique-id>
+	<command>convert %f -quality 95 `basename %f .jpg`.png</command>
+	<description>Convert the current .jpg image to a .png format</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*.jpg</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>format-convert-to-path</icon>
+	<name>Convert PNG to JPG</name>
+	<unique-id>1492891323594941-42</unique-id>
+	<command>convert %f -quality 95 `basename %f .png`.jpg</command>
+	<description>Convert the current .png image to a .jpg format</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*.png</patterns>
+	<image-files/>
+</action>
+<action>
 	<icon>utilities-terminal-symbolic</icon>
 	<name>Copy Path</name>
-	<unique-id>1492847315113323-3</unique-id>
+	<unique-id>1492891680602697-49</unique-id>
 	<command>echo -n %f | xclip -selection &quot;clipboard&quot;</command>
-	<description>Copies the current path to the system clipboard</description>
+	<description>Copy the current path to the system clipboard</description>
 	<upper>-1</upper>
 	<lower>-1</lower>
 	<patterns>*</patterns>
@@ -17,33 +39,22 @@
 	<video-files/>
 </action>
 <action>
-	<icon>clipman-symbolic</icon>
-	<name>Copy Content</name>
-	<unique-id>1492780290441767-11</unique-id>
-	<command>cat &quot;%F&quot; | xclip -i -selection clipboard</command>
-	<description>Copies the content of the selected file to the clipboard</description>
-	<upper>-1</upper>
-	<lower>-1</lower>
-	<patterns>*</patterns>
-	<text-files/>
-</action>
-<action>
-	<icon>file-roller-symbolic</icon>
-	<name>Flatten Folder</name>
-	<unique-id>1492780052566243-6</unique-id>
-	<command>find . -mindepth 2 -type f -exec mv &quot;{}&quot; . \; &amp;&amp; find . -type d -empty -delete</command>
-	<description>Moves all files from sub-folders to parent (current) folder, then removes all empty folders inside the current folder.</description>
+	<icon>drive-harddisk-system-symbolic</icon>
+	<name>Disk Usage</name>
+	<unique-id>1492892174887372-53</unique-id>
+	<command>baobab %f</command>
+	<description>Display the memory usage of the selected folder</description>
 	<upper>-1</upper>
 	<lower>-1</lower>
 	<patterns>*</patterns>
 	<directories/>
 </action>
 <action>
-	<icon>libreoffice-base-symbolic</icon>
-	<name>Prune</name>
-	<unique-id>1492850271117318-13</unique-id>
-	<command>find . -type d -empty -delete</command>
-	<description>Deletes all empty folders</description>
+	<icon>file-roller-symbolic</icon>
+	<name>Flatten Folder</name>
+	<unique-id>1492891624292050-45</unique-id>
+	<command>find . -mindepth 2 -type f -exec mv &quot;{}&quot; . \; &amp;&amp; find . -type d -empty -delete</command>
+	<description>Move files to current folder and delete all empty subfolders</description>
 	<upper>-1</upper>
 	<lower>-1</lower>
 	<patterns>*</patterns>
@@ -74,9 +85,9 @@
 <action>
 	<icon>preferences-system-search-symbolic</icon>
 	<name>Search</name>
-	<unique-id>1492850855200546-17</unique-id>
+	<unique-id>1492891637531577-46</unique-id>
 	<command>catfish --path=%f</command>
-	<description>Conducts a search query</description>
+	<description>Conduct a search query</description>
 	<upper>-1</upper>
 	<lower>-1</lower>
 	<patterns>*</patterns>
@@ -85,9 +96,9 @@
 <action>
 	<icon>preferences-desktop-wallpaper-symbolic</icon>
 	<name>Set Wallpaper</name>
-	<unique-id>1492854856531482-21</unique-id>
+	<unique-id>1492891646355132-47</unique-id>
 	<command>xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace1/last-image -s %f</command>
-	<description>Sets the current image as the desktop wallpaper</description>
+	<description>Set the current image as the desktop wallpaper</description>
 	<upper>-1</upper>
 	<lower>-1</lower>
 	<patterns>*</patterns>
@@ -96,9 +107,9 @@
 <action>
 	<icon>web-browser-symbolic</icon>
 	<name>Slugify Name</name>
-	<unique-id>1492780169588072-10</unique-id>
+	<unique-id>1492891723337691-50</unique-id>
 	<command>for file in %N; do mv &quot;$file&quot; &quot;$(echo &quot;$file&quot; | tr -s &apos; &apos; | tr &apos; A-Z&apos; &apos;-a-z&apos; | tr -s &apos;-&apos; | tr -c &apos;[:alnum:][:cntrl:].&apos; &apos;-&apos;)&quot;; done</command>
-	<description>Rename the selected items, making the filenames lower-case &amp; replacing spaces with dashes.</description>
+	<description>Convert name to all lowercase, replacing spaces with hyphens</description>
 	<upper>-1</upper>
 	<lower>-1</lower>
 	<patterns>*</patterns>
@@ -110,9 +121,20 @@
 	<video-files/>
 </action>
 <action>
+	<icon>adjustcurves</icon>
+	<name>Optimise JPEG</name>
+	<unique-id>1492893296966779-57</unique-id>
+	<command>for file in %F; do jpegoptim --strip-all -of &quot;$file&quot;; done</command>
+	<description>Removes EXIF data from .jpeg image</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*.jpg;*.jpeg;*.JPG;*.JPEG</patterns>
+	<image-files/>
+</action>
+<action>
 	<icon>utilities-system-monitor-symbolic</icon>
-	<name>Virus scan</name>
-	<unique-id>1492850032706652-11</unique-id>
+	<name>Virus and Malware Scan</name>
+	<unique-id>1492891479175288-44</unique-id>
 	<command>clamtk %F</command>
 	<description>Search for malicious files</description>
 	<upper>-1</upper>
