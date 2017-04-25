@@ -31,7 +31,6 @@ bison
 blas
 bluez-libs
 boost-libs
-breeze-default-cursor-theme
 btrfs-progs
 bzip2
 bzr
@@ -716,6 +715,7 @@ thunar-media-tags-plugin
 thunar-volman
 totem-plparser
 ttf-dejavu
+ttf-fira-sans
 ttf-iosevka-term-zshaped
 tumbler
 tzdata

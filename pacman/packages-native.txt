@@ -705,6 +705,7 @@ thunar-media-tags-plugin
 thunar-volman
 totem-plparser
 ttf-dejavu
+ttf-fira-sans
 tumbler
 tzdata
 udisks2

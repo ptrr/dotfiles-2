@@ -1,5 +1,4 @@
 b43-firmware
-breeze-default-cursor-theme
 cower
 evince-light
 lightdm-flexiserver
