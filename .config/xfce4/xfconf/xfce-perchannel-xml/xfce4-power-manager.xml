@@ -13,5 +13,6 @@
     <property name="lid-action-on-battery" type="uint" value="1"/>
     <property name="logind-handle-lid-switch" type="bool" value="true"/>
     <property name="lid-action-on-ac" type="uint" value="1"/>
+    <property name="dpms-enabled" type="bool" value="true"/>
   </property>
 </channel>

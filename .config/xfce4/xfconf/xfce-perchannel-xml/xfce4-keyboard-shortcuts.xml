@@ -43,7 +43,6 @@
       <property name="&lt;Alt&gt;s" type="string" value="cmus-remote --prev"/>
       <property name="&lt;Alt&gt;d" type="string" value="cmus-remote --next"/>
       <property name="&lt;Alt&gt;a" type="string" value="cmus-remote --pause"/>
-      <property name="&lt;Alt&gt;5" type="string" value="exo-open --launch TerminalEmulator nvim"/>
       <property name="&lt;Alt&gt;4" type="string" value="exo-open --launch TerminalEmulator mutt"/>
       <property name="&lt;Alt&gt;6" type="string" value="exo-open --launch TerminalEmulator cmus"/>
       <property name="&lt;Alt&gt;w" type="string" value="exo-open --launch TerminalEmulator"/>
@@ -51,6 +50,11 @@
       <property name="&lt;Alt&gt;1" type="string" value="exo-open --launch FileManager"/>
       <property name="&lt;Alt&gt;grave" type="string" value="xfce4-settings-manager"/>
       <property name="&lt;Super&gt;l" type="string" value="i3lock -f -e -c 597899 --image=&quot;/home/prot/Pictures/arch_wp.png&quot;"/>
+      <property name="Alt_R" type="empty">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
+      <property name="Print" type="string" value="xfce4-screenshooter"/>
+      <property name="&lt;Alt&gt;5" type="string" value="mousepad"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">
