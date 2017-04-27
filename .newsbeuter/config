@@ -24,11 +24,12 @@ bind-key K prev article
 
 # Colours ----------------------------------------
 # Tested with dark variants of Prot16 schemes <https://protesilaos.com/schemes>
-color listnormal default default
+color background color14 color8
+color info color10 color8
+color article color14 color8
+color listnormal color14 color8
 color listfocus color7 color2
-color listnormal_unread default default
+color listnormal_unread color14 color8
 color listfocus_unread color7 color2
-color info color10 default
-color article default default
 
-highlight article "^(Feed|Title|Author|Link|Date):.*" color11 default
+highlight article "^(Feed|Title|Author|Link|Date):.*" color11 color8

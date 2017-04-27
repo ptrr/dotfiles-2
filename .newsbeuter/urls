@@ -5,8 +5,8 @@
 https://blog.xfce.org/feed/ "Linux"
 https://www.archlinux.org/feeds/news/ "Linux"
 
-https://protesilaos.com/feed.xml "MyEUpolitics"
-https://protesilaos.com/codelog.xml "MyCode"
+https://protesilaos.com/feed.xml "Personal"
+https://protesilaos.com/codelog.xml "Personal"
 
 # Filters ---------------------------------------
 "query:Unread Articles:unread = \"yes\""
