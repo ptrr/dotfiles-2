@@ -11,4 +11,3 @@ thunar-extended
 ttf-iosevka-term-zshaped
 vertex-themes
 xfce4-volumed-pulse
-xfce4-weather-mono-icons-git
