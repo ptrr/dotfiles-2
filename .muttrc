@@ -47,6 +47,7 @@ set sort_browser = "date"
 set sort_aux = reverse-last-date-received
 
 # GPG
+source ~/.mutt/gpg.rc
 set crypt_use_gpgme = yes
 set crypt_autosign = yes
 set crypt_autosmime = yes
