@@ -7,14 +7,26 @@ color search color15 color5
 color indicator color10 color7
 color tree color3 color7
 
+# defaults
 color index color2 default '.*'
 color index_author color13 default '.*'
 color index_number color3 default
 color index_subject color5 default '.s'
 
+# deleted messages
 color index color7 color1 "~D"
 color index_author color7 color1 "~D"
 color index_subject color7 color1 "~D"
+
+# read messages
+color index color10 default "~R"
+color index_author color10 default "~R"
+color index_subject color10 default "~R"
+
+# read but marked as important
+color index color4 default "~R~F"
+color index_author color4 default "~R~F"
+color index_subject color4 default "~R~F"
 
 # message headers ------------------------------------------------------
 color hdrdefault color12 default
@@ -26,8 +38,8 @@ color header color9 default "^(Subject)"
 # body -----------------------------------------------------------------
 color quoted color2 default
 color quoted1 color4 default
-color quoted2 color6 default        
-color quoted3 color3 default        
+color quoted2 color6 default
+color quoted3 color3 default
 color quoted4 color12 default
 
 color signature color10 default
