@@ -40,7 +40,7 @@ set reverse_name
 
 # Sorting
 set date_format="%m/%d %R"
-set index_format="[%Z] %2C %d %-25.25F %-50.50s"
+set index_format="[%Z] %2C %d %-25.25F %-80.80s"
 set sort = threads
 set strict_threads = "yes"
 set sort_browser = "date"
