@@ -13,7 +13,7 @@ PS1="\[\e[34m\]\A\[\e[m\] \[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\
 # Aliases
 # --------------------------------------------------------------------
 # General
-alias ls="ls --color=auto"
+alias ls="ls -a --color=auto"
 
 # Editor
 alias v="nvim"
@@ -42,6 +42,10 @@ alias pcache0="sudo paccache -ruk0" # remove all cache
 alias pQqback="sudo pacman -Qq > packages-all.txt"
 alias pQnqback="sudo pacman -Qnq > packages-native.txt"
 alias pQmqback="sudo pacman -Qmq > packages-foreign.txt"
+
+# Jekyll
+alias bejs="bundle exec jekyll serve"
+alias bejsdev="bundle exec jekyll serve --config _config.yml,_config-dev.yml"
 
 # Sessions
 alias xfcegui="exec startxfce4"
