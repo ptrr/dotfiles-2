@@ -1,0 +1,33 @@
+[Added Associations]
+x-scheme-handler/http=exo-web-browser.desktop
+x-scheme-handler/https=exo-web-browser.desktop
+inode/directory=exo-file-manager.desktop
+x-scheme-handler/trash=exo-file-manager.desktop
+application/zip=org.gnome.FileRoller.desktop;
+application/x-iwork-keynote-sffkey=mousepad.desktop;
+text/html=firefox.desktop;
+x-scheme-handler/mailto=exo-mail-reader.desktop
+image/png=ristretto.desktop;gimp.desktop;
+application/x-gtk-builder=mousepad.desktop;chromium.desktop;
+text/plain=mousepad.desktop;
+application/x-shellscript=mousepad.desktop;
+text/x-scss=mousepad.desktop;
+text/markdown=mousepad.desktop;
+application/xml=mousepad.desktop;chromium.desktop;
+image/jpeg=ristretto.desktop;gimp.desktop;
+application/octet-stream=mousepad.desktop;
+application/x-compressed-tar=org.gnome.FileRoller.desktop;
+application/x-yaml=mousepad.desktop;
+audio/x-vorbis+ogg=rhythmbox.desktop;
+application/pdf=evince.desktop;gimp.desktop;xpdf.desktop;
+text/x-matlab=mousepad.desktop;
+text/x-scheme=mousepad.desktop;
+
+[Default Applications]
+text/html=firefox.desktop
+image/png=ristretto.desktop
+application/x-gtk-builder=mousepad.desktop
+application/xml=mousepad.desktop
+image/jpeg=ristretto.desktop
+application/octet-stream=mousepad.desktop
+application/pdf=evince.desktop
