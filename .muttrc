@@ -4,6 +4,7 @@
 # Mailcap
 auto_view text/html
 alternative_order text/plain text/enriched text/html
+set mailcap_path=~/.mutt/mailcap
 
 # Colours
 source "~/.mutt/themes/prot16-dark"
@@ -15,8 +16,9 @@ set imap_keepalive = 300
 unset imap_passive
 
 # Cache
-set header_cache = "~/.cache/mutt"
-set message_cachedir = "~/.cache/mutt"
+set header_cache='~/.mutt/.cache/headercache'
+set message_cachedir='~/.mutt/.cache/messagecache'
+set certificate_file='~/.mutt/.cache/certificates'
 
 # Messages
 set beep_new = yes
@@ -24,7 +26,7 @@ set delete = yes
 set confirmappend = no
 set confirmcreate = yes
 unset markers
-set pager_index_lines = 50
+set pager_index_lines = 10
 
 # Composing
 set editor = "nvim +':set textwidth=0' +':set wrapmargin=0' +':set wrap'"
