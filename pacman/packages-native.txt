@@ -52,7 +52,6 @@ clamtk
 cmake
 cmus
 compositeproto
-conky
 coreutils
 cracklib
 crda
@@ -506,7 +505,6 @@ linux-lts
 llvm-libs
 lm_sensors
 logrotate
-lua
 lua52
 lua52-bitop
 lua52-expat

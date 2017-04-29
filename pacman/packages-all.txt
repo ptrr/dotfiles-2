@@ -53,7 +53,6 @@ clamtk
 cmake
 cmus
 compositeproto
-conky
 coreutils
 cower
 cracklib
@@ -510,7 +509,6 @@ linux-lts
 llvm-libs
 lm_sensors
 logrotate
-lua
 lua52
 lua52-bitop
 lua52-expat
@@ -795,6 +793,7 @@ xfce4-taskmanager
 xfce4-terminal
 xfce4-volumed-pulse
 xfce4-wavelan-plugin
+xfce4-weather-mono-icons-git
 xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
