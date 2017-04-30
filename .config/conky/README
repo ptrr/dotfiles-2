@@ -1,3 +1,0 @@
-# Conky on XFCE4
-
-For Conky's two snippets to launch automatically, the `start-conky.sh` needs to be made executable and added to the startup scripts.
