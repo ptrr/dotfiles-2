@@ -25,8 +25,6 @@
       <property name="&lt;Alt&gt;F2" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="xflock4"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="xflock4"/>
       <property name="override" type="bool" value="true"/>
       <property name="&lt;Alt&gt;2" type="string" value="exo-open --launch WebBrowser"/>
       <property name="Super_L" type="empty">
@@ -55,6 +53,9 @@
       <property name="Print" type="string" value="xfce4-screenshooter"/>
       <property name="&lt;Alt&gt;5" type="string" value="mousepad"/>
       <property name="&lt;Super&gt;l" type="string" value="i3lock -f -e -c 597899 --image=&quot;/usr/share/backgrounds/xfce/arch_wp.png&quot;"/>
+      <property name="&lt;Alt&gt;Return" type="string" value="bash /home/prot/.config/conky/start-conky.sh">
+        <property name="startup-notify" type="bool" value="true"/>
+      </property>
     </property>
   </property>
   <property name="xfwm4" type="empty">

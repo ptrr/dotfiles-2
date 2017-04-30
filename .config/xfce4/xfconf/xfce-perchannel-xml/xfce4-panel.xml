@@ -30,6 +30,7 @@
       </property>
       <property name="mode" type="uint" value="2"/>
       <property name="disable-struts" type="bool" value="true"/>
+      <property name="length-adjust" type="bool" value="true"/>
     </property>
   </property>
   <property name="plugins" type="empty">

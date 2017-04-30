@@ -5,6 +5,7 @@
     <property name="FailsafeSessionName" type="empty"/>
     <property name="SessionName" type="string" value="Default"/>
     <property name="SaveOnExit" type="bool" value="false"/>
+    <property name="PromptOnLogout" type="bool" value="true"/>
   </property>
   <property name="sessions" type="empty">
     <property name="Failsafe" type="empty">
@@ -23,7 +24,7 @@
     </property>
   </property>
   <property name="splash" type="empty">
-    <property name="Engine" type="string" value="mice"/>
+    <property name="Engine" type="string" value=""/>
     <property name="engines" type="empty">
       <property name="balou" type="empty">
         <property name="Theme" type="string" value="Default"/>
