@@ -52,6 +52,7 @@ clamtk
 cmake
 cmus
 compositeproto
+conky
 coreutils
 cracklib
 crda
@@ -505,6 +506,7 @@ linux-lts
 llvm-libs
 lm_sensors
 logrotate
+lua
 lua52
 lua52-bitop
 lua52-expat
@@ -651,6 +653,13 @@ python2-cairo
 python2-gobject2
 python2-numpy
 qrencode
+qt5-base
+qt5-declarative
+qt5-location
+qt5-sensors
+qt5-webchannel
+qt5-webkit-ng
+qt5-xmlpatterns
 randrproto
 re2
 readline
@@ -704,6 +713,7 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
 totem-plparser
+tslib
 ttf-dejavu
 ttf-fira-sans
 tumbler

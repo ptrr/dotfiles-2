@@ -53,6 +53,7 @@ clamtk
 cmake
 cmus
 compositeproto
+conky
 coreutils
 cower
 cracklib
@@ -509,6 +510,7 @@ linux-lts
 llvm-libs
 lm_sensors
 logrotate
+lua
 lua52
 lua52-bitop
 lua52-expat
@@ -660,6 +662,13 @@ python2-cairo
 python2-gobject2
 python2-numpy
 qrencode
+qt5-base
+qt5-declarative
+qt5-location
+qt5-sensors
+qt5-webchannel
+qt5-webkit-ng
+qt5-xmlpatterns
 randrproto
 re2
 readline
@@ -714,6 +723,7 @@ thunar-extended
 thunar-media-tags-plugin
 thunar-volman
 totem-plparser
+tslib
 ttf-dejavu
 ttf-fira-sans
 ttf-iosevka-term-zshaped
@@ -793,7 +803,6 @@ xfce4-taskmanager
 xfce4-terminal
 xfce4-volumed-pulse
 xfce4-wavelan-plugin
-xfce4-weather-mono-icons-git
 xfce4-weather-plugin
 xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
