@@ -42,6 +42,11 @@ alias pcache0="sudo paccache -ruk0" # remove all cache
 alias pQqback="sudo pacman -Qq > packages-all.txt"
 alias pQnqback="sudo pacman -Qnq > packages-native.txt"
 alias pQmqback="sudo pacman -Qmq > packages-foreign.txt"
+alias pQqeback="sudo pacman -Qqe > packages-explicit.txt"
+alias pQqdback="sudo pacman -Qqd > packages-deps.txt"
+alias pQqgback="sudo pacman -Qqg > packages-groups.txt"
+
+alias pacback="bash ~/my-utils/backup-pacman-packages.sh" # does the above backups automatically and copies them to the dotfiles repo
 
 # Jekyll
 alias bejs="bundle exec jekyll serve"
@@ -77,6 +82,7 @@ alias bbb="nvim ~/.bashrc"
 alias mmm="nvim ~/.muttrc"
 alias ttt="nvim ~/.taskrc"
 alias sss="nvim ~/.mutt/mails/signature"
+alias ccc="nvim ~/.config/conky/conky.conf"
 
 # Reload files
 alias rbbb="source ~/.bashrc"
