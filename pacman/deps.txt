@@ -12,6 +12,7 @@ attr
 avahi
 babl
 blas
+bluez-libs
 boost-libs
 c-ares
 ca-certificates
@@ -307,6 +308,8 @@ libmodplug
 libmpc
 libmpeg2
 libmtp
+libndp
+libnewt
 libnftnl
 libnl
 libnm
@@ -316,6 +319,7 @@ libogg
 libomxil-bellagio
 libpcap
 libpciaccess
+libpgm
 libpipeline
 libplist
 libpng
@@ -334,6 +338,7 @@ libsidplay
 libsigc++
 libsm
 libsndfile
+libsodium
 libsoup
 libsoxr
 libspiro
@@ -341,6 +346,7 @@ libssh
 libssh2
 libsystemd
 libtasn1
+libteam
 libtermkey
 libthai
 libtheora
@@ -527,6 +533,7 @@ sdl2
 semver
 serd
 shared-mime-info
+slang
 snappy
 sord
 sound-theme-freedesktop
@@ -603,6 +610,7 @@ xproto
 xvidcore
 yajl
 zenity
+zeromq
 zita-alsa-pcmi
 zita-resampler
 zlib

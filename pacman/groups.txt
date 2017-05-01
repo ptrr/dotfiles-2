@@ -4,6 +4,7 @@ gnome gnome-keyring
 gnome gnome-themes-standard
 gnome gvfs
 gnome gvfs-mtp
+gnome networkmanager
 gnome xdg-user-dirs-gtk
 base-devel autoconf
 base-devel automake

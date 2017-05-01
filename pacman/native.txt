@@ -27,6 +27,7 @@ bind-tools
 binutils
 bison
 blas
+bluez-libs
 boost-libs
 btrfs-progs
 bzip2
@@ -384,6 +385,8 @@ libmodplug
 libmpc
 libmpeg2
 libmtp
+libndp
+libnewt
 libnftnl
 libnl
 libnm
@@ -393,6 +396,7 @@ libogg
 libomxil-bellagio
 libpcap
 libpciaccess
+libpgm
 libpipeline
 libplist
 libpng
@@ -411,6 +415,7 @@ libsidplay
 libsigc++
 libsm
 libsndfile
+libsodium
 libsoup
 libsoxr
 libspiro
@@ -418,6 +423,7 @@ libssh
 libssh2
 libsystemd
 libtasn1
+libteam
 libtermkey
 libthai
 libtheora
@@ -527,6 +533,7 @@ netcdf
 netctl
 nettle
 network-manager-applet
+networkmanager
 newsbeuter
 nfs-utils
 nfsidmap
@@ -663,6 +670,7 @@ serd
 shadow
 shared-mime-info
 sharutils
+slang
 snappy
 sord
 sound-theme-freedesktop
@@ -803,6 +811,7 @@ yajl
 youtube-dl
 zd1211-firmware
 zenity
+zeromq
 zip
 zita-alsa-pcmi
 zita-resampler
