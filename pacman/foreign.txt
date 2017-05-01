@@ -1,0 +1,13 @@
+b43-firmware
+cower
+evince-light
+lightdm-flexiserver
+mugshot
+neofetch
+neomutt
+pacaur
+papirus-icon-theme-git
+thunar-extended
+ttf-iosevka-term-zshaped
+vertex-themes
+xfce4-volumed-pulse

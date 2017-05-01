@@ -46,7 +46,7 @@ alias pQqeback="sudo pacman -Qqe > packages-explicit.txt"
 alias pQqdback="sudo pacman -Qqd > packages-deps.txt"
 alias pQqgback="sudo pacman -Qqg > packages-groups.txt"
 
-alias pacback="bash ~/my-utils/backup-pacman-packages.sh" # does the above backups automatically and copies them to the dotfiles repo
+alias pacback="bash ~/my-utils/backup-pacman-packages.sh" # does the above backups automatically
 
 # Jekyll
 alias bejs="bundle exec jekyll serve"
