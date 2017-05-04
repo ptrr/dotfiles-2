@@ -1,9 +1,9 @@
 <?xml encoding="UTF-8" version="1.0"?>
 <actions>
 <action>
-	<icon>format-convert-to-path</icon>
+	<icon>gnome-power-manager-symbolic</icon>
 	<name>Convert JPG to PNG</name>
-	<unique-id>1492891344274066-43</unique-id>
+	<unique-id>1493843371026342-5</unique-id>
 	<command>convert %f -quality 95 `basename %f .jpg`.png</command>
 	<description>Convert the current .jpg image to a .png format</description>
 	<upper>-1</upper>
@@ -12,9 +12,9 @@
 	<image-files/>
 </action>
 <action>
-	<icon>format-convert-to-path</icon>
+	<icon>gnome-power-manager-symbolic</icon>
 	<name>Convert PNG to JPG</name>
-	<unique-id>1492891323594941-42</unique-id>
+	<unique-id>1493843391339799-6</unique-id>
 	<command>convert %f -quality 95 `basename %f .png`.jpg</command>
 	<description>Convert the current .png image to a .jpg format</description>
 	<upper>-1</upper>
@@ -50,9 +50,9 @@
 	<directories/>
 </action>
 <action>
-	<icon>file-roller-symbolic</icon>
+	<icon>clipman-symbolic</icon>
 	<name>Flatten Folder</name>
-	<unique-id>1492891624292050-45</unique-id>
+	<unique-id>1493843309764328-3</unique-id>
 	<command>find . -mindepth 2 -type f -exec mv &quot;{}&quot; . \; &amp;&amp; find . -type d -empty -delete</command>
 	<description>Move files to current folder and delete all empty subfolders</description>
 	<upper>-1</upper>
@@ -61,9 +61,20 @@
 	<directories/>
 </action>
 <action>
-	<icon>password-manager-symbolic</icon>
+	<icon>preferences-system-privacy-symbolic</icon>
+	<name>Optimise JPEG</name>
+	<unique-id>1493843348298860-4</unique-id>
+	<command>for file in %F; do jpegoptim --strip-all -of &quot;$file&quot;; done</command>
+	<description>Removes EXIF data from .jpeg image</description>
+	<upper>-1</upper>
+	<lower>-1</lower>
+	<patterns>*.jpg;*.jpeg;*.JPG;*.JPEG</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>text-editor-symbolic</icon>
 	<name>Root File Access</name>
-	<unique-id>1492855846406604-25</unique-id>
+	<unique-id>1493843177842355-1</unique-id>
 	<command>xfce4-terminal -e &apos;sudo nvim %f&apos;</command>
 	<description>Open selected text file with root privileges</description>
 	<upper>-1</upper>
@@ -72,9 +83,9 @@
 	<text-files/>
 </action>
 <action>
-	<icon>password-manager-symbolic</icon>
+	<icon>text-editor-symbolic</icon>
 	<name>Root Folder Access</name>
-	<unique-id>1492850010059075-10</unique-id>
+	<unique-id>1493843200865918-2</unique-id>
 	<command>pkexec thunar %f</command>
 	<description>Open selected folder with root privileges</description>
 	<upper>-1</upper>
@@ -119,17 +130,6 @@
 	<other-files/>
 	<text-files/>
 	<video-files/>
-</action>
-<action>
-	<icon>adjustcurves</icon>
-	<name>Optimise JPEG</name>
-	<unique-id>1492893296966779-57</unique-id>
-	<command>for file in %F; do jpegoptim --strip-all -of &quot;$file&quot;; done</command>
-	<description>Removes EXIF data from .jpeg image</description>
-	<upper>-1</upper>
-	<lower>-1</lower>
-	<patterns>*.jpg;*.jpeg;*.JPG;*.JPEG</patterns>
-	<image-files/>
 </action>
 <action>
 	<icon>utilities-system-monitor-symbolic</icon>
