@@ -1,13 +1,68 @@
-# Just dummy content
+# Feeds // Newsbeuter 2.9
+# ===============================================
 
-# Feeds -----------------------------------------
+# Linux and programming
+# -----------------------------------------------
 
-https://blog.xfce.org/feed/ "Linux"
+# Distros
 https://www.archlinux.org/feeds/news/ "Linux"
+https://www.debian.org/News/news "Linux"
+http://blog.linuxmint.com/?feed=rss2 "Linux"
+https://ubuntu-mate.org/rss.xml "Linux"
+https://xubuntu.org/feed/ "Linux"
+https://antergos.com/feed/ "Linux"
+https://manjaro.org/feed/ "Linux"
+https://solus-project.com/blog/index.xml "Linux"
 
+# Projects
+https://blog.xfce.org/feed/ "Linux"
+https://feeds.feedburner.com/d0od "Linux"
+https://budgie-desktop.org/blog/index.xml "Linux"
+https://www.gnome.org/feed/ "Linux"
+https://dot.kde.org/rss.xml "Linux"
+
+# News and opinion
+https://planet.archlinux.org/rss20.xml "Linux"
+https://feeds.feedburner.com/FreedomPenguin "Linux"
+http://lunduke.com/feed/ "Linux"
+
+# Politics
+# -----------------------------------------------
+
+# Official
+https://europa.eu/newsroom/highlights.xml_en "EU"
+https://europa.eu/newsroom/press-releases.xml_en "EU"
+
+# Civil society
+http://gef.eu/feed/ "Greens"
+http://reconnecting-europe.boellblog.org/feed/ "Greens"
+https://blog.mozilla.org/internetcitizen/feed/ "Mozilla"
+https://blog.mozilla.org/netpolicy/feed/ "Mozilla"
+https://blog.mozilla.org/community/feed/ "Mozilla"
+
+# Blogs
+http://ruitavares.net/feed "Politics"
+http://europa.fhenriques.eu/rss "Politics"
+http://stanislasjourdan.fr/feed "Politics"
+https://boycottholland.wordpress.com/feed/ "Politics"
+
+# General
+# -----------------------------------------------
+
+# Web
+https://github.com/blog/all.atom "Web"
+https://about.gitlab.com/atom.xml "Web"
+https://www.gandi.net/feed/news/en/block/hp/ "Web"
+https://jekyllrb.com/feed.xml "Web"
+https://blog.mozilla.org/opendesign/feed/ "Web"
+https://blog.mozilla.org/feed/ "Web"
+https://hacks.mozilla.org/feed/ "Web"
+
+# Testing
 https://protesilaos.com/feed.xml "Personal"
 https://protesilaos.com/codelog.xml "Personal"
 
-# Filters ---------------------------------------
-"query:Unread Articles:unread = \"yes\""
+# Filters
+# -----------------------------------------------
 
+"query:Unread Articles:unread = \"yes\""
