@@ -24,13 +24,13 @@
     <property name="focus_delay" type="int" value="250"/>
     <property name="focus_hint" type="bool" value="true"/>
     <property name="focus_new" type="bool" value="true"/>
-    <property name="frame_opacity" type="int" value="100"/>
+    <property name="frame_opacity" type="int" value="0"/>
     <property name="full_width_title" type="bool" value="true"/>
     <property name="horiz_scroll_opacity" type="bool" value="false"/>
     <property name="inactive_opacity" type="int" value="100"/>
     <property name="maximized_offset" type="int" value="0"/>
     <property name="mousewheel_rollup" type="bool" value="true"/>
-    <property name="move_opacity" type="int" value="78"/>
+    <property name="move_opacity" type="int" value="80"/>
     <property name="placement_mode" type="string" value="center"/>
     <property name="placement_ratio" type="int" value="100"/>
     <property name="popup_opacity" type="int" value="100"/>
@@ -39,7 +39,7 @@
     <property name="raise_on_click" type="bool" value="true"/>
     <property name="raise_on_focus" type="bool" value="false"/>
     <property name="raise_with_any_button" type="bool" value="true"/>
-    <property name="repeat_urgent_blink" type="bool" value="false"/>
+    <property name="repeat_urgent_blink" type="bool" value="true"/>
     <property name="resize_opacity" type="int" value="87"/>
     <property name="scroll_workspaces" type="bool" value="true"/>
     <property name="shadow_delta_height" type="int" value="0"/>
@@ -56,10 +56,10 @@
     <property name="snap_to_windows" type="bool" value="false"/>
     <property name="snap_width" type="int" value="10"/>
     <property name="sync_to_vblank" type="bool" value="false"/>
-    <property name="theme" type="string" value="Vertex-Dark"/>
+    <property name="theme" type="string" value="RGapsBlendNoButtons"/>
     <property name="tile_on_move" type="bool" value="true"/>
     <property name="title_alignment" type="string" value="center"/>
-    <property name="title_font" type="string" value="Fira Sans Light 10"/>
+    <property name="title_font" type="string" value="Fira Sans Semi-Bold 10"/>
     <property name="title_horizontal_offset" type="int" value="0"/>
     <property name="titleless_maximize" type="bool" value="true"/>
     <property name="title_shadow_active" type="string" value="false"/>
@@ -78,12 +78,12 @@
     <property name="wrap_workspaces" type="bool" value="false"/>
     <property name="zoom_desktop" type="bool" value="true"/>
     <property name="workspace_names" type="array">
-      <value type="string" value="Admin"/>
-      <value type="string" value="Code"/>
-      <value type="string" value="Study"/>
-      <value type="string" value="Comms"/>
-      <value type="string" value="General"/>
-      <value type="string" value="Media"/>
+      <value type="string" value="1"/>
+      <value type="string" value="2"/>
+      <value type="string" value="3"/>
+      <value type="string" value="4"/>
+      <value type="string" value="5"/>
+      <value type="string" value="6"/>
     </property>
   </property>
 </channel>
