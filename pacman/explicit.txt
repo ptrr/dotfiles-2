@@ -78,6 +78,10 @@ less
 lib32-gst-plugins-base
 lib32-gst-plugins-good
 lib32-mesa
+libreoffice-fresh
+libreoffice-fresh-el
+libreoffice-fresh-en-GB
+libreoffice-fresh-fr
 libtool
 libtxc_dxtn
 libva-intel-driver
@@ -124,6 +128,7 @@ os-prober
 pacaur
 pacman
 papirus-icon-theme-git
+parole
 patch
 pavucontrol
 pciutils
@@ -155,6 +160,7 @@ thunar-extended
 thunar-media-tags-plugin
 thunar-volman
 ttf-fira-sans
+ttf-freefont
 ttf-iosevka-term-zshaped
 tumbler
 unace
@@ -167,12 +173,14 @@ uudeview
 vertex-themes
 vi
 vim
+vivacious-colors-icon-theme
 w3m
 wget
 which
 whois
 wireless_tools
 wpa_actiond
+xarchiver
 xclip
 xdg-user-dirs-gtk
 xf86-video-ati

@@ -48,8 +48,12 @@ cdparanoia
 chromium
 clamav
 clamtk
+clucene
+clutter
+clutter-gtk
 cmake
 cmus
+cogl
 compositeproto
 conky
 coreutils
@@ -115,12 +119,14 @@ giflib
 gimp
 git
 gjs
+glew
 glib-networking
 glib-perl
 glib2
 glib2-docs
 glibc
 glibmm
+glu
 gmime
 gmp
 gnome-icon-theme
@@ -317,6 +323,7 @@ lib32-wavpack
 lib32-wayland
 lib32-xz
 lib32-zlib
+libabw
 libaio
 libarchive
 libass
@@ -335,6 +342,8 @@ libcap-ng
 libcddb
 libcdio
 libcdio-paranoia
+libcdr
+libcmis
 libcroco
 libcue
 libcups
@@ -345,13 +354,17 @@ libdmx
 libdrm
 libdv
 libdvdread
+libe-book
 libedit
 libelf
 libepoxy
+libetonyek
 libev
 libevdev
 libevent
 libexif
+libexttextcat
+libfbclient
 libffi
 libfm
 libfm-extra
@@ -370,10 +383,12 @@ libiec61883
 libimobiledevice
 libinput
 libisofs
+libixion
 libjpeg-turbo
 libkeybinder2
 libkeybinder3
 libksba
+liblangtag
 libldap
 liblqr
 libmad
@@ -384,7 +399,9 @@ libmnl
 libmodplug
 libmpc
 libmpeg2
+libmspub
 libmtp
+libmwaw
 libndp
 libnewt
 libnftnl
@@ -392,8 +409,11 @@ libnl
 libnm
 libnm-glib
 libnotify
+libodfgen
 libogg
 libomxil-bellagio
+liborcus
+libpagemaker
 libpcap
 libpciaccess
 libpgm
@@ -405,6 +425,11 @@ libpsl
 libpulse
 libqmi
 libraw1394
+libreoffice-fresh
+libreoffice-fresh-el
+libreoffice-fresh-en-GB
+libreoffice-fresh-fr
+librevenge
 librsvg
 libsamplerate
 libsasl
@@ -429,6 +454,7 @@ libthai
 libtheora
 libtiff
 libtirpc
+libtommath
 libtool
 libtxc_dxtn
 libunistring
@@ -441,6 +467,7 @@ libva
 libva-intel-driver
 libva-vdpau-driver
 libvdpau
+libvisio
 libvisual
 libvoikko
 libvorbis
@@ -450,6 +477,9 @@ libwacom
 libwebp
 libwmf
 libwnck
+libwpd
+libwpg
+libwps
 libx11
 libx264
 libxau
@@ -487,6 +517,7 @@ libxvmc
 libxxf86dga
 libxxf86vm
 libyaml
+libzmf
 licenses
 lightdm
 lightdm-gtk-greeter
@@ -499,6 +530,7 @@ linux-lts
 llvm-libs
 lm_sensors
 logrotate
+lpsolve
 lua
 lv2
 lvm2
@@ -527,6 +559,7 @@ msgpack-c
 mtdev
 nano
 ncurses
+neon
 neovim
 net-tools
 netcdf
@@ -563,6 +596,7 @@ orage
 orc
 os-prober
 p11-kit
+p7zip
 pacman
 pacman-mirrorlist
 pam
@@ -570,6 +604,7 @@ pambase
 pango
 pango-perl
 pangomm
+parole
 patch
 pavucontrol
 pciutils
@@ -647,9 +682,12 @@ qt5-webchannel
 qt5-webkit-ng
 qt5-xmlpatterns
 randrproto
+raptor
+rasqal
 re2
 readline
 recordproto
+redland
 reiserfsprogs
 renderproto
 ristretto
@@ -700,6 +738,7 @@ thunar-volman
 tslib
 ttf-dejavu
 ttf-fira-sans
+ttf-freefont
 tumbler
 tzdata
 udisks2
@@ -738,6 +777,7 @@ wpa_supplicant
 wxgtk
 x265
 xapian-core
+xarchiver
 xcb-proto
 xcb-util
 xcb-util-image

@@ -10,4 +10,5 @@ papirus-icon-theme-git
 thunar-extended
 ttf-iosevka-term-zshaped
 vertex-themes
+vivacious-colors-icon-theme
 xfce4-volumed-pulse
