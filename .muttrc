@@ -29,7 +29,7 @@ unset markers
 set pager_index_lines = 10
 
 # Composing
-set editor = "nvim +':set textwidth=0' +':set wrapmargin=0' +':set wrap'"
+set editor = "vim +':set textwidth=0' +':set wrapmargin=0' +':set wrap'"
 set askcc = no
 set ispell = "aspell -e -c"
 set edit_headers = no
@@ -63,15 +63,15 @@ source "gpg2 -dq $HOME/.mutt/mails/passwords.gpg |"
 
 # MAIL ONE
 source "~/.mutt/mails/stavrou"
-folder-hook $folder 'source ~/.mutt/mails/stavrou'
+folder-hook $folder 'source ~/.mutt/mails/one'
 
 # MAIL TWO
 source "~/.mutt/mails/public"
-folder-hook $folder 'source ~/.mutt/mails/public'
+folder-hook $folder 'source ~/.mutt/mails/two'
 
 # MAIL THREE
 source "~/.mutt/mails/info"
-folder-hook $folder 'source ~/.mutt/mails/info'
+folder-hook $folder 'source ~/.mutt/mails/three'
 
 # Sidebar settings ------------------------------
 set sidebar_visible = no
@@ -96,9 +96,9 @@ bind index,pager s flag-message
 bind index,pager P purge-message
 
 # Account switching
-macro index,pager ,1 '<sync-mailbox><enter-command>source ~/.mutt/mails/stavrou<enter><change-folder>!<enter>'
-macro index,pager ,2 '<sync-mailbox><enter-command>source ~/.mutt/mails/info<enter><change-folder>!<enter>'
-macro index,pager ,3 '<sync-mailbox><enter-command>source ~/.mutt/mails/public<enter><change-folder>!<enter>'
+macro index,pager ,1 '<sync-mailbox><enter-command>source ~/.mutt/mails/one<enter><change-folder>!<enter>'
+macro index,pager ,2 '<sync-mailbox><enter-command>source ~/.mutt/mails/two<enter><change-folder>!<enter>'
+macro index,pager ,3 '<sync-mailbox><enter-command>source ~/.mutt/mails/three<enter><change-folder>!<enter>'
 
 # Sidebar
 bind index,pager <left> sidebar-toggle-visible 
