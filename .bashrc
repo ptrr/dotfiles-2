@@ -16,7 +16,7 @@ PS1="\[\e[34m\]\A\[\e[m\] \[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\
 alias ls="ls -a --color=auto"
 
 # Editor
-alias v="nvim"
+alias v="vim"
 
 # Admin
 alias pSyu="sudo pacman -Syu" # system upgrade
@@ -77,12 +77,13 @@ alias sign="gpg -s -r"
 alias vanish="shred -xu"
 
 # Common configs
-alias vvv="nvim ~/.vimrc"
-alias bbb="nvim ~/.bashrc"
-alias mmm="nvim ~/.muttrc"
-alias ttt="nvim ~/.taskrc"
-alias sss="nvim ~/.mutt/mails/signature"
-alias ccc="nvim ~/.config/conky/conky.conf"
+alias vvv="vim ~/.vimrc"
+alias bbb="vim ~/.bashrc"
+alias mmm="vim ~/.muttrc"
+alias ttt="vim ~/.taskrc"
+alias sss="vim ~/.mutt/mails/signature"
+alias ccc="vim ~/.config/conky/conky.conf"
+alias nnn="vim ~/.newsbeuter/urls"
 
 # Reload files
 alias rbbb="source ~/.bashrc"
