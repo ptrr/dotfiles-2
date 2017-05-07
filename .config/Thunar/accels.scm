@@ -54,7 +54,6 @@
 ; (gtk_accel_path "<Actions>/ThunarStandardView/move-to-trash" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/select-by-pattern" "<Primary>s")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/7ad7314450e92521631e3ff67c49cced" "")
-; (gtk_accel_path "<Actions>/ThunarBookmarks/d709736f29df91c2040c7a5e6b5cc705" "")
 (gtk_accel_path "<Actions>/ThunarActions/uca-action-1492891479175288-44" "<Primary><Super>m")
 ; (gtk_accel_path "<Actions>/ThunarWindow/about" "")
 (gtk_accel_path "<Actions>/ThunarActions/uca-action-1492850010059075-10" "<Primary><Super>r")

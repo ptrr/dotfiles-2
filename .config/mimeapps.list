@@ -34,6 +34,7 @@ application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 audio/mpeg=org.xfce.Parole.desktop;
+application/x-perl=mousepad.desktop;
 
 [Default Applications]
 text/html=firefox.desktop
