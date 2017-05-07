@@ -3,6 +3,9 @@
 # Main account ----------------------------------
 color status color0 color11
 
+# Specify GPG
+set pgp_sign_as = 0xFINGERPRINT-GOES-HERE
+
 # Configure imap username and password
 set imap_user = "EMAIL-TWO@protesilaos.com"
 set imap_pass = "$my_EMAIL-TWO_pass"

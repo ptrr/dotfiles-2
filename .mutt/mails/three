@@ -3,6 +3,9 @@
 # Main account ----------------------------------
 color status color11 default
 
+# Specify GPG
+set pgp_sign_as = 0xFINGERPRINT-GOES-HERE
+
 # Configure imap username and password
 set imap_user = "EMAIL-THREE@protesilaos.com"
 set imap_pass = "$my_EMAIL-THREE_pass"

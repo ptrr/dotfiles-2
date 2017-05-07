@@ -62,15 +62,15 @@ set pgp_timeout = 3600
 source "gpg2 -dq $HOME/.mutt/mails/passwords.gpg |"
 
 # MAIL ONE
-source "~/.mutt/mails/stavrou"
+source "~/.mutt/mails/one"
 folder-hook $folder 'source ~/.mutt/mails/one'
 
 # MAIL TWO
-source "~/.mutt/mails/public"
+source "~/.mutt/mails/two"
 folder-hook $folder 'source ~/.mutt/mails/two'
 
 # MAIL THREE
-source "~/.mutt/mails/info"
+source "~/.mutt/mails/three"
 folder-hook $folder 'source ~/.mutt/mails/three'
 
 # Sidebar settings ------------------------------
@@ -101,10 +101,10 @@ macro index,pager ,2 '<sync-mailbox><enter-command>source ~/.mutt/mails/two<ente
 macro index,pager ,3 '<sync-mailbox><enter-command>source ~/.mutt/mails/three<enter><change-folder>!<enter>'
 
 # Sidebar
-bind index,pager <left> sidebar-toggle-visible 
-bind index,pager <up> sidebar-prev 
-bind index,pager <down> sidebar-next 
-bind index,pager <right> sidebar-open 
+bind index,pager <left> sidebar-toggle-visible
+bind index,pager <up> sidebar-prev
+bind index,pager <down> sidebar-next
+bind index,pager <right> sidebar-open
 
 # Moving messages
 # Move message(s) to Archive
