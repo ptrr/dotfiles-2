@@ -21,11 +21,17 @@ alias v="vim"
 # Admin
 alias pSyu="sudo pacman -Syu" # system upgrade
 alias aSyu="pacaur -Syu --aur" # system upgrade aur
+alias pk="pacaur -k" # check aur packages
+
 alias pD="sudo pacman -D" # control package install state with `--asdeps` or `--asexplicit`
 
 alias pS="pacaur -S" # sync download
 alias pSs="sudo pacman -Ss" # query database for package
-alias ps="pacaur --search" # search aur
+alias pSi="sudo pacman -Si" # see remote package details
+
+alias pi="pacaur -i" # see aur package details
+alias ps="pacaur -s" # search aur
+
 alias pRs="pacaur -Rs" # remove unless conflicting deps
 alias pRnsc="sudo pacman -Rnsc" # remove recursively
 alias pRnscQqdt="sudo pacman -Rnsc $(pacman -Qqdt)" # remove orphans
