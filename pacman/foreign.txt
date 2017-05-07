@@ -1,6 +1,7 @@
 b43-firmware
 cower
 evince-light
+gtk-theme-united-gnome
 lightdm-flexiserver
 mugshot
 neofetch

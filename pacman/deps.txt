@@ -125,7 +125,6 @@ iw
 jack
 jansson
 jasper
-jemalloc
 js
 js38
 json-c
@@ -368,7 +367,6 @@ libssh2
 libsystemd
 libtasn1
 libteam
-libtermkey
 libthai
 libtheora
 libtiff
@@ -387,7 +385,6 @@ libvisual
 libvoikko
 libvorbis
 libvpx
-libvterm
 libwacom
 libwebp
 libwmf
@@ -454,7 +451,6 @@ mobile-broadband-provider-info
 mozilla-common
 mpfr
 mpg123
-msgpack-c
 mtdev
 ncurses
 neon
@@ -588,7 +584,6 @@ tslib
 ttf-dejavu
 tzdata
 udisks2
-unibilium
 upower
 usbmuxd
 v4l-utils

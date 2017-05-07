@@ -59,6 +59,7 @@ grep
 groff
 grub
 gst-plugins-ugly
+gtk-theme-united-gnome
 gtk-xfce-engine
 gulp
 gvfs
@@ -107,7 +108,6 @@ mugshot
 nano
 neofetch
 neomutt
-neovim
 net-tools
 netctl
 network-manager-applet

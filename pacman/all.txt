@@ -157,6 +157,7 @@ gst-plugins-ugly
 gstreamer
 gtk-doc
 gtk-engine-murrine
+gtk-theme-united-gnome
 gtk-update-icon-cache
 gtk-xfce-engine
 gtk2
@@ -199,7 +200,6 @@ iw
 jack
 jansson
 jasper
-jemalloc
 jfsutils
 jpegoptim
 js
@@ -452,7 +452,6 @@ libssh2
 libsystemd
 libtasn1
 libteam
-libtermkey
 libthai
 libtheora
 libtiff
@@ -475,7 +474,6 @@ libvisual
 libvoikko
 libvorbis
 libvpx
-libvterm
 libwacom
 libwebp
 libwmf
@@ -559,7 +557,6 @@ mousepad
 mozilla-common
 mpfr
 mpg123
-msgpack-c
 mtdev
 mugshot
 nano
@@ -567,7 +564,6 @@ ncurses
 neofetch
 neomutt
 neon
-neovim
 net-tools
 netcdf
 netctl
@@ -754,7 +750,6 @@ tumbler
 tzdata
 udisks2
 unace
-unibilium
 unrar
 unzip
 upower

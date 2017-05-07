@@ -196,7 +196,6 @@ iw
 jack
 jansson
 jasper
-jemalloc
 jfsutils
 jpegoptim
 js
@@ -449,7 +448,6 @@ libssh2
 libsystemd
 libtasn1
 libteam
-libtermkey
 libthai
 libtheora
 libtiff
@@ -472,7 +470,6 @@ libvisual
 libvoikko
 libvorbis
 libvpx
-libvterm
 libwacom
 libwebp
 libwmf
@@ -555,12 +552,10 @@ mousepad
 mozilla-common
 mpfr
 mpg123
-msgpack-c
 mtdev
 nano
 ncurses
 neon
-neovim
 net-tools
 netcdf
 netctl
@@ -743,7 +738,6 @@ tumbler
 tzdata
 udisks2
 unace
-unibilium
 unrar
 unzip
 upower
