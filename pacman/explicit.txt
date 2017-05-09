@@ -100,9 +100,11 @@ m4
 make
 man-db
 man-pages
+mate-calc
 mdadm
 mlocate
 modemmanager
+moka-icon-theme-git
 mousepad
 mugshot
 nano
@@ -140,6 +142,7 @@ pkgfile
 procps-ng
 psmisc
 qt5-webkit-ng
+qutebrowser
 reiserfsprogs
 ristretto
 rsync
@@ -154,6 +157,7 @@ sysfsutils
 systemd-sysvcompat
 tar
 task
+terminus-font
 texinfo
 thunar-archive-plugin
 thunar-extended
@@ -162,6 +166,7 @@ thunar-volman
 ttf-fira-sans
 ttf-freefont
 ttf-iosevka-term-zshaped
+ttf-roboto
 tumbler
 unace
 unrar
@@ -173,7 +178,6 @@ uudeview
 vertex-themes
 vi
 vim
-vivacious-colors-icon-theme
 w3m
 wget
 which

@@ -1,8 +1,11 @@
 b43-firmware
 cower
 evince-light
+faba-icon-theme-git
+faba-mono-icons-git
 gtk-theme-united-gnome
 lightdm-flexiserver
+moka-icon-theme-git
 mugshot
 neofetch
 neomutt
@@ -11,5 +14,4 @@ papirus-icon-theme-git
 thunar-extended
 ttf-iosevka-term-zshaped
 vertex-themes
-vivacious-colors-icon-theme
 xfce4-volumed-pulse
