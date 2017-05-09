@@ -8,3 +8,7 @@
 .config/qutebrowser/bookmarks
 .config/qutebrowser/keys.conf
 .config/qutebrowser/quickmarks
+.newsbeuter/cache.db
+.newsbeuter/cache.db.lock
+.newsbeuter/history.cmdline
+.newsbeuter/history.search

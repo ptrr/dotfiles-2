@@ -1,30 +1,52 @@
 # Feeds // Newsbeuter 2.9
 # ===============================================
 
-# Linux and programming
+# Computers
 # -----------------------------------------------
 
 # Distros
-https://www.archlinux.org/feeds/news/ "Linux"
-https://www.debian.org/News/news "Linux"
-http://blog.linuxmint.com/?feed=rss2 "Linux"
-https://ubuntu-mate.org/rss.xml "Linux"
-https://xubuntu.org/feed/ "Linux"
-https://antergos.com/feed/ "Linux"
-https://manjaro.org/feed/ "Linux"
-https://solus-project.com/blog/index.xml "Linux"
+https://www.archlinux.org/feeds/news/ "Linux Distro"
+https://www.debian.org/News/news "Linux Distro"
+http://blog.linuxmint.com/?feed=rss2 "Linux Distro"
+https://ubuntu-mate.org/rss.xml "Linux Distro"
+https://xubuntu.org/feed/ "Linux Distro"
+https://antergos.com/feed/ "Linux Distro"
+https://manjaro.org/feed/ "Linux Distro"
+https://solus-project.com/blog/index.xml "Linux Distro"
 
 # Projects
-https://blog.xfce.org/feed/ "Linux"
-https://feeds.feedburner.com/d0od "Linux"
-https://budgie-desktop.org/blog/index.xml "Linux"
-https://www.gnome.org/feed/ "Linux"
-https://dot.kde.org/rss.xml "Linux"
+https://blog.xfce.org/feed/ "Linux DE"
+https://budgie-desktop.org/blog/index.xml "Linux DE"
+https://www.gnome.org/feed/ "Linux DE"
+https://dot.kde.org/rss.xml "Linux DE"
+http://mate-desktop.org/rss.xml "Linux DE"
+
+http://taskwarrior.org/feed.rss "Linux Apps CLI"
+https://www.neomutt.org/feed.xml "Linux Apps CLI"
+https://blog.qutebrowser.org/feeds/all.atom.xml "Linux Apps"
+
+https://neovim.io/news.xml "Apps"
+
+https://nextcloud.com/blogfeed/ "Privacy"
+
+# Hardware
+https://puri.sm/feed/ "Linux Hardware"
+http://blog.system76.com/rss "Linux Hardware"
 
 # News and opinion
-https://planet.archlinux.org/rss20.xml "Linux"
-https://feeds.feedburner.com/FreedomPenguin "Linux"
-http://lunduke.com/feed/ "Linux"
+https://planet.archlinux.org/rss20.xml "Linux Community"
+https://feeds.feedburner.com/FreedomPenguin "Linux Community"
+https://www.linux.com/feeds/news/desktop/rss "Linux Community"
+https://feeds.feedburner.com/d0od "Linux Community"
+https://opensource.com/feed "Linux Community"
+http://lunduke.com/feed/ "Linux Community"
+https://www.sudosatirical.com/articles/index.xml "Linux Community"
+
+https://sfconservancy.org/feeds/news/ "Linux GPL"
+https://sfconservancy.org/feeds/news/ "Linux GPL"
+http://static.fsf.org/fsforg/rss/blogs.xml "GNU GPL"
+http://static.fsf.org/fsforg/rss/news.xml "GNU GPL"
+https://stallman.org/rss/rss.xml "GNU GPL Stallman"
 
 # Politics
 # -----------------------------------------------
@@ -41,10 +63,11 @@ https://blog.mozilla.org/netpolicy/feed/ "Mozilla"
 https://blog.mozilla.org/community/feed/ "Mozilla"
 
 # Blogs
+https://www.project-syndicate.org/rss "Politics Economics"
 http://ruitavares.net/feed "Politics"
 http://europa.fhenriques.eu/rss "Politics"
 http://stanislasjourdan.fr/feed "Politics"
-https://boycottholland.wordpress.com/feed/ "Politics"
+https://boycottholland.wordpress.com/feed/ "Politics Economics"
 
 # General
 # -----------------------------------------------
@@ -57,6 +80,9 @@ https://jekyllrb.com/feed.xml "Web"
 https://blog.mozilla.org/opendesign/feed/ "Web"
 https://blog.mozilla.org/feed/ "Web"
 https://hacks.mozilla.org/feed/ "Web"
+
+# Entertainment
+http://samostudios.tumblr.com/rss "Music"
 
 # Testing
 https://protesilaos.com/feed.xml "Personal"
