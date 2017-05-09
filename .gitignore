@@ -5,3 +5,6 @@
 .config/xfce4/weather
 .config/xfce4/xfce4
 .config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+.config/qutebrowser/bookmarks
+.config/qutebrowser/keys.conf
+.config/qutebrowser/quickmarks
