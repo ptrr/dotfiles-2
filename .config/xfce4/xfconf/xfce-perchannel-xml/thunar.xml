@@ -15,7 +15,7 @@
   <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_SMALLEST"/>
   <property name="misc-middle-click-in-tab" type="bool" value="true"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_SMALLER"/>
-  <property name="last-details-view-column-widths" type="string" value="50,134,50,50,515,50,50,80,134"/>
+  <property name="last-details-view-column-widths" type="string" value="50,132,50,50,521,50,50,72,150"/>
   <property name="tree-icon-emblems" type="bool" value="true"/>
   <property name="last-show-hidden" type="bool" value="true"/>
   <property name="last-location-bar" type="string" value="ThunarLocationEntry"/>
