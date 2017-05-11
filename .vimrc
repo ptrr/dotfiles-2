@@ -6,8 +6,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
-  Plug 'junegunn/limelight.vim'
-  Plug 'junegunn/goyo.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'dpelle/vim-LanguageTool'
   Plug 'scrooloose/nerdcommenter'
@@ -32,11 +30,9 @@ set backspace=indent,eol,start
 set showcmd
 set wildmenu
 
-"  Backups
-set directory^=$HOME/vim-backups/ " put all swap files together in one place
-
 " Lines
 set number
+set relativenumber
 set cursorline
 set wrap
 set ruler
@@ -48,14 +44,6 @@ set showmatch
 set textwidth=0
 set nostartofline
 set splitbelow splitright
-
-if !&scrolloff
-  set scrolloff=1
-endif
-if !&sidescrolloff
-  set sidescrolloff=5
-endif
-set display+=lastline
 
 if &listchars ==# 'eol:$'
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
@@ -89,7 +77,7 @@ nmap <silent> <leader>l :wincmd l<CR>
 map <silent> \ :silent nohlsearch<CR>
 
 " Visually select the text that was last edited/pasted
-map <leader>v `[v`]
+map <silent> <leader>v `[v`]
 
 " Toggle spell check
 map <silent> <leader>sp :set spell!<CR>
@@ -103,9 +91,6 @@ nnoremap <leader>i :set list!<cr>
 
 " Toggle Nerd Tree
 map <leader>n :NERDTreeToggle<CR>
-
-" Toggle Goyo
-map <leader>go :Goyo<CR>
 
 " Invoke CtrlP
 " ff is mnemonic for Fuzzy Finder.
@@ -135,30 +120,19 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Typography
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 10
-
-let g:goyo_width = 85
-let g:goyo_height = '100%'
-let g:goyo_linenr = 0
-
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-
 " CtrlP
 " Ignore common directories
 let g:ctrlp_custom_ignore = {
-   \ 'dir': 'node_modules\|bower_components\|public\|_site',
+   \ 'dir': 'node_modules\|bower_components\|public\|_site\|vendor',
    \ }
 
 " Airline
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#fugitive#enabled = 1
 let g:airline_symbols_ascii = 1
-let g:airline_theme='termina_dark'
+let g:airline_theme='hinterland_dark'
 set laststatus=2
 
 " Theme
 syntax enable
-colorscheme termina_dark
+colorscheme hinterland_dark
