@@ -8,7 +8,7 @@ export LC_ALL="en_GB.utf8"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1="\[\e[34m\]\A\[\e[m\] \[\e[32m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]\[\e[1;31m\] \w\[\e[m\] \[\e[38m\]\\$\[\e[m\] "
+PS1="\[\e[32m\]\w\[\e[m\] \[\e[1;31m\]>\[\e[m\] "
 
 # Aliases
 # --------------------------------------------------------------------
@@ -25,10 +25,11 @@ alias pk="pacaur -k" # check aur packages
 
 alias pD="sudo pacman -D" # control package install state with `--asdeps` or `--asexplicit`
 
-alias pS="pacaur -S" # sync download
+alias pS="sudo pacman -S" # sync download
+alias pSa="pacaur -S --aur" # sync aur download
+
 alias pSs="sudo pacman -Ss" # query database for package
 alias pSi="sudo pacman -Si" # see remote package details
-
 alias pi="pacaur -i" # see aur package details
 alias ps="pacaur -s" # search aur
 
@@ -43,6 +44,8 @@ alias pQdt="sudo pacman -Qdt" # list orphans
 
 alias pcache1="sudo paccache -rk 1" # remove cache except last item
 alias pcache0="sudo paccache -ruk0" # remove all cache
+
+alias pkrk="sudo pacman-key --refresh-keys" # refresh pacman keys
 
 # Admin - backups
 alias pQqback="sudo pacman -Qq > packages-all.txt"
@@ -90,6 +93,7 @@ alias ttt="vim ~/.taskrc"
 alias sss="vim ~/.mutt/mails/signature"
 alias ccc="vim ~/.config/conky/conky.conf"
 alias nnn="vim ~/.newsbeuter/urls"
+alias qqq="vim ~/.config/qutebrowser/qutebrowser.conf"
 
 # Reload files
 alias rbbb="source ~/.bashrc"
