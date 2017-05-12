@@ -12,8 +12,6 @@ PS1="\[\e[32m\]\w\[\e[m\] \[\e[1;31m\]>\[\e[m\] "
 
 # Aliases
 # --------------------------------------------------------------------
-# General
-alias ls="ls -a --color=auto"
 
 # Editor
 alias v="vim"
@@ -94,6 +92,9 @@ alias sss="vim ~/.mutt/mails/signature"
 alias ccc="vim ~/.config/conky/conky.conf"
 alias nnn="vim ~/.newsbeuter/urls"
 alias qqq="vim ~/.config/qutebrowser/qutebrowser.conf"
+
+# Curl
+alias cO="curl -O"
 
 # Reload files
 alias rbbb="source ~/.bashrc"
