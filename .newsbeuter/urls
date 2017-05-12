@@ -27,8 +27,6 @@ https://blog.qutebrowser.org/feeds/all.atom.xml "Linux Apps"
 
 https://neovim.io/news.xml "Apps"
 
-https://nextcloud.com/blogfeed/ "Privacy"
-
 # Hardware
 https://puri.sm/feed/ "Linux Hardware"
 http://blog.system76.com/rss "Linux Hardware"
@@ -45,8 +43,8 @@ https://www.sudosatirical.com/articles/index.xml "Linux Community"
 https://sfconservancy.org/feeds/news/ "Linux GPL"
 https://sfconservancy.org/feeds/news/ "Linux GPL"
 http://static.fsf.org/fsforg/rss/blogs.xml "GNU GPL"
+https://fsfe.org/news/news.en.rss "GPL Politics EU"
 http://static.fsf.org/fsforg/rss/news.xml "GNU GPL"
-https://stallman.org/rss/rss.xml "GNU GPL Stallman"
 
 # Politics
 # -----------------------------------------------
@@ -62,8 +60,16 @@ https://blog.mozilla.org/internetcitizen/feed/ "Mozilla"
 https://blog.mozilla.org/netpolicy/feed/ "Mozilla"
 https://blog.mozilla.org/community/feed/ "Mozilla"
 
-# Blogs
+# Think Tanks
+https://www.ineteconomics.org/feed.rss "Politics Economics"
+https://www.ceps.eu/rss1.php "EU Politics"
+http://bruegel.org/feed/ "EU Politics"
+
+# Media outlets
 https://www.project-syndicate.org/rss "Politics Economics"
+
+# Blogs
+http://blogactiv.eu/feed/ "Politics"
 http://ruitavares.net/feed "Politics"
 http://europa.fhenriques.eu/rss "Politics"
 http://stanislasjourdan.fr/feed "Politics"
