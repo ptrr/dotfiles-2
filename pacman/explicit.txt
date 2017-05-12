@@ -118,8 +118,6 @@ newsbeuter
 nfs-utils
 nilfs-utils
 nodejs
-noto-fonts
-noto-fonts-cjk
 noto-fonts-emoji
 npm
 ntfs-3g
@@ -164,9 +162,8 @@ thunar-extended
 thunar-media-tags-plugin
 thunar-volman
 ttf-fira-sans
-ttf-freefont
+ttf-hack
 ttf-iosevka-term-zshaped
-ttf-roboto
 tumbler
 unace
 unrar

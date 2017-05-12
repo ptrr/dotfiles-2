@@ -572,8 +572,6 @@ nilfs-utils
 nm-connection-editor
 nodejs
 notmuch-runtime
-noto-fonts
-noto-fonts-cjk
 noto-fonts-emoji
 npm
 npth
@@ -757,8 +755,7 @@ thunar-volman
 tslib
 ttf-dejavu
 ttf-fira-sans
-ttf-freefont
-ttf-roboto
+ttf-hack
 tumbler
 tzdata
 udisks2
