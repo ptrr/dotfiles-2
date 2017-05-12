@@ -6,14 +6,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'airblade/vim-gitgutter'
   Plug 'tpope/vim-fugitive'
-  Plug 'vim-airline/vim-airline'
   Plug 'dpelle/vim-LanguageTool'
   Plug 'scrooloose/nerdcommenter'
   Plug 'ervandew/supertab'
   Plug 'jiangmiao/auto-pairs'
   Plug 'protesilaos/prot16-vim'
-  Plug 'protesilaos/prot16-vim-airline'
   Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
@@ -126,12 +125,10 @@ let g:ctrlp_custom_ignore = {
    \ 'dir': 'node_modules\|bower_components\|public\|_site\|vendor',
    \ }
 
-" Airline
-let g:airline#extensions#tabline#enabled = 0
-let g:airline#extensions#fugitive#enabled = 1
-let g:airline_symbols_ascii = 1
-let g:airline_theme='hinterland_dark'
-set laststatus=2
+" Easy motion
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " Theme
 syntax enable
