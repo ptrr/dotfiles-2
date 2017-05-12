@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'protesilaos/prot16-vim'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'easymotion/vim-easymotion'
+  Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
