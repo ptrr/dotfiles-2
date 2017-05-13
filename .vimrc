@@ -22,10 +22,13 @@ call plug#end()
 set encoding=utf-8
 set errorbells
 set visualbell
+set autoread
 
 set updatetime=250
 set undolevels=1000
+
 set backspace=indent,eol,start
+set whichwrap+=<,>,h,l
 
 set showcmd
 set wildmenu
@@ -64,14 +67,34 @@ set incsearch
 " -----------------------------------------------
 let mapleader=","
 
+" File actions
+nmap <leader>w :w!<cr>
+nmap <leader>wa :wa!<cr>
+nmap <leader>x :x!<cr>
+nmap <leader>xa :xa!<cr>
+nmap <leader>q :q!<cr>
+nmap <leader>qa :qa!<cr>
+
 " Remap escape for insert mode
 inoremap jk <Esc>
 
 " Navigate splits
-nmap <silent> <leader>k :wincmd k<CR>
-nmap <silent> <leader>j :wincmd j<CR>
-nmap <silent> <leader>h :wincmd h<CR>
-nmap <silent> <leader>l :wincmd l<CR>
+nmap <silent> <leader>j <C-W>j<C-W>_
+nmap <silent> <leader>k <C-W>k<C-W>_
+nmap <silent> <leader>h <c-w>h<c-w><bar>
+nmap <silent> <leader>l <c-w>l<c-w><bar>
+set wmw=0
+set wmh=0
+
+" Manage tabs
+nmap <S-T> :tabnew<cr>
+nmap <S-D> :tabclose<cr>
+nmap <S-H> gT
+nmap <S-L> gt
+
+" Move lines
+noremap <silent> <S-J> :m +1<CR>
+noremap <silent> <S-K> :m -2<CR>
 
 " Clear the search highlight
 map <silent> \ :silent nohlsearch<CR>
@@ -106,6 +129,12 @@ set pastetoggle=<leader>p
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
+" Return to last edit position when opening files
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" Abbreviations
+iab xdate <c-r>=strftime("%Y-%m-%d")<cr>
+
 " Plugin settings
 " ------------------------------------------------
 " Nerd Commenter
@@ -127,9 +156,9 @@ let g:ctrlp_custom_ignore = {
    \ }
 
 " Easy motion
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
+" ew is mnemonic for `easy word`
+map  <Leader>ew <Plug>(easymotion-bd-w)
+nmap <Leader>ew <Plug>(easymotion-overwin-w)
 
 " Theme
 syntax enable
