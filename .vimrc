@@ -12,7 +12,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'jiangmiao/auto-pairs'
   Plug 'protesilaos/prot16-vim'
   Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'easymotion/vim-easymotion'
   Plug 'sheerun/vim-polyglot'
 
 call plug#end()
@@ -24,7 +23,7 @@ set errorbells
 set visualbell
 set autoread
 
-set updatetime=250
+set updatetime=500
 set undolevels=1000
 
 set backspace=indent,eol,start
@@ -46,7 +45,6 @@ set modifiable
 set showmatch
 set textwidth=0
 set nostartofline
-set splitbelow splitright
 
 if &listchars ==# 'eol:$'
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
@@ -55,17 +53,41 @@ endif
 " Tabs
 set autoindent
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 set smarttab
-set tabstop=2
+set tabstop=4
 
 " Searches
 set hlsearch
 set incsearch
 
+" Splits
+set wmw=0
+set wmh=0
+set splitbelow splitright
+
 " Key bindings
 " -----------------------------------------------
 let mapleader=","
+
+" Unmap arrows - learn Vim!
+no <down> <Nop>
+no <left> <Nop>
+no <right> <Nop>
+no <up> <Nop>
+
+ino <down> <Nop>
+ino <left> <Nop>
+ino <right> <Nop>
+ino <up> <Nop>
+
+vno <down> <Nop>
+vno <left> <Nop>
+vno <right> <Nop>
+vno <up> <Nop>
+
+" Visual block remap
+nmap <leader>vb <C-V>
 
 " File actions
 nmap <leader>w :w!<cr>
@@ -78,13 +100,11 @@ nmap <leader>qa :qa!<cr>
 " Remap escape for insert mode
 inoremap jk <Esc>
 
-" Navigate splits
+" Navigate and maximise splits
 nmap <silent> <leader>j <C-W>j<C-W>_
 nmap <silent> <leader>k <C-W>k<C-W>_
 nmap <silent> <leader>h <c-w>h<c-w><bar>
 nmap <silent> <leader>l <c-w>l<c-w><bar>
-set wmw=0
-set wmh=0
 
 " Manage tabs
 nmap <S-T> :tabnew<cr>
@@ -129,10 +149,11 @@ set pastetoggle=<leader>p
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
-" Return to last edit position when opening files
+" Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Abbreviations
+" TODO Source file
 iab xdate <c-r>=strftime("%Y-%m-%d")<cr>
 
 " Plugin settings
@@ -154,11 +175,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:ctrlp_custom_ignore = {
    \ 'dir': 'node_modules\|bower_components\|public\|_site\|vendor',
    \ }
-
-" Easy motion
-" ew is mnemonic for `easy word`
-map  <Leader>ew <Plug>(easymotion-bd-w)
-nmap <Leader>ew <Plug>(easymotion-overwin-w)
 
 " Theme
 syntax enable
