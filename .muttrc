@@ -1,5 +1,5 @@
 # General settings ------------------------------
-# Works with NeoMutt 20170421 (1.8.2)
+# Works with NeoMutt 20170428-1
 
 # Mailcap
 auto_view text/html
@@ -59,19 +59,16 @@ set pgp_timeout = 3600
 
 # Mailboxes -------------------------------------
 # First retrieve passwords from secure file
-source "gpg2 -dq $HOME/.mutt/mails/passwords.gpg |"
+source "gpg2 -dq ~/.mutt/mails/passwords.gpg |"
 
-# MAIL ONE
-source "~/.mutt/mails/one"
-folder-hook $folder 'source ~/.mutt/mails/one'
+source "~/.mutt/mails/email-one"
+folder-hook $folder 'source ~/.mutt/mails/email-one'
 
-# MAIL TWO
-source "~/.mutt/mails/two"
-folder-hook $folder 'source ~/.mutt/mails/two'
+source "~/.mutt/mails/email-three"
+folder-hook $folder 'source ~/.mutt/mails/email-three'
 
-# MAIL THREE
-source "~/.mutt/mails/three"
-folder-hook $folder 'source ~/.mutt/mails/three'
+source "~/.mutt/mails/email-two"
+folder-hook $folder 'source ~/.mutt/mails/email-two'
 
 # Sidebar settings ------------------------------
 set sidebar_visible = no
@@ -96,9 +93,9 @@ bind index,pager s flag-message
 bind index,pager P purge-message
 
 # Account switching
-macro index,pager ,1 '<sync-mailbox><enter-command>source ~/.mutt/mails/one<enter><change-folder>!<enter>'
-macro index,pager ,2 '<sync-mailbox><enter-command>source ~/.mutt/mails/two<enter><change-folder>!<enter>'
-macro index,pager ,3 '<sync-mailbox><enter-command>source ~/.mutt/mails/three<enter><change-folder>!<enter>'
+macro index,pager ,1 '<sync-mailbox><enter-command>source ~/.mutt/mails/email-one<enter><change-folder>!<enter>'
+macro index,pager ,2 '<sync-mailbox><enter-command>source ~/.mutt/mails/email-two<enter><change-folder>!<enter>'
+macro index,pager ,3 '<sync-mailbox><enter-command>source ~/.mutt/mails/email-three<enter><change-folder>!<enter>'
 
 # Sidebar
 bind index,pager <left> sidebar-toggle-visible
