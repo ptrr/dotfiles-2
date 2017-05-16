@@ -47,6 +47,7 @@ catfish
 cblas
 cdparanoia
 chromium
+cifs-utils
 clamav
 clamtk
 clucene
@@ -56,6 +57,7 @@ cmake
 cmus
 cogl
 compositeproto
+confuse
 conky
 coreutils
 cower
@@ -82,6 +84,9 @@ docbook-xml
 docbook-xsl
 dosfstools
 e2fsprogs
+efibootmgr
+efivar
+enca
 enchant
 evince-light
 exfat-utils
@@ -89,6 +94,8 @@ exo
 expac
 expat
 f2fs-tools
+faac
+faad2
 faba-icon-theme-git
 faba-mono-icons-git
 fakeroot
@@ -218,6 +225,7 @@ lame
 lapack
 lcms
 lcms2
+ldb
 ldns
 less
 lib32-aalib
@@ -338,6 +346,7 @@ libatasmart
 libatomic_ops
 libavc1394
 libbluray
+libbsd
 libburn
 libcaca
 libcanberra
@@ -354,10 +363,12 @@ libcue
 libcups
 libdaemon
 libdatrie
+libdca
 libdiscid
 libdmx
 libdrm
 libdv
+libdvdnav
 libdvdread
 libe-book
 libedit
@@ -375,6 +386,7 @@ libfm
 libfm-extra
 libfm-gtk2
 libfontenc
+libftdi
 libgcrypt
 libglade
 libglvnd
@@ -402,6 +414,7 @@ libmm-glib
 libmng
 libmnl
 libmodplug
+libmp4v2
 libmpc
 libmpeg2
 libmspub
@@ -466,6 +479,7 @@ libtxc_dxtn
 libunistring
 libunwind
 libusb
+libusb-compat
 libusbmuxd
 libutil-linux
 libuv
@@ -479,6 +493,7 @@ libvoikko
 libvorbis
 libvpx
 libwacom
+libwbclient
 libwebp
 libwmf
 libwnck
@@ -525,7 +540,6 @@ libyaml
 libzmf
 licenses
 lightdm
-lightdm-flexiserver
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 lilv
@@ -533,6 +547,8 @@ linux
 linux-api-headers
 linux-firmware
 linux-lts
+linux-lts-headers
+lirc
 llvm-libs
 lm_sensors
 logrotate
@@ -563,6 +579,7 @@ mousepad
 mozilla-common
 mpfr
 mpg123
+mplayer
 mtdev
 mugshot
 nano
@@ -590,10 +607,12 @@ nspr
 nss
 ntfs-3g
 ntp
+obs-studio
 ocl-icd
 openal
 opencore-amr
 openexr
+openh264
 openjpeg2
 openresolv
 openssh
@@ -614,7 +633,6 @@ pango
 pango-perl
 pangomm
 papirus-icon-theme-git
-parole
 patch
 pavucontrol
 pciutils
@@ -693,6 +711,7 @@ python2-cairo
 python2-gobject2
 python2-numpy
 qrencode
+qt4
 qt5-base
 qt5-connectivity
 qt5-declarative
@@ -714,6 +733,7 @@ raptor
 rasqal
 re2
 readline
+recode
 recordproto
 redland
 reiserfsprogs
@@ -722,6 +742,7 @@ ristretto
 rpcbind
 rsync
 rtkit
+rtmpdump
 ruby
 ruby-bundler
 run-parts
@@ -736,8 +757,10 @@ serd
 shadow
 shared-mime-info
 sharutils
+simplescreenrecorder
 sip
 slang
+smbclient
 snappy
 sord
 sound-theme-freedesktop
@@ -760,12 +783,14 @@ task
 tcl
 tdb
 terminus-font
+tevent
 texinfo
 thin-provisioning-tools
 thunar-archive-plugin
 thunar-extended
 thunar-media-tags-plugin
 thunar-volman
+transmission-gtk
 tslib
 ttf-dejavu
 ttf-fira-sans

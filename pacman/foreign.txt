@@ -4,11 +4,11 @@ evince-light
 faba-icon-theme-git
 faba-mono-icons-git
 gtk-theme-united-gnome
-lightdm-flexiserver
 moka-icon-theme-git
 mugshot
 neofetch
 neomutt
+openh264
 pacaur
 papirus-icon-theme-git
 thunar-extended
