@@ -9,7 +9,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'dpelle/vim-LanguageTool'
   Plug 'scrooloose/nerdcommenter'
   Plug 'ervandew/supertab'
-  Plug 'jiangmiao/auto-pairs'
   Plug 'protesilaos/prot16-vim'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'sheerun/vim-polyglot'
@@ -153,8 +152,11 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Abbreviations
-" TODO Source file
 iab xdate <c-r>=strftime("%Y-%m-%d")<cr>
+iab mesite https://protesilaos.com/
+iab megithub https://github.com/protesilaos
+iab megitlab https://gitlab.com/protesilaos
+iab metwitter https://twitter.com/protstavrou
 
 " Plugin settings
 " ------------------------------------------------
