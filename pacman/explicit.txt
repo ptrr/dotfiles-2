@@ -662,15 +662,14 @@ tcl
 tdb
 terminus-font
 texinfo
+thunar
 thunar-archive-plugin
-thunar-extended
 thunar-media-tags-plugin
 thunar-volman
 transmission-gtk
 tslib
 ttf-dejavu
 ttf-fira-sans
-ttf-hack
 ttf-iosevka-term-zshaped
 tumbler
 udisks2

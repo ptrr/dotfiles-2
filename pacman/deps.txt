@@ -1,4 +1,5 @@
 acl
+alsa-plugins
 archlinux-keyring
 attr
 bluez-libs
@@ -100,7 +101,6 @@ nettle
 npth
 nspr
 nss
-openh264
 openresolv
 openssl
 p11-kit
@@ -112,6 +112,7 @@ perl-error
 pinentry
 polkit
 popt
+pulseaudio-alsa
 qt4
 readline
 recode

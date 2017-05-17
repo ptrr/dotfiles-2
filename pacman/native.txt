@@ -6,6 +6,7 @@ acl
 acpid
 adwaita-icon-theme
 alsa-lib
+alsa-plugins
 alsa-utils
 archlinux-keyring
 aspell
@@ -669,6 +670,7 @@ procps-ng
 protobuf
 psmisc
 pulseaudio
+pulseaudio-alsa
 pygobject-devel
 pygobject2-devel
 pygtk
@@ -773,6 +775,7 @@ terminus-font
 tevent
 texinfo
 thin-provisioning-tools
+thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
@@ -780,7 +783,6 @@ transmission-gtk
 tslib
 ttf-dejavu
 ttf-fira-sans
-ttf-hack
 tumbler
 tzdata
 udisks2

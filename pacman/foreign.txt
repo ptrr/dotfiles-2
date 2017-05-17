@@ -8,10 +8,8 @@ moka-icon-theme-git
 mugshot
 neofetch
 neomutt
-openh264
 pacaur
 papirus-icon-theme-git
-thunar-extended
 ttf-iosevka-term-zshaped
 vertex-themes
 xfce4-volumed-pulse

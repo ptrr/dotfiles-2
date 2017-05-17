@@ -84,7 +84,7 @@ base xfsprogs
 xfce4 exo
 xfce4 garcon
 xfce4 gtk-xfce-engine
-xfce4 thunar-extended
+xfce4 thunar
 xfce4 thunar-volman
 xfce4 tumbler
 xfce4 xfce4-appfinder
