@@ -35,6 +35,9 @@ application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 audio/mpeg=org.xfce.Parole.desktop;
 application/x-perl=mousepad.desktop;
+application/x-bittorrent=transmission-gtk.desktop;
+video/mp4=mplayer.desktop;gnome-mplayer.desktop;org.xfce.Parole.desktop;
+video/x-matroska=mplayer.desktop;gnome-mplayer.desktop;org.xfce.Parole.desktop;smplayer.desktop;
 
 [Default Applications]
 text/html=firefox.desktop

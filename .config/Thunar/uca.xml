@@ -105,17 +105,6 @@
 	<directories/>
 </action>
 <action>
-	<icon>preferences-desktop-wallpaper-symbolic</icon>
-	<name>Set Wallpaper</name>
-	<unique-id>1492891646355132-47</unique-id>
-	<command>xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/workspace1/last-image -s %f</command>
-	<description>Set the current image as the desktop wallpaper</description>
-	<upper>-1</upper>
-	<lower>-1</lower>
-	<patterns>*</patterns>
-	<image-files/>
-</action>
-<action>
 	<icon>web-browser-symbolic</icon>
 	<name>Slugify Name</name>
 	<unique-id>1492891723337691-50</unique-id>
