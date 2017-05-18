@@ -87,10 +87,10 @@ bind attach,index gg first-entry
 bind attach,index G last-entry
 
 bind editor <Tab> complete-query
-bind pager R group-reply
-
-bind index,pager s flag-message
+bind index,pager F flag-message
 bind index,pager P purge-message
+bind index,pager S save-message
+bind index,pager R group-reply
 
 # Account switching
 macro index,pager ,1 '<sync-mailbox><enter-command>source ~/.mutt/mails/email-one<enter><change-folder>!<enter>'
