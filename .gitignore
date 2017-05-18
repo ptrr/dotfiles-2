@@ -1,3 +1,8 @@
+.config/ranger/bookmarks
+.config/ranger/tagged
+.config/qutebrowser/bookmarks
+.config/qutebrowser/keys.conf
+.config/qutebrowser/quickmarks
 .config/xfce4/xfce4-screenshooter
 .config/xfce4/xfwm4
 .config/xfce4/desktop
@@ -5,9 +10,6 @@
 .config/xfce4/weather
 .config/xfce4/xfce4
 .config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
-.config/qutebrowser/bookmarks
-.config/qutebrowser/keys.conf
-.config/qutebrowser/quickmarks
 .newsbeuter/cache.db
 .newsbeuter/cache.db.lock
 .newsbeuter/history.cmdline
