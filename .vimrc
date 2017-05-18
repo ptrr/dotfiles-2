@@ -116,15 +116,31 @@ noremap <silent> <S-J> :m +1<CR>
 noremap <silent> <S-K> :m -2<CR>
 
 " Clear the search highlight
-map <silent> \ :silent nohlsearch<CR>
+nmap <silent> \ :silent nohlsearch<CR>
 
-" Visually select the text that was last edited/pasted
-map <silent> <leader>v `[v`]
+" Toggle letter casing
+" Inverting case of character with ~
+nmap <leader>uu guu
+nmap <leader>UU gUU
+
+" Quick jump to last modification
+nmap <leader>` `.
+nmap <leader>' '.
 
 " Toggle spell check
-map <silent> <leader>sp :set spell!<CR>
+nmap <silent> <leader>sp :set spell!<CR>
 
-" resize splits (http://vim.wikia.com/wiki/Resize_splits_more_quickly)
+" Word Count
+nmap <leader>wc g<C-g>
+
+" Visually select the text that was last edited/pasted
+nmap <silent> <leader>v `[v`]
+
+" Visual wrappings
+:vmap [ "zdi[<C-R>z]<Esc>
+:vmap ( "zdi(<C-R>z)<Esc>
+
+" resize splits
 map <silent> <leader>= :exe "resize " . (winheight(0) * 3/2)<CR>
 map <silent> <leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
