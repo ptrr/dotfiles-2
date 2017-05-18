@@ -125,6 +125,7 @@ geoip-database
 gettext
 giflib
 gimp
+girara
 git
 gjs
 glew
@@ -461,6 +462,7 @@ libspiro
 libsrtp
 libssh
 libssh2
+libsynctex
 libsystemd
 libtasn1
 libteam
@@ -783,6 +785,7 @@ transmission-gtk
 tslib
 ttf-dejavu
 ttf-fira-sans
+ttf-inconsolata
 tumbler
 tzdata
 udisks2
@@ -892,6 +895,8 @@ xvidcore
 xz
 yajl
 youtube-dl
+zathura
+zathura-pdf-poppler
 zd1211-firmware
 zenity
 zeromq

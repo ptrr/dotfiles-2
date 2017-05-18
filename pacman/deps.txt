@@ -21,6 +21,7 @@ expat
 faac
 faad2
 gdbm
+girara
 glib-networking
 glib2
 gmp
@@ -79,6 +80,7 @@ libsecret
 libsodium
 libsoup
 libssh2
+libsynctex
 libsystemd
 libtasn1
 libteam
@@ -125,5 +127,6 @@ tevent
 thin-provisioning-tools
 tzdata
 xz
+zathura-pdf-poppler
 zeromq
 zlib

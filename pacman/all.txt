@@ -89,7 +89,6 @@ efibootmgr
 efivar
 enca
 enchant
-evince-light
 exfat-utils
 exo
 expac
@@ -130,6 +129,7 @@ geoip-database
 gettext
 giflib
 gimp
+girara
 git
 gjs
 glew
@@ -467,6 +467,7 @@ libspiro
 libsrtp
 libssh
 libssh2
+libsynctex
 libsystemd
 libtasn1
 libteam
@@ -632,7 +633,6 @@ pambase
 pango
 pango-perl
 pangomm
-papirus-icon-theme-git
 patch
 pavucontrol
 pciutils
@@ -795,6 +795,7 @@ transmission-gtk
 tslib
 ttf-dejavu
 ttf-fira-sans
+ttf-inconsolata
 ttf-iosevka-term-zshaped
 tumbler
 tzdata
@@ -810,7 +811,6 @@ util-linux
 uudeview
 v4l-utils
 vamp-plugin-sdk
-vertex-themes
 vi
 vid.stab
 videoproto
@@ -907,6 +907,8 @@ xvidcore
 xz
 yajl
 youtube-dl
+zathura
+zathura-pdf-poppler
 zd1211-firmware
 zenity
 zeromq

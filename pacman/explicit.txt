@@ -70,7 +70,6 @@ dosfstools
 e2fsprogs
 efibootmgr
 enchant
-evince-light
 exfat-utils
 exo
 expac
@@ -523,7 +522,6 @@ pacman
 pango
 pango-perl
 pangomm
-papirus-icon-theme-git
 patch
 pavucontrol
 pciutils
@@ -670,6 +668,7 @@ transmission-gtk
 tslib
 ttf-dejavu
 ttf-fira-sans
+ttf-inconsolata
 ttf-iosevka-term-zshaped
 tumbler
 udisks2
@@ -684,7 +683,6 @@ util-linux
 uudeview
 v4l-utils
 vamp-plugin-sdk
-vertex-themes
 vi
 vid.stab
 videoproto
@@ -780,6 +778,7 @@ xproto
 xvidcore
 yajl
 youtube-dl
+zathura
 zd1211-firmware
 zenity
 zip

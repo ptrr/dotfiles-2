@@ -1,6 +1,5 @@
 b43-firmware
 cower
-evince-light
 faba-icon-theme-git
 faba-mono-icons-git
 gtk-theme-united-gnome
@@ -9,7 +8,5 @@ mugshot
 neofetch
 neomutt
 pacaur
-papirus-icon-theme-git
 ttf-iosevka-term-zshaped
-vertex-themes
 xfce4-volumed-pulse
