@@ -8,13 +8,11 @@ export LC_ALL="en_GB.utf8"
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Simplify prompt
 PS1="\[\e[32m\]\w\[\e[m\] \[\e[1;31m\]>\[\e[m\] "
 
 # Aliases
 # --------------------------------------------------------------------
-
-# Editor
-alias v="vim"
 
 # Admin
 alias pSyu="sudo pacman -Syu" # system upgrade
@@ -55,12 +53,28 @@ alias pQqgback="sudo pacman -Qqg > packages-groups.txt"
 
 alias pacback="bash ~/my-utils/backup-pacman-packages.sh" # does the above backups automatically
 
-# Jekyll
-alias bejs="bundle exec jekyll serve"
-alias bejsdev="bundle exec jekyll serve --config _config.yml,_config-dev.yml"
+# Common configs
+alias bbb="vim ~/.bashrc"
+alias ccc="vim ~/.config/conky/conky.conf"
+alias mmm="vim ~/.muttrc"
+alias nnn="vim ~/.newsbeuter/urls"
+alias sss="vim ~/.mutt/mails/signature"
+alias ttt="vim ~/.taskrc"
+alias qqq="vim ~/.config/qutebrowser/qutebrowser.conf"
+alias vvv="vim ~/.vimrc"
+alias xxx="vim ~/.Xresources"
 
-# Sessions
-alias xfcegui="exec startxfce4"
+# Curl
+alias cO="curl -O"
+
+# Editor
+alias v="vim"
+
+# Encryption
+alias crypt="gpg -e -r"
+alias decrypt="gpg -d -r"
+alias sign="gpg -s -r"
+alias vanish="shred -xu"
 
 # Git
 alias gadd="git add"
@@ -69,6 +83,17 @@ alias gcom="git commit -m"
 alias ghead="git push -u origin HEAD"
 alias gpush="git push -u origin master"
 
+# Jekyll
+alias bejs="bundle exec jekyll serve"
+alias bejsdev="bundle exec jekyll serve --config _config.yml,_config-dev.yml"
+
+# Reload files
+alias rbbb="source ~/.bashrc"
+alias rxxx="xrdb -merge ~/.Xresources"
+
+# Sessions
+alias xfcegui="exec startxfce4"
+
 # Tasks
 alias t="task"
 alias tl="task list"
@@ -76,26 +101,3 @@ alias ta="task add"
 alias td="task done"
 alias tm="task modify"
 alias tx="task delete"
-
-# Encryption
-alias crypt="gpg -e -r"
-alias decrypt="gpg -d -r"
-alias sign="gpg -s -r"
-alias vanish="shred -xu"
-
-# Common configs
-alias vvv="vim ~/.vimrc"
-alias bbb="vim ~/.bashrc"
-alias mmm="vim ~/.muttrc"
-alias ttt="vim ~/.taskrc"
-alias sss="vim ~/.mutt/mails/signature"
-alias ccc="vim ~/.config/conky/conky.conf"
-alias nnn="vim ~/.newsbeuter/urls"
-alias qqq="vim ~/.config/qutebrowser/qutebrowser.conf"
-
-# Curl
-alias cO="curl -O"
-
-# Reload files
-alias rbbb="source ~/.bashrc"
-alias rxxx="xrdb -merge ~/.Xresources"
