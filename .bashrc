@@ -98,3 +98,4 @@ alias cO="curl -O"
 
 # Reload files
 alias rbbb="source ~/.bashrc"
+alias rxxx="xrdb -merge ~/.Xresources"
