@@ -1,6 +1,8 @@
 # Configurations for GNU/Linux
 
-These are some of the configuration files I use for my favourite programs on a GNU/Linux machine. The repo also includes some files related to my current setup, such as the package list for pacman (Arch Linux).
+These are some of the configuration files I use for my favourite programs on a GNU/Linux machine. The repo also includes some files related to my main setup, such as the package list for pacman (Arch Linux).
+
+NOTE: The `debian-unstable` branch contains files specific to another Debian-based system. Anything specific to Arch is kept in `master`. Generally though, most of the configs work regardless of distro. What is specific to Arch will not work on Debian and vice-versa.
 
 ## Use case (work in progress)
 
