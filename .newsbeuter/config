@@ -24,7 +24,9 @@ bind-key J next article
 bind-key K prev article
 
 # Colours ----------------------------------------
-# Tested with dark variants of Prot16 schemes <https://protesilaos.com/schemes>
+# Tested with Xfce4 terminal using Prot16 schemes <https://protesilaos.com/schemes>
+
+# Dark variant
 color background color14 color8
 color info color10 color8
 color article color14 color8
@@ -32,5 +34,14 @@ color listnormal color14 color8
 color listfocus color7 color2
 color listnormal_unread color14 color8
 color listfocus_unread color7 color2
-
 highlight article "^(Feed|Title|Author|Link|Date):.*" color11 color8
+
+## Light variant
+# color background color10 color15
+# color info color12 color7
+# color article color10 color15
+# color listnormal color14 color7
+# color listfocus color10 color15
+# color listnormal_unread color10 color15
+# color listfocus_unread color10 color15
+# highlight article "^(Feed|Title|Author|Link|Date):.*" color12 color15
