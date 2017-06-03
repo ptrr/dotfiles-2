@@ -1,8 +1,4 @@
-#------------------------------------------------------------------------------#
-#                   OFFICIAL DEBIAN REPOS                    
-#------------------------------------------------------------------------------#
-
-###### Debian Main Repos
+# Official repos
 deb http://ftp.gr.debian.org/debian/ stretch main contrib non-free
 deb-src http://ftp.gr.debian.org/debian/ stretch main contrib non-free
 
@@ -11,3 +7,7 @@ deb-src http://ftp.gr.debian.org/debian/ stretch-updates main contrib non-free
 
 deb http://security.debian.org/ stretch/updates main
 deb-src http://security.debian.org/ stretch/updates main
+
+# Experimental repos
+# NOTE the following is meant for firefox-esr (v52)
+deb http://http.debian.net/debian experimental main
