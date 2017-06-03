@@ -41,14 +41,12 @@
       <property name="&lt;Alt&gt;a" type="string" value="cmus-remote --pause"/>
       <property name="&lt;Alt&gt;4" type="string" value="exo-open --launch TerminalEmulator mutt"/>
       <property name="&lt;Alt&gt;w" type="string" value="exo-open --launch TerminalEmulator"/>
-      <property name="&lt;Alt&gt;3" type="string" value="exo-open --launch TerminalEmulator newsbeuter"/>
       <property name="&lt;Alt&gt;1" type="string" value="exo-open --launch FileManager"/>
       <property name="&lt;Alt&gt;grave" type="string" value="xfce4-settings-manager"/>
       <property name="Alt_R" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
       <property name="Print" type="string" value="xfce4-screenshooter"/>
-      <property name="&lt;Super&gt;l" type="string" value="i3lock -f -e -c 597899 --image=&quot;/usr/share/backgrounds/xfce/arch_wp.png&quot;"/>
       <property name="&lt;Alt&gt;Return" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
@@ -58,9 +56,10 @@
       <property name="&lt;Alt&gt;5" type="string" value="exo-open --launch TerminalEmulator cmus">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Alt&gt;q" type="string" value="qutebrowser --backend webengine"/>
       <property name="&lt;Alt&gt;2" type="string" value="firefox"/>
       <property name="&lt;Alt&gt;e" type="string" value="xfce4-terminal --drop-down"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;e" type="string" value="dm-tool switch-to-greeter"/>
+      <property name="&lt;Alt&gt;3" type="string" value="exo-open --launch TerminalEmulator newsbeuter"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

@@ -1,4 +1,4 @@
-WebBrowser=custom-WebBrowser
-FileManager=Thunar
+WebBrowser=firefox
 MailReader=mutt
+TerminalEmulator=xfce4-terminal
 
