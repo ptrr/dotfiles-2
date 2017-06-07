@@ -1,0 +1,289 @@
+# vim:filetype=i3
+# i3 config file (v4)
+set $mod Mod4
+
+# Common tools
+set $term xfce4-terminal
+set $fm thunar
+set $browser firefox
+set $fmterm xfce4-terminal -x ranger
+set $rss xfce4-terminal -x newsbeuter
+set $mail xfce4-terminal -x mutt
+set $music xfce4-terminal -x cmus
+
+# Colour scheme
+# Hinterland - https://protesilaos.com/hinterland
+set $dbg #12171B 
+set $dhl #22272B 
+set $dt2 #60604f
+set $dt1 #8aa0a4
+set $lbg #f9f8fc
+set $lhl #e9e8ec 
+set $lt2 #768592
+set $lt1 #3d463f
+set $red #983f16 
+set $ora #9e6c3d 
+set $yel #b09020 
+set $gre #3D814C 
+set $cya #01917b 
+set $blu #217ab3 
+set $vio #7d6cab 
+set $mag #ad5c5b 
+
+# Window rules
+workspace_auto_back_and_forth yes
+force_display_urgency_hint 0 ms
+focus_on_window_activation urgent
+
+# Window states
+# order: BORDER BACKGROUND FOREGROUND INDICATOR CHILD_BORDER
+client.focused $dhl $dbg $dt2 $dt2 $dbg
+client.unfocused $dbg $dbg $lt1 $dbg $dbg
+client.focused_inactive $dbg $dbg $lt2 $dbg $dbg
+client.urgent $red $red $dhl $red $red
+client.background $dhl
+
+# Font for window titles. Will also be used by the bar unless a different font
+font pango:DejaVu Sans Mono 8
+
+# Disable titlebars
+# for_window [class="^.*"] border pixel 0
+
+# Gaps
+# smart_gaps on
+smart_borders on
+
+gaps inner 15
+gaps outer 15
+
+# Dynamic gapping
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# Before i3 v4.8, we used to recommend this one as the default:
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# The font above is very space-efficient, that is, it looks good, sharp and
+# clear in small sizes. However, its unicode glyph coverage is limited, the old
+# X core fonts rendering does not support right-to-left and this being a bitmap
+# font, it doesn’t scale on retina/hidpi displays.
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier Mod1
+
+# start a terminal
+bindsym Mod1+w exec $term
+
+# kill focused window
+bindsym $mod+q kill
+
+# app launcher
+bindsym $mod+Return exec --no-startup-id rofi -show run
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Mod1+h move left
+bindsym $mod+Mod1+j move down
+bindsym $mod+Mod1+k move up
+bindsym $mod+Mod1+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym Mod1+h split h
+
+# split in vertical orientation
+bindsym Mod1+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Mod1+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Mod1+1 move container to workspace 1
+bindsym $mod+Mod1+2 move container to workspace 2
+bindsym $mod+Mod1+3 move container to workspace 3
+bindsym $mod+Mod1+4 move container to workspace 4
+bindsym $mod+Mod1+5 move container to workspace 5
+bindsym $mod+Mod1+6 move container to workspace 6
+bindsym $mod+Mod1+7 move container to workspace 7
+bindsym $mod+Mod1+8 move container to workspace 8
+bindsym $mod+Mod1+9 move container to workspace 9
+bindsym $mod+Mod1+0 move container to workspace 10
+
+# reload the configuration file
+bindsym $mod+Mod1+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Mod1+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Mod1+q exec "i3-nagbar -t warning -m 'Exit i3?' -b 'Yes' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# i3 bar
+bar {
+        status_command i3blocks
+        height 20
+        tray_output eDP1
+        tray_output LVDS-0
+        tray_padding 0
+        position top
+        font pango:DejaVu Sans Mono 9
+        separator_symbol "/"
+
+        colors {
+            background $dbg
+            statusline $dt2
+            separator $lt1
+
+            focused_workspace $dt2 $dt2 $dbg
+            active_workspace $dt2 $dbg $dt2
+            inactive_workspace $lt1 $lt1 $dbg
+            urgent_workspace $red $red $dbg
+        }
+}
+
+# screenshot
+bindsym Print exec --no-startup-id "xfce4-screenshooter"
+
+# Lock
+bindsym Mod1+l exec --no-startup-id "bash ~/.config/i3/lock.sh"
+
+# Pulse Audio controls
+bindsym Mod1+x exec pactl set-sink-volume 0 +5% #increase sound volume
+bindsym Mod1+z exec pactl set-sink-volume 0 -5% #decrease sound volume
+
+# Media player controls
+bindsym Mod1+a exec "cmus-remote -u"
+bindsym Mod1+d exec "cmus-remote -n"
+bindsym Mod1+s exec "cmus-remote -r"
+
+# Auxiliary windows
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+
+# Workspace vars
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws10 0
+
+# Application shortcuts
+bindsym Mod1+1 exec $fm
+bindsym Mod1+2 exec $browser
+bindsym Mod1+3 exec $rss
+bindsym Mod1+4 exec $mail
+bindsym Mod1+5 exec $music
+bindsym Mod1+q exec $fmterm
+
+# Application placement
+assign [class="^Gimp"] $ws5
+assign [class="^Riot"] $ws6
+
+# Autostart
+exec_always --no-startup-id feh --bg-fill $HOME/Pictures/unsplash/ross-sokolovski-165164.jpg
+exec --no-startup-id compton -b
+exec --no-startup-id "setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle'"

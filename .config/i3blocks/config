@@ -1,0 +1,30 @@
+# Global properties
+separator_block_width=30
+align=center_all
+
+[mediaplayer]
+command=/home/prot/.config/i3blocks/blocklets/mediaplayer/mediaplayer
+instance=cmus
+color=#3d463f
+interval=5
+signal=10
+
+[kbdd_layout]
+command=/home/prot/.config/i3blocks/blocklets/kbdd_layout/kbdd_layout
+color=#60604f
+interval=persist
+
+[date]
+command=date "+%a %m-%d"
+color=#3D814C
+interval=once
+
+[volume-pulseaudio]
+command=/home/prot/.config/i3blocks/blocklets/volume-pulseaudio/volume-pulseaudio -Sa -f 3
+color=#01917b
+interval=persist
+
+[time]
+command=date "+%H:%M"
+color=#217ab3
+interval=60
