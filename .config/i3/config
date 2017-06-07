@@ -202,10 +202,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym i resize shrink width 10 px or 10 ppt
+        bindsym o resize grow width 10 px or 10 ppt
+        bindsym Ctrl+i resize shrink height 10 px or 10 ppt
+        bindsym Ctrl+o resize grow height 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -217,6 +217,7 @@ bindsym $mod+r mode "resize"
 # i3 bar
 bar {
         status_command i3blocks
+        i3bar_command i3bar -t
         height 20
         tray_output eDP1
         tray_output LVDS-0
@@ -226,16 +227,31 @@ bar {
         separator_symbol "/"
 
         colors {
-            background $dbg
+            background #00000050
             statusline $dt2
             separator $lt1
 
-            focused_workspace $dt2 $dt2 $dbg
-            active_workspace $dt2 $dbg $dt2
-            inactive_workspace $lt1 $lt1 $dbg
-            urgent_workspace $red $red $dbg
+            focused_workspace $lt1 #88880030 $dt2
+            active_workspace $dhl #4444440020 $dt2
+            inactive_workspace $dhl #22220020 $lt1
+            urgent_workspace $ora $ora $dbg
         }
 }
+
+# Power management
+set $mode_system System (l) lock, (w) logout, (r) reboot, (q) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id "bash ~/.config/i3/lock.sh"
+    bindsym w exec --no-startup-id i3-msg exit, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym q exec --no-startup-id systemctl poweroff -i, mode "default"  
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+p mode "$mode_system"
 
 # screenshot
 bindsym Print exec --no-startup-id "xfce4-screenshooter"

@@ -5,18 +5,18 @@ align=center_all
 [mediaplayer]
 command=/home/prot/.config/i3blocks/blocklets/mediaplayer/mediaplayer
 instance=cmus
-color=#3d463f
+color=#768592
 interval=5
 signal=10
 
 [kbdd_layout]
 command=/home/prot/.config/i3blocks/blocklets/kbdd_layout/kbdd_layout
-color=#60604f
+color=#7d6cab
 interval=persist
 
 [date]
 command=date "+%a %m-%d"
-color=#3D814C
+color=#217ab3
 interval=once
 
 [volume-pulseaudio]
@@ -26,5 +26,5 @@ interval=persist
 
 [time]
 command=date "+%H:%M"
-color=#217ab3
+color=#3D814C
 interval=60
