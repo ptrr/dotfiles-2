@@ -37,7 +37,7 @@ focus_on_window_activation urgent
 
 # Window states
 # order: BORDER BACKGROUND FOREGROUND INDICATOR CHILD_BORDER
-client.focused $dhl $dbg $dt2 $dt2 $dbg
+client.focused $dhl $dbg $dt2 $dt2 $lt1
 client.unfocused $dbg $dbg $lt1 $dbg $dbg
 client.focused_inactive $dbg $dbg $lt2 $dbg $dbg
 client.urgent $red $red $dhl $red $red
@@ -51,8 +51,8 @@ font pango:DejaVu Sans Mono 8
 
 # Gaps
 # smart_gaps on
+new_window 1pixel
 smart_borders on
-
 gaps inner 15
 gaps outer 15
 
@@ -94,13 +94,6 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier Mod1
 
@@ -109,6 +102,7 @@ bindsym Mod1+w exec $term
 
 # kill focused window
 bindsym $mod+q kill
+bindsym Ctrl+q kill
 
 # app launcher
 bindsym $mod+Return exec --no-startup-id rofi -show run
@@ -147,8 +141,9 @@ bindsym Mod1+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# NOTE not using these layouts, but keeping it just in case
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -158,7 +153,7 @@ bindsym $mod+Mod1+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -187,12 +182,22 @@ bindsym $mod+Mod1+8 move container to workspace 8
 bindsym $mod+Mod1+9 move container to workspace 9
 bindsym $mod+Mod1+0 move container to workspace 10
 
+# move focused container to workspace and switch to it
+bindsym Ctrl+$mod+Mod1+1 move container to workspace 1, worskpace 1
+bindsym Ctrl+$mod+Mod1+2 move container to workspace 2, worskpace 2
+bindsym Ctrl+$mod+Mod1+3 move container to workspace 3, worskpace 3
+bindsym Ctrl+$mod+Mod1+4 move container to workspace 4, worskpace 4
+bindsym Ctrl+$mod+Mod1+5 move container to workspace 5, worskpace 5
+bindsym Ctrl+$mod+Mod1+6 move container to workspace 6, worskpace 6
+bindsym Ctrl+$mod+Mod1+7 move container to workspace 7, worskpace 7
+bindsym Ctrl+$mod+Mod1+8 move container to workspace 8, worskpace 8
+bindsym Ctrl+$mod+Mod1+9 move container to workspace 9, worskpace 9
+bindsym Ctrl+$mod+Mod1+0 move container to workspace 10, worskpace 10
+
 # reload the configuration file
 bindsym $mod+Mod1+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Mod1+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Mod1+q exec "i3-nagbar -t warning -m 'Exit i3?' -b 'Yes' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -219,9 +224,7 @@ bar {
         status_command i3blocks
         i3bar_command i3bar -t
         height 20
-        tray_output eDP1
-        tray_output LVDS-0
-        tray_padding 0
+        tray_output none
         position top
         font pango:DejaVu Sans Mono 9
         separator_symbol "/"
@@ -277,6 +280,7 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
 # Workspace vars
+# NOTE can change their names, add icons
 set $ws1 1
 set $ws2 2
 set $ws3 3
@@ -285,7 +289,8 @@ set $ws5 5
 set $ws6 6
 set $ws7 7
 set $ws8 8
-set $ws10 0
+set $ws9 9
+set $ws10 10
 
 # Application shortcuts
 bindsym Mod1+1 exec $fm
@@ -296,10 +301,11 @@ bindsym Mod1+5 exec $music
 bindsym Mod1+q exec $fmterm
 
 # Application placement
+assign [class="^Riot"] $ws3
 assign [class="^Gimp"] $ws5
-assign [class="^Riot"] $ws6
 
 # Autostart
-exec_always --no-startup-id feh --bg-fill $HOME/Pictures/unsplash/ross-sokolovski-165164.jpg
+exec --no-startup-id feh --bg-fill $HOME/Pictures/unsplash/ross-sokolovski-165164.jpg
 exec --no-startup-id compton -b
 exec --no-startup-id "setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle'"
+exec --no-startup-id "setxkbmap -option compose:rctrl"
