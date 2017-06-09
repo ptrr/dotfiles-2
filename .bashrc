@@ -1,25 +1,20 @@
 #
 # ~/.bashrc
-# Symlinked to /root/.bashrc
 #
 
-# if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-    # export TERM='xterm-256color'
-# else
-    # export TERM='xterm-color'
-# fi
-
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# Root and normal user prompt
-if [ $(id -u) -eq 0 ];
-then
-    PS1="\[\e[33m\]\w\[\e[m\] \[\e[31m\]#\[\e[m\] "
-else
-    PS1="\[\e[32m\]\w\[\e[m\] \[\e[1;31m\]>\[\e[m\] "
-fi
+# Custom prompt
+PS1="\[\e[32m\]\w\[\e[m\] \[\e[1;31m\]>\[\e[m\] "
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Aliases
 # --------------------------------------------------------------------
@@ -39,18 +34,19 @@ alias aar="sudo apt autoremove"
 alias as="sudo apt search"
 alias ash="sudo apt show"
 
-# TODO Need to test this
-alias al="sudo apt list"
+# TODO do they need sudo?
+alias acs="apt-cache search --names-only"
+alias acsfull="apt-cache search --full"
+alias acsh="apt-cache showpkg"
 
 # Common configs
 alias bbb="vim ~/.bashrc"
-alias ccc="vim ~/.config/conky/conky.conf"
+alias blocks="vim .config/i3blocks/config"
+alias iii="vim ~/.config/i3/config"
 alias mmm="vim ~/.muttrc"
 alias nnn="vim ~/.newsbeuter/urls"
 alias sss="vim ~/.mutt/mails/signature"
 alias ttt="vim ~/.taskrc"
-# NOTE qutebrowser is not in Debian repos
-# alias qqq="vim ~/.config/qutebrowser/qutebrowser.conf"
 alias vvv="vim ~/.vimrc"
 alias xxx="vim ~/.Xresources"
 
@@ -87,7 +83,9 @@ alias rbbb="source ~/.bashrc"
 alias rxxx="xrdb -merge ~/.Xresources"
 
 # Sessions
+# FIXME check which one works in Debian
 alias xfcegui="exec startxfce4"
+alias xfceguinew="exec ck-launch-session startxfce4"
 
 # Tasks
 alias t="task"
@@ -97,3 +95,17 @@ alias td="task done"
 alias tm="task modify"
 alias tx="task delete"
 
+# YouTube dl
+alias mp3="youtube-dl -x --audio-format mp3 -o '~/Music/%(title)s.%(ext)s'"
+alias ytmp3="youtube-dl -x --audio-format mp3 -o '~/Music/Youtube/%(title)s.%(ext)s'"
+
+# NOTE for i3
+alias fehbg="feh --bg-scale"
+
+# Packages
+
+# System restore
+# Requires apt-get install dselect
+# feed it the file: dpkg --set-selections < file
+# alias dpkgrestore="dpkg --set-selections" 
+# Install from file apt-get dselect-upgrade

@@ -26,12 +26,14 @@ N=$( dbus-send --print-reply=literal --dest=ru.gentoo.KbddService\
     /ru/gentoo/KbddService ru.gentoo.kbdd.getCurrentLayout 2>/dev/null |\
     sed -un 's/^.*uint32 //p' )
 
+
 # In case dbus service wasn't available yet, poll until service is ready
 while [[ -z "$N" ]]; do
     sleep .1
     N=$( dbus-send --print-reply=literal --dest=ru.gentoo.KbddService\
         /ru/gentoo/KbddService ru.gentoo.kbdd.getCurrentLayout 2>/dev/null |\
         sed -un 's/^.*uint32 //p' )
+
 done
 echo $( dbus-send --print-reply=literal --dest=ru.gentoo.KbddService \
 	/ru/gentoo/KbddService ru.gentoo.kbdd.getLayoutName uint32:$N )

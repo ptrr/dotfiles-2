@@ -34,6 +34,7 @@ set $mag #ad5c5b
 workspace_auto_back_and_forth yes
 force_display_urgency_hint 0 ms
 focus_on_window_activation urgent
+focus_follows_mouse no
 
 # Window states
 # order: BORDER BACKGROUND FOREGROUND INDICATOR CHILD_BORDER
@@ -305,5 +306,6 @@ assign [class="^Gimp"] $ws5
 exec --no-startup-id feh --bg-fill $HOME/Pictures/unsplash/ross-sokolovski-165164.jpg
 exec --no-startup-id compton -b
 exec --no-startup-id "setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle'"
-# FIXME find why compose does not autostart
 exec_always --no-startup-id "setxkbmap -option compose:rctrl"
+exec_always --no-startup-id "unclutter"
+# exec_always --no-startup-id "eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
