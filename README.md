@@ -8,4 +8,8 @@ Sample of my current setup:
 
 ## License
 
-Unless otherwise noted, all code herein is distributed under the terms of the GNU General Public License v3.0.
+Unless otherwise noted, all code herein is distributed under the terms of the GNU General Public License v3.0. In cases where that cannot apply (e.g. a picture), the Creative Commons Attribution-SahreAlike 4.0 License shall be used instead.
+
+## Credits
+
+The current `.config/i3/wallpaper.jpg` is by [Ross Sokolowski on Unsplash](https://unsplash.com/photos/UAFXj9dRpwo). Reused under the terms of the [Unsplash license](https://unsplash.com/license).
