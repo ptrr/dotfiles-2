@@ -289,9 +289,9 @@ bindsym Mod1+d exec "cmus-remote -n"
 bindsym Mod1+s exec "cmus-remote -r"
 
 # Autostart
-exec --no-startup-id feh --bg-fill $HOME/Pictures/unsplash/ross-sokolovski-165164.jpg
 exec --no-startup-id compton -b
 exec --no-startup-id "setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle'"
+exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg   
 exec_always --no-startup-id "setxkbmap -option compose:rctrl"
 exec_always --no-startup-id "unclutter"
 # exec_always --no-startup-id "eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"

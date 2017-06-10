@@ -139,9 +139,9 @@ class prot16(ColorScheme):
             elif context.vcsstaged:
                 fg = 4
             elif context.vcssync:
-                fg = 5
+                fg = 12
             elif context.vcsignored:
-                fg = 6
+                fg = 10
 
         elif context.vcsremote and not context.selected:
             attr &= ~bold
