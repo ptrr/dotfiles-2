@@ -156,10 +156,6 @@ bindsym Ctrl+$mod+Mod1+8 move container to workspace $ws8, workspace $ws8
 bindsym Ctrl+$mod+Mod1+9 move container to workspace $ws9, workspace $ws9
 bindsym Ctrl+$mod+Mod1+0 move container to workspace $ws10, workspace $ws10
 
-# Workspace gaps
-workspace $ws5 gaps inner 0
-workspace $ws5 gaps outer 0
-
 # i3 modalities
 # =============
 
@@ -242,13 +238,13 @@ bar {
         separator_symbol "/"
 
         colors {
-            background #00000050
+            background $dbg
             statusline $dt2
             separator $lt1
 
-            focused_workspace $lt1 #88880030 $dt2
-            active_workspace $dhl #4444440020 $dt2
-            inactive_workspace $dhl #22220020 $lt1
+            focused_workspace $lt1 $dhl $dt1
+            active_workspace $dhl $dbg $dt2
+            inactive_workspace $dhl $dbg $lt1
             urgent_workspace $ora $ora $dbg
         }
 }

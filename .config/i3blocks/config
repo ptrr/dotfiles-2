@@ -14,17 +14,17 @@ command=/home/prot/.config/i3blocks/blocklets/kbdd_layout/kbdd_layout
 color=#7d6cab
 interval=persist
 
-[date]
-command=date "+%a %m-%d"
-color=#217ab3
-interval=once
-
 [volume-pulseaudio]
 command=/home/prot/.config/i3blocks/blocklets/volume-pulseaudio/volume-pulseaudio -Sa -f 3
-color=#01917b
+color=#217ab3
 interval=persist
 
+[date]
+command=date "+%a %m-%d"
+color=#01917b
+interval=once
+
 [time]
-command=date "+%H:%M"
+command=date "+%H:%M "
 color=#3D814C
 interval=60
