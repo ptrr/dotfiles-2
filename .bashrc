@@ -41,7 +41,7 @@ alias acsh="apt-cache showpkg"
 
 # Common configs
 alias bbb="vim ~/.bashrc"
-alias blocks="vim .config/i3blocks/config"
+alias blocks="vim ~/.config/i3blocks/config"
 alias iii="vim ~/.config/i3/config"
 alias mmm="vim ~/.muttrc"
 alias nnn="vim ~/.newsbeuter/urls"
@@ -103,9 +103,9 @@ alias ytmp3="youtube-dl -x --audio-format mp3 -o '~/Music/Youtube/%(title)s.%(ex
 alias fehbg="feh --bg-scale"
 
 # Packages
+alias debbackup="bash ~/bin/deb-backup.sh"
 
 # System restore
 # Requires apt-get install dselect
 # feed it the file: dpkg --set-selections < file
-# alias dpkgrestore="dpkg --set-selections" 
 # Install from file apt-get dselect-upgrade
