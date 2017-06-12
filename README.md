@@ -12,6 +12,6 @@ Unless otherwise noted, all code herein is distributed under the terms of the GN
 
 ## Credits
 
-The current `.config/i3/wallpaper.jpg` is by [Ross Sokolowski on Unsplash](https://unsplash.com/photos/UAFXj9dRpwo). Reused under the terms of the [Unsplash license](https://unsplash.com/license).
+The current `.config/i3/wallpaper.jpg` is by [Matteo Minelli on Unsplash](https://unsplash.com/@matteominelli?photo=VgdFyOOu1PA). Reused under the terms of the [Unsplash license](https://unsplash.com/license).
 
 All code herein is a combination of my own work, adaptations from others' contributions, man pages, and wiki articles.
