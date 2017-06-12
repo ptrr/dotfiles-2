@@ -57,7 +57,7 @@ for_window [window_type="menu"] floating enable
 
 # Window states
 # order: BORDER BACKGROUND FOREGROUND INDICATOR CHILD_BORDER
-client.focused $dhl $dbg $dt2 $lt1 $dt2
+client.focused $dhl $dbg $dt2 $blu $gre
 client.unfocused $dbg $dbg $lt1 $dbg $dbg
 client.focused_inactive $dbg $dbg $lt2 $dbg $dbg
 client.urgent $red $red $dhl $red $red
@@ -241,7 +241,8 @@ bar {
             background $dbg
             statusline $dt2
             separator $lt1
-
+            
+            # BORDER BACKGROUND FOREGROUND
             focused_workspace $lt1 $dhl $dt1
             active_workspace $dhl $dbg $dt2
             inactive_workspace $dhl $dbg $lt1
@@ -276,8 +277,8 @@ assign [class="^Gimp"] $ws5
 bindsym Print exec --no-startup-id "xfce4-screenshooter"
 
 # Pulse Audio volume
-bindsym Mod1+x exec pactl set-sink-volume 0 +5% #increase sound volume
-bindsym Mod1+z exec pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym Mod1+x exec amixer set Master 10%+
+bindsym Mod1+z exec amixer set Master 10%-
 
 # Media player controls
 bindsym Mod1+a exec "cmus-remote -u"
@@ -286,9 +287,9 @@ bindsym Mod1+s exec "cmus-remote -r"
 
 # Autostart
 exec --no-startup-id compton -b
+exec --no-startup-id "unclutter"
+exec --no-startup-id "setxkbmap -option compose:rctrl"
+exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg   
 exec --no-startup-id "setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle'"
-exec_always --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg   
-exec_always --no-startup-id "setxkbmap -option compose:rctrl"
-exec_always --no-startup-id "unclutter"
-exec_always --no-startup-id "/usr/bin/xcalib -d :0 ~/.local/share/icc/Gamma5500K.icc"
+exec --no-startup-id "/usr/bin/xcalib -d :0 /usr/share/color/icc/colord/Gamma5500K.icc"
 # exec_always --no-startup-id "eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
