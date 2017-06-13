@@ -67,6 +67,7 @@ busybox						install
 bzip2						install
 ca-certificates					install
 ca-certificates-java				install
+cabextract					install
 caribou						deinstall
 cdrdao						install
 certbot						install
@@ -116,6 +117,7 @@ debian-archive-keyring				install
 debian-faq					install
 debian-keyring					install
 debianutils					install
+debugedit					install
 default-java-plugin				install
 default-jre					install
 default-jre-headless				install
@@ -147,6 +149,7 @@ dpkg						install
 dpkg-dev					install
 dput						install
 dselect						install
+dtrx						install
 dunst						install
 dvdauthor					install
 e2fslibs:amd64					install
@@ -208,13 +211,11 @@ fonts-font-awesome				install
 fonts-freefont-ttf				install
 fonts-hack-ttf					install
 fonts-junicode					deinstall
-fonts-lato					install
 fonts-liberation				install
 fonts-linuxlibertine				install
 fonts-lmodern					install
-fonts-noto					install
-fonts-noto-cjk					install
-fonts-noto-hinted				install
+fonts-noto-cjk					deinstall
+fonts-noto-hinted				deinstall
 fonts-noto-mono					install
 fonts-opensymbol				install
 fonts-roboto					install
@@ -330,6 +331,7 @@ gnome-shell					install
 gnome-shell-common				install
 gnome-software					install
 gnome-software-common				install
+gnome-sound-recorder				install
 gnome-sushi					install
 gnome-terminal					install
 gnome-terminal-data				install
@@ -1058,6 +1060,7 @@ libmediaart-2.0-0:amd64				install
 libmetis5:amd64					install
 libmhash2:amd64					install
 libmime-tools-perl				install
+libminiupnpc10:amd64				install
 libminizip1:amd64				install
 libmjpegutils-2.1-0				install
 libmm-glib0:amd64				install
@@ -1081,6 +1084,7 @@ libmpfr4:amd64					install
 libmpg123-0:amd64				install
 libmplex2-2.1-0					install
 libmpx2:amd64					install
+libmspack0:amd64				install
 libmspub-0.1-1:amd64				install
 libmtdev1:amd64					install
 libmtp-common					install
@@ -1092,6 +1096,7 @@ libmutter0i:amd64				install
 libmwaw-0.3-3:amd64				install
 libmythes-1.2-0:amd64				install
 libnamespace-clean-perl				install
+libnatpmp1:amd64				install
 libnautilus-extension1a:amd64			install
 libncurses5:amd64				install
 libncursesw5:amd64				install
@@ -1318,6 +1323,10 @@ librest-0.7-0:amd64				install
 librevenge-0.0-0:amd64				install
 librhythmbox-core10:amd64			install
 librole-tiny-perl				install
+librpm3						install
+librpmbuild3					install
+librpmio3					install
+librpmsign3					install
 librsvg2-2:amd64				install
 librsvg2-common:amd64				install
 librtmp1:amd64					install
@@ -1468,6 +1477,7 @@ libumfpack5.6.2:amd64				deinstall
 libunicode-utf8-perl				install
 libunique-1.0-0					install
 libunistring0:amd64				install
+libunshield0:amd64				install
 libupower-glib3:amd64				install
 liburi-perl					install
 libusageenvironment1				deinstall
@@ -1707,7 +1717,7 @@ mencoder					install
 mesa-utils					install
 mesa-vdpau-drivers:amd64			install
 mime-support					install
-minissdpd					deinstall
+minissdpd					install
 mlocate						install
 mobile-broadband-provider-info			install
 modemmanager					install
@@ -1751,6 +1761,7 @@ openssh-client					install
 openssl						install
 orage						install
 os-prober					install
+oss-compat					install
 p11-kit						install
 p11-kit-modules:amd64				install
 p7zip						install
@@ -1781,7 +1792,7 @@ policykit-1-gnome				install
 poppler-data					install
 popularity-contest				install
 ppp						install
-preview-latex-style				install
+preview-latex-style				deinstall
 procmail					install
 procps						install
 prosper						install
@@ -1876,6 +1887,7 @@ python3-pycurl					install
 python3-pysimplesoap				install
 python3-reportbug				install
 python3-requests				install
+python3-setuptools				install
 python3-six					install
 python3-smbc					install
 python3-software-properties			install
@@ -1906,6 +1918,9 @@ riot-web					install
 ristretto					install
 rofi						install
 rpcbind						install
+rpm						install
+rpm-common					install
+rpm2cpio					install
 rsync						install
 rsyslog						install
 rtkit						install
@@ -1983,12 +1998,12 @@ texlive-fonts-extra				deinstall
 texlive-fonts-extra-doc				deinstall
 texlive-fonts-recommended			install
 texlive-fonts-recommended-doc			install
-texlive-generic-extra				install
+texlive-generic-extra				deinstall
 texlive-generic-recommended			install
 texlive-latex-base				install
 texlive-latex-base-doc				install
-texlive-latex-extra				install
-texlive-latex-extra-doc				install
+texlive-latex-extra				deinstall
+texlive-latex-extra-doc				deinstall
 texlive-latex-recommended			install
 texlive-latex-recommended-doc			install
 texlive-luatex					install
@@ -1996,7 +2011,7 @@ texlive-pictures				install
 texlive-pictures-doc				install
 texlive-pstricks				install
 texlive-pstricks-doc				install
-texlive-xetex					install
+texlive-xetex					deinstall
 thunar						install
 thunar-archive-plugin				install
 thunar-data					install
@@ -2004,6 +2019,8 @@ thunar-media-tags-plugin			install
 thunar-volman					install
 thunderbird					install
 time						install
+timidity					deinstall
+timidity-daemon					deinstall
 tipa						install
 tk						install
 tk8.6						install
@@ -2013,7 +2030,8 @@ totem-plugins					install
 traceroute					install
 tracker						install
 tracker-gui					install
-transmission-gtk				deinstall
+transmission-common				install
+transmission-gtk				install
 tumbler						install
 tumbler-common					install
 tzdata						install
@@ -2022,6 +2040,7 @@ udev						install
 udisks2						install
 unclutter					install
 uno-libs3					install
+unshield					install
 unzip						install
 update-inetd					install
 upower						install
@@ -2040,7 +2059,6 @@ vim						install
 vim-common					install
 vim-runtime					install
 vim-tiny					install
-vlc						deinstall
 vlc-nox						deinstall
 vlc-plugin-notify:amd64				deinstall
 vlc-plugin-samba:amd64				deinstall
