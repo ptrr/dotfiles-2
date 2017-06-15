@@ -57,21 +57,18 @@ for_window [window_type="menu"] floating enable
 
 # Window states
 # order: BORDER BACKGROUND FOREGROUND INDICATOR CHILD_BORDER
-client.focused $dhl $dbg $dt2 $blu $gre
+client.focused $dhl $dbg $dt2 $red $ora
 client.unfocused $dbg $dbg $lt1 $dbg $dbg
 client.focused_inactive $dbg $dbg $lt2 $dbg $dbg
 client.urgent $red $red $dhl $red $red
 client.background $dhl
 
-# Disable titlebars
-# NOTE Enabling this also removes the border and thus there is no visible focus state
-# for_window [class="^.*"] border pixel 0
-
 # Decorations and gaps
-new_window 1pixel
+for_window [class="^.*"] border pixel 2
+# new_window 1pixel
 smart_borders on
 gaps inner 15
-gaps outer 15
+gaps outer 5
 
 # Use Mouse+Mod1 (Alt) to drag floating windows to their wanted position
 floating_modifier Mod1
@@ -161,9 +158,8 @@ bindsym Ctrl+$mod+Mod1+0 move container to workspace $ws10, workspace $ws10
 
 # Dynamic gaps
 set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-bindsym $mod+g mode "$mode_gaps"
+set $mode_gaps_outer Outer Gaps: o = +5 / i=-5 / u = 0 (local), O = +5 / I = -5 / U = 0 (global)
+set $mode_gaps_inner Inner Gaps: o = +5 / i=-5 / u = 0 (local), O = +5 / I = -5 / U = 0 (global)
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
@@ -173,32 +169,36 @@ mode "$mode_gaps" {
 }
 
 mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
+        bindsym o  gaps inner current plus 5
+        bindsym i  gaps inner current minus 5
+        bindsym u  gaps inner current set 0
 
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
+        bindsym O  gaps inner all plus 5
+        bindsym I  gaps inner all minus 5
+        bindsym U  gaps inner all set 0
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
+        bindsym o  gaps outer current plus 5
+        bindsym i  gaps outer current minus 5
+        bindsym u  gaps outer current set 0
 
-        bindsym Shift+plus  gaps outer all plus 5
-        bindsym Shift+minus gaps outer all minus 5
-        bindsym Shift+0     gaps outer all set 0
+        bindsym O  gaps outer all plus 5
+        bindsym I  gaps outer all minus 5
+        bindsym U  gaps outer all set 0
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
-# resize window (you can also use the mouse for that)
-mode "resize" {
+bindsym $mod+g mode "$mode_gaps"
+
+# Resize window
+set $resize Window (i) shrink (o) grow
+
+mode "$resize" {
         bindsym i resize shrink width 10 px or 10 ppt
         bindsym o resize grow width 10 px or 10 ppt
         bindsym Ctrl+i resize shrink height 10 px or 10 ppt
@@ -209,12 +209,14 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "$resize"
 
-# Power management
-set $mode_system System (l) lock, (w) logout, (r) reboot, (q) shutdown
+# Session management
+set $mode_system System (l) lock, (s) switch users, (w) logout, (r) reboot, (q) shutdown
+
 mode "$mode_system" {
     bindsym l exec --no-startup-id "bash ~/.config/i3/lock.sh"
+    bindsym s exec --no-startup-id "dm-tool switch-to-greeter"
     bindsym w exec --no-startup-id i3-msg exit, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym q exec --no-startup-id systemctl poweroff -i, mode "default"  
@@ -226,11 +228,29 @@ mode "$mode_system" {
 
 bindsym $mod+p mode "$mode_system"
 
+# Quick launchers
+# NOTE work in progress
+set $quicklaunchers Launch (1) Thunar, (2) Firefox, (3) Newsbeuter, (4) Mutt, (5) Cmus, (r) Ranger
+
+mode "$quicklaunchers" {
+    bindsym 1 exec $fm
+    bindsym 2 exec $browser
+    bindsym 3 exec $rss
+    bindsym 4 exec $mail
+    bindsym 5 exec $music
+    bindsym r exec $fmterm
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+x mode "$quicklaunchers"
+
 # i3 bar and statusline
 # =====================
 bar {
         status_command i3blocks
-        i3bar_command i3bar -t
         height 20
         tray_output none
         position top
@@ -267,6 +287,7 @@ bindsym Mod1+r exec $fmterm
 bindsym $mod+Return exec --no-startup-id rofi -show run
 
 # Application placement
+assign [class="^Chromium"] $ws2
 assign [class="^Riot"] $ws3
 assign [class="^Gimp"] $ws5
 
@@ -277,8 +298,8 @@ assign [class="^Gimp"] $ws5
 bindsym Print exec --no-startup-id "xfce4-screenshooter"
 
 # Pulse Audio volume
-bindsym Mod1+x exec amixer set Master 10%+
-bindsym Mod1+z exec amixer set Master 10%-
+bindsym Mod1+x exec amixer set Master 5%+
+bindsym Mod1+z exec amixer set Master 5%-
 
 # Media player controls
 bindsym Mod1+a exec "cmus-remote -u"
@@ -290,6 +311,6 @@ exec --no-startup-id compton -b
 exec --no-startup-id "unclutter"
 exec --no-startup-id "setxkbmap -option compose:rctrl"
 exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg   
-exec --no-startup-id "setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle'"
+exec_always --no-startup-id "setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle'"
 exec --no-startup-id "/usr/bin/xcalib -d :0 /usr/share/color/icc/colord/Gamma5500K.icc"
-# exec_always --no-startup-id "eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
+exec --no-startup-id "eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
