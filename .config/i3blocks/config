@@ -20,11 +20,11 @@ color=#217ab3
 interval=persist
 
 [date]
-command=date "+%a %m-%d"
+command=date "+%Y-%m-%d"
 color=#01917b
 interval=once
 
 [time]
-command=date "+%H:%M "
+command=date "+%a, %H:%M "
 color=#3D814C
 interval=60
