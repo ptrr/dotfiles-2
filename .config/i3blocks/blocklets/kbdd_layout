@@ -18,8 +18,6 @@
 
 # In case user is restarting block after making layout changes
 # e.g. via setxkbmap, reload kbdd
-
-# Adapted by Protesilaos Stavrou to shorten output of English and Greek layouts
 killall kbdd 2>/dev/null
 kbdd >/dev/null || exit 1
 
@@ -35,11 +33,9 @@ while [[ -z "$N" ]]; do
         /ru/gentoo/KbddService ru.gentoo.kbdd.getCurrentLayout 2>/dev/null |\
         sed -un 's/^.*uint32 //p' )
 done
+echo $( dbus-send --print-reply=literal --dest=ru.gentoo.KbddService \
+	/ru/gentoo/KbddService ru.gentoo.kbdd.getLayoutName uint32:$N )
 
-dbus-send --print-reply=literal --dest=ru.gentoo.KbddService \
-  /ru/gentoo/KbddService ru.gentoo.kbdd.getLayoutName uint32:$N |\
-  sed -un 's:.*English.*:EN:p;s:.*Greek.*:EL:p'
-
-# Parse dbus output 
+# Parse dbus output
 dbus-monitor "interface='ru.gentoo.kbdd',member='layoutNameChanged'" |\
-  sed -un 's:.*English.*:EN:p;s:.*Greek.*:EL:p'
+	sed -un '0~2p' | sed -un 's:.*string "\(.*\)".*:\1:p'  | sed -u '/:/d'

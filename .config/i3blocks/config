@@ -3,28 +3,53 @@ separator_block_width=30
 align=center_all
 
 [mediaplayer]
-command=/home/prot/.config/i3blocks/blocklets/mediaplayer/mediaplayer
+command=/home/prot/.config/i3blocks/blocklets/mediaplayer
 instance=cmus
 color=#768592
 interval=5
-signal=10
+signal=persist
+
+# [network]
+# command=/home/prot/.config/i3blocks/blocklets/network
+# label=
+# interval=persist
+
+[keystate]
+command=/home/prot/.config/i3blocks/blocklets/keystate
+label=ABC
+color=#983f16
+instance=caps
+interval=1
+
+[keystate]
+command=/home/prot/.config/i3blocks/blocklets/keystate
+label=123
+color=#ad5c5b
+instance=num
+interval=1
 
 [kbdd_layout]
-command=/home/prot/.config/i3blocks/blocklets/kbdd_layout/kbdd_layout
+command=/home/prot/.config/i3blocks/blocklets/kbdd_layout
 color=#7d6cab
 interval=persist
 
 [volume-pulseaudio]
-command=/home/prot/.config/i3blocks/blocklets/volume-pulseaudio/volume-pulseaudio -Sa -f 3
+command=/home/prot/.config/i3blocks/blocklets/volume-pulseaudio -Sa -f 3
 color=#217ab3
+interval=persist
+
+[taskwarrior]
+command=/home/prot/.config/i3blocks/blocklets/taskwarrior
+color=#01917b
 interval=persist
 
 [date]
 command=date "+%Y-%m-%d"
-color=#01917b
+color=#3D814C
 interval=once
 
 [time]
 command=date "+%a, %H:%M "
-color=#3D814C
+color=#9e6c3d
 interval=60
+
