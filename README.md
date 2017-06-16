@@ -8,7 +8,7 @@ Sample of my current setup:
 
 ## License
 
-Unless otherwise noted, all code herein is distributed under the terms of the GNU General Public License v3.0. In cases where that cannot apply (e.g. a picture), the Creative Commons Attribution-SahreAlike 4.0 License shall be used instead.
+Unless otherwise noted, all code herein is distributed under the terms of the GNU General Public License v3.0. In cases where that cannot apply (e.g. a picture), the Creative Commons Attribution-ShareAlike 4.0 License shall be used instead.
 
 ## Credits
 
