@@ -16,14 +16,14 @@ signal=persist
 
 [keystate]
 command=/home/prot/.config/i3blocks/blocklets/keystate
-label=ABC
+label=Α_Ω
 color=#983f16
 instance=caps
 interval=1
 
 [keystate]
 command=/home/prot/.config/i3blocks/blocklets/keystate
-label=123
+label=1_9
 color=#ad5c5b
 instance=num
 interval=1

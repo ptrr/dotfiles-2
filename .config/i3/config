@@ -287,9 +287,8 @@ bindsym Mod1+r exec $fmterm
 bindsym $mod+Return exec --no-startup-id rofi -show run
 
 # Application placement
-assign [class="^Chromium"] $ws2
-assign [class="^Riot"] $ws3
 assign [class="^Gimp"] $ws5
+assign [class="^Chromium"] $ws6
 
 # Controls and utilities
 # ======================
