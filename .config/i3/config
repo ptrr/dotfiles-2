@@ -310,6 +310,6 @@ exec --no-startup-id compton -b
 exec --no-startup-id "unclutter"
 exec --no-startup-id "setxkbmap -option compose:rctrl"
 exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg   
-exec_always --no-startup-id "setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle'"
+exec --no-startup-id "setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle'"
 exec --no-startup-id "/usr/bin/xcalib -d :0 /usr/share/color/icc/colord/Gamma5500K.icc"
 exec --no-startup-id "eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
