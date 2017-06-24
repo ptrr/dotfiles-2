@@ -12,6 +12,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'protesilaos/prot16-vim'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'sheerun/vim-polyglot'
+  Plug 'qpkorr/vim-renamer'
+  Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
@@ -156,6 +158,9 @@ nnoremap <leader>ff :CtrlP<cr>
 nnoremap <leader>ft :CtrlPTag<cr>
 nnoremap <leader>fb :CtrlPBuffer<cr>
 
+" Toggle Goyo
+map <leader>go :Goyo<CR>
+
 " Helpers
 " ------------------------------------------------
 " Paste mode avoids auto-indent
@@ -194,6 +199,11 @@ let g:ctrlp_custom_ignore = {
    \ 'dir': 'node_modules\|bower_components\|public\|_site\|vendor',
    \ }
 
+" Goyo
+let g:goyo_width = 100
+let g:goyo_height = '90%'
+
 " Theme
+set t_Co=256
 syntax enable
 colorscheme hinterland_dark
