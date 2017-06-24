@@ -195,21 +195,33 @@ mode "$mode_gaps_outer" {
 
 bindsym $mod+g mode "$mode_gaps"
 
-# Resize window
-set $resize Window (i) shrink (o) grow
+# Dynamic window resize
+set $mode_resize Resize: (h) horizontal, (v) vertical
+set $mode_resize_vertical Width: (i) reduce, (o) increase
+set $mode_resize_horizontal Height: (i) reduce, (o) increase
 
-mode "$resize" {
-        bindsym i resize shrink width 10 px or 10 ppt
-        bindsym o resize grow width 10 px or 10 ppt
-        bindsym Ctrl+i resize shrink height 10 px or 10 ppt
-        bindsym Ctrl+o resize grow height 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
+mode "$mode_resize" {
+        bindsym v      mode "$mode_resize_vertical"
+        bindsym h      mode "$mode_resize_horizontal"
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "$resize"
+mode "$mode_resize_vertical" {
+        bindsym i resize shrink width 10 px or 10 ppt
+        bindsym o resize grow width 10 px or 10 ppt
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_resize_horizontal" {
+        bindsym i resize shrink height 10 px or 10 ppt
+		bindsym o resize grow height 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "$mode_resize"
 
 # Session management
 set $mode_system System (l) lock, (s) switch users, (w) logout, (r) reboot, (q) shutdown
