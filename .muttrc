@@ -51,7 +51,7 @@ set sort_aux = reverse-last-date-received
 # GPG
 source ~/.mutt/gpg.rc
 set crypt_use_gpgme = yes
-set crypt_autosign = yes
+set crypt_autosign = no
 set crypt_autosmime = yes
 set crypt_replyencrypt = yes
 set crypt_replysignencrypted = yes
@@ -81,8 +81,10 @@ set sidebar_delim_chars="/" # Delete everything up to the last / character
 # Bindings --------------------------------------
 bind pager j next-line
 bind pager k previous-line
+bind pager g noop # As suggested here https://www.neomutt.org/guide/configuration.html#bind-warnings
 bind pager gg top
 bind pager G bottom
+bind attach,index g noop # As suggested here https://www.neomutt.org/guide/configuration.html#bind-warnings
 bind attach,index gg first-entry
 bind attach,index G last-entry
 
