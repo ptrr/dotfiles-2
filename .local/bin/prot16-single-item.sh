@@ -1,7 +1,11 @@
 #!/bin/bash
+# IMPORTANT This script presupposes some change in the prot16-builder/db/schemes/
+# The builder is then updated with `npm version patch && npm publish`
+# The new builder is installed with `[sudo] npm i -g prot16-builder`
+
 # Define theme slug
 # NOTE this could be a loop for all items. Just keeping it simple.
-scheme=sonho
+scheme=nefelio
 
 # Prepare files for prot16 repo
 # TODO write prot16-builder templates for plain yml and jekyll-rouge scss
@@ -53,3 +57,6 @@ do
     git commit -m "Update ${scheme}"
     git push -u origin master
 done
+
+# TODO atom themes will require apm syncing
+# TODO `apm publish [major | minor | patch]`
