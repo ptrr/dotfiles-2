@@ -15,23 +15,23 @@ set $mail xfce4-terminal -x mutt
 set $music xfce4-terminal -x cmus
 
 # Colour scheme
-# Hinterland - https://protesilaos.com/hinterland
-set $dbg #12171B 
-set $dhl #22272B 
-set $dt2 #60604f
-set $dt1 #8aa0a4
-set $lbg #f9f8fc
-set $lhl #e9e8ec 
-set $lt2 #768592
-set $lt1 #3d463f
-set $red #983f16 
-set $ora #9e6c3d 
-set $yel #b09020 
-set $gre #3D814C 
-set $cya #01917b 
-set $blu #217ab3 
-set $vio #7d6cab 
-set $mag #ad5c5b 
+# Fortuna - https://protesilaos.com/fortuna
+set $dbg #453731
+set $dhl #554741
+set $dt2 #837858
+set $dt1 #98b4ac
+set $lbg #f2f1ef
+set $lhl #e2e1df
+set $lt2 #78849c
+set $lt1 #5d6348
+set $red #da5447
+set $ora #dc7926
+set $yel #db9d0b
+set $gre #78ad28
+set $cya #16adac
+set $blu #3894cd
+set $vio #aa8bee
+set $mag #dc6788
 
 # Fonts
 font pango:DejaVu Sans Mono 8
@@ -57,7 +57,7 @@ for_window [window_type="menu"] floating enable
 
 # Window states
 # order: BORDER BACKGROUND FOREGROUND INDICATOR CHILD_BORDER
-client.focused $dhl $dbg $dt2 $red $ora
+client.focused $dhl $dbg $dt2 $red $gre
 client.unfocused $dbg $dbg $lt1 $dbg $dbg
 client.focused_inactive $dbg $dbg $lt2 $dbg $dbg
 client.urgent $red $red $dhl $red $red

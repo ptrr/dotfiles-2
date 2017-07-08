@@ -5,7 +5,7 @@ align=center_all
 [mediaplayer]
 command=/home/prot/.config/i3blocks/blocklets/mediaplayer
 instance=cmus
-color=#768592
+color=#837858
 interval=5
 signal=persist
 
@@ -17,39 +17,39 @@ signal=persist
 [keystate]
 command=/home/prot/.config/i3blocks/blocklets/keystate
 label=Α_Ω
-color=#983f16
+color=#da5447
 instance=caps
 interval=1
 
 [keystate]
 command=/home/prot/.config/i3blocks/blocklets/keystate
 label=1_9
-color=#ad5c5b
+color=#dc6788
 instance=num
 interval=1
 
 [kbdd_layout]
 command=/home/prot/.config/i3blocks/blocklets/kbdd_layout
-color=#7d6cab
+color=#aa8bee
 interval=persist
 
 [volume-pulseaudio]
 command=/home/prot/.config/i3blocks/blocklets/volume-pulseaudio -Sa -f 3
-color=#217ab3
+color=#3894cd
 interval=persist
 
 [taskwarrior]
 command=/home/prot/.config/i3blocks/blocklets/taskwarrior
-color=#01917b
+color=#16adac 
 interval=persist
 
 [date]
 command=date "+%Y-%m-%d"
-color=#3D814C
+color=#78ad28
 interval=once
 
 [time]
 command=date "+%a, %H:%M "
-color=#9e6c3d
+color=#dc7926
 interval=60
 
