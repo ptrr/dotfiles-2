@@ -263,10 +263,10 @@ bindsym $mod+x mode "$quicklaunchers"
 # =====================
 bar {
         status_command i3blocks
-        height 20
+        height 30
         tray_output none
         position top
-        font pango:DejaVu Sans Mono 9
+        font pango:Iosevka Term Light 11
         separator_symbol "/"
 
         colors {
