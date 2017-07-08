@@ -101,11 +101,13 @@ nmap <leader>qa :qa!<cr>
 " Remap escape for insert mode
 inoremap jk <Esc>
 
+" Navigate vsplits
+nmap <silent> <leader>l <c-w>l
+nmap <silent> <leader>h <c-w>h
+
 " Navigate and maximise splits
 nmap <silent> <leader>j <C-W>j<C-W>_
 nmap <silent> <leader>k <C-W>k<C-W>_
-nmap <silent> <leader>h <c-w>h<c-w><bar>
-nmap <silent> <leader>l <c-w>l<c-w><bar>
 
 " Manage tabs
 nmap <S-T> :tabnew<cr>
@@ -141,6 +143,9 @@ nmap <silent> <leader>v `[v`]
 " Visual wrappings
 :vmap [ "zdi[<C-R>z]<Esc>
 :vmap ( "zdi(<C-R>z)<Esc>
+:vmap { "zdi{<C-R>z}<Esc>
+:vmap ` "zdi`<C-R>z`<Esc>
+:vmap <leader>< "zdi<<C-R>z><Esc>
 
 " resize splits
 map <silent> <leader>= :exe "resize " . (winheight(0) * 3/2)<CR>
@@ -206,4 +211,4 @@ let g:goyo_height = '90%'
 " Theme
 set t_Co=256
 syntax enable
-colorscheme hinterland_dark
+colorscheme equinox_dark
