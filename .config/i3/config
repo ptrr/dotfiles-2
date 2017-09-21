@@ -6,32 +6,33 @@
 set $mod Mod4
 
 # Common tools
-set $term xfce4-terminal
+set $term urxvt
 set $browser firefox
-set $fm thunar
-set $fmterm xfce4-terminal -x ranger
-set $rss xfce4-terminal -x newsbeuter
-set $mail xfce4-terminal -x mutt
-set $music xfce4-terminal -x cmus
+set $fm urxvt -e ranger
+set $rss urxvt -e newsbeuter
+set $mail urxvt -e mutt
+set $music urxvt -e ncmpcpp
+set $imged gimp
+set $calc urxvt -e calcurse
 
 # Colour scheme
 # Fortuna - https://protesilaos.com/fortuna
-set $dbg #453731
-set $dhl #554741
-set $dt2 #837858
-set $dt1 #98b4ac
-set $lbg #f2f1ef
-set $lhl #e2e1df
-set $lt2 #78849c
-set $lt1 #5d6348
-set $red #da5447
-set $ora #dc7926
-set $yel #db9d0b
-set $gre #78ad28
-set $cya #16adac
-set $blu #3894cd
-set $vio #aa8bee
-set $mag #dc6788
+set $dbg #0a2d3c
+set $dhl #1a3d4c
+set $dt2 #8d9474
+set $dt1 #9ebcc8
+set $lbg #f6f6f6
+set $lhl #e6e6e6
+set $lt2 #6a8ba9
+set $lt1 #5d654e
+set $red #d94832
+set $ora #dc7d3a
+set $yel #dbac13
+set $gre #32a850
+set $cya #2ebad8
+set $blu #1d8fde
+set $vio #aa7deb
+set $mag #dc76aa
 
 # Fonts
 font pango:DejaVu Sans Mono 8
@@ -153,8 +154,11 @@ bindsym Ctrl+$mod+Mod1+8 move container to workspace $ws8, workspace $ws8
 bindsym Ctrl+$mod+Mod1+9 move container to workspace $ws9, workspace $ws9
 bindsym Ctrl+$mod+Mod1+0 move container to workspace $ws10, workspace $ws10
 
-# i3 modalities
-# =============
+# Stop/hide everything
+bindsym Ctrl+Mod1+Delete workspace 10; exec $term -e htop; exec $term -e ranger
+
+# i3 window drawing and modalities
+# ================================
 
 # Dynamic gaps
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -196,32 +200,10 @@ mode "$mode_gaps_outer" {
 bindsym $mod+g mode "$mode_gaps"
 
 # Dynamic window resize
-set $mode_resize Resize: (h) horizontal, (v) vertical
-set $mode_resize_vertical Width: (i) reduce, (o) increase
-set $mode_resize_horizontal Height: (i) reduce, (o) increase
-
-mode "$mode_resize" {
-        bindsym v      mode "$mode_resize_vertical"
-        bindsym h      mode "$mode_resize_horizontal"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-mode "$mode_resize_vertical" {
-        bindsym i resize shrink width 10 px or 10 ppt
-        bindsym o resize grow width 10 px or 10 ppt
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_resize_horizontal" {
-        bindsym i resize shrink height 10 px or 10 ppt
-		bindsym o resize grow height 10 px or 10 ppt
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-bindsym $mod+r mode "$mode_resize"
+bindsym $mod+i resize shrink width 10 px or 10 ppt
+bindsym $mod+o resize grow width 10 px or 10 ppt
+bindsym $mod+Shift+i resize shrink height 10 px or 10 ppt
+bindsym $mod+Shift+o resize grow height 10 px or 10 ppt
 
 # Session management
 set $mode_system System (l) lock, (s) switch users, (w) logout, (r) reboot, (q) shutdown
@@ -240,48 +222,6 @@ mode "$mode_system" {
 
 bindsym $mod+p mode "$mode_system"
 
-# Quick launchers
-# NOTE work in progress
-set $quicklaunchers Launch (1) Thunar, (2) Firefox, (3) Newsbeuter, (4) Mutt, (5) Cmus, (r) Ranger
-
-mode "$quicklaunchers" {
-    bindsym 1 exec $fm
-    bindsym 2 exec $browser
-    bindsym 3 exec $rss
-    bindsym 4 exec $mail
-    bindsym 5 exec $music
-    bindsym r exec $fmterm
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym $mod+x mode "$quicklaunchers"
-
-# i3 bar and statusline
-# =====================
-bar {
-        status_command i3blocks
-        height 25
-        tray_output none
-        position top
-        font pango:Iosevka Term 10
-        separator_symbol "/"
-
-        colors {
-            background $dbg
-            statusline $dt2
-            separator $lt1
-            
-            # BORDER BACKGROUND FOREGROUND
-            focused_workspace $lt1 $dhl $dt1
-            active_workspace $dhl $dbg $dt2
-            inactive_workspace $dhl $dbg $lt1
-            urgent_workspace $ora $ora $dbg
-        }
-}
-
 # Applications
 # ============
 bindsym $mod+w exec $term
@@ -293,7 +233,8 @@ bindsym Mod1+2 exec $browser
 bindsym Mod1+3 exec $rss
 bindsym Mod1+4 exec $mail
 bindsym Mod1+5 exec $music
-bindsym Mod1+r exec $fmterm
+bindsym Mod1+6 exec $imged
+bindsym Mod1+7 exec $calc
 
 # App launcher menu
 bindsym $mod+Return exec --no-startup-id rofi -show run
@@ -306,21 +247,31 @@ assign [class="^Chromium"] $ws6
 # ======================
 
 # Screenshot
-bindsym Print exec --no-startup-id "xfce4-screenshooter"
+bindsym Print exec --no-startup-id scrot -u -z '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Desktop'
+bindsym Shift+Print exec --no-startup-id scrot -s -z '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Desktop'
 
-# Pulse Audio volume
-bindsym Mod1+x exec amixer set Master 5%+
-bindsym Mod1+z exec amixer set Master 5%-
+# Volume
+set $mute --no-startup-id amixer sset Master toggle
+set $volumeup --no-startup-id amixer set Master 5%+
+set $volumedown --no-startup-id amixer set Master 5%-
+
+bindsym Mod1+x exec $volumeup
+bindsym Mod1+z exec $volumedown
+bindsym XF86AudioMute exec $mute
+bindsym XF86AudioRaiseVolume exec $volumeup
+bindsym XF86AudioLowerVolume exec $volumedown
 
 # Media player controls
-bindsym Mod1+a exec "cmus-remote -u"
-bindsym Mod1+d exec "cmus-remote -n"
-bindsym Mod1+s exec "cmus-remote -r"
+bindsym Mod1+a exec --no-startup-id mpc toggle
+bindsym Mod1+s exec --no-startup-id mpc prev
+bindsym Mod1+d exec --no-startup-id mpc next
 
 # Autostart
+exec_always --no-startup-id mpd
+exec --no-startup-id unclutter
 exec --no-startup-id compton -b
-exec --no-startup-id "unclutter"
 exec --no-startup-id "setxkbmap -option compose:rctrl"
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg   
 exec_always --no-startup-id "setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle'"
 exec --no-startup-id "/usr/bin/xcalib -d :0 /usr/share/color/icc/colord/Gamma5500K.icc"

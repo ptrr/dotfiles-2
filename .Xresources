@@ -1,3 +1,5 @@
+! Font settings
+! ============
 Xft.dpi: 96
 Xft.antialias: true      
 Xft.hinting: true
@@ -6,12 +8,14 @@ Xft.autohint: true
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-! rofi
+! Rofi
+! ============
 rofi.modi: run
-rofi.font: Hack 12
+rofi.font: Iosevka Term 24
 rofi.width: 50
 rofi.lines: 5
 rofi.columns: 1
+
 !                    bg       fg      altbg    hlbg     hlfg
 rofi.color-normal: #12171B, #60604f, #12171B, #60604f, #12171B
 rofi.color-urgent: #12171B, #60604f, #12171B, #60604f, #12171B
@@ -19,5 +23,64 @@ rofi.color-active: #12171B, #60604f, #12171B, #60604f, #12171B
 rofi.color-window: #12171B, #12171B
 rofi.bw: 0
 rofi.location: 0
-rofi.padding: 20
+rofi.padding: 50
 rofi.fuzzy: false
+
+! urxvt
+! ============
+
+! Colours - Fortuna (Prot16)
+URxvt*background: [90]#0a2d3c
+URxvt*foreground: #9ebcc8
+URxvt*cursorColor: #9ebcc8
+URxvt*color0: #1a3d4c
+URxvt*color1: #d94832
+URxvt*color2: #32a850
+URxvt*color3: #dbac13
+URxvt*color4: #1d8fde
+URxvt*color5: #dc76aa
+URxvt*color6: #2ebad8
+URxvt*color7: #e6e6e6
+URxvt*color8: #0a2d3c
+URxvt*color9: #dc7d3a
+URxvt*color10: #5d654e
+URxvt*color11: #8d9474
+URxvt*color12: #6a8ba9
+URxvt*color13: #aa7deb
+URxvt*color14: #9ebcc8
+URxvt*color15: #f6f6f6
+
+! Preferences
+URxvt.termName: rxvt-unicode
+URxvt.cursorBlink: true
+URxvt.saveLines: 5000
+URxvt.intensityStyles: false
+URxvt.depth: 32
+URxvt.font: xft:Iosevka Term:size=13:antialias=true
+URxvt.allow_bold: true
+URxvt.letterSpace: -1
+URxvt.scrollBar: false
+Urxvt.secondaryScroll: true # Enable Shift-PageUp/Down in screen
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard
+URxvt.url-launcher:	firefox
+URxvt.matcher.button: 1
+
+! Key Bindings
+! NOTE see https://superuser.com/questions/1247281/how-to-configure-rxvt-unicode-to-behave-similar-to-gnome-terminal-or-others-f
+!
+! Disable ISO 14755 unicode input so we can use Ctrl-Shift bindings
+URxvt.iso14755:        false
+URxvt.iso14755_52:     false
+! Disable Ctrl-Alt-c & Ctrl-Alt-v bindings (optional)
+URxvt.keysym.C-M-c:    builtin-string:
+URxvt.keysym.C-M-v:    builtin-string:
+! Bind Ctrl-c & Ctrl-v to copy and paste
+! I dont know why, but I needed to use hex keysym values to get it to work
+URxvt.keysym.C-c: eval:selection_to_clipboard
+URxvt.keysym.C-v: eval:paste_clipboard
+
+URxvt.keysym.Home: \033[H
+URxvt.keysym.End:  \033[F
+
+! clear the scrollback
+URxvt.keysym.Control-l: command:\033c

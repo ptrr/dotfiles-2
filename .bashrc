@@ -2,6 +2,12 @@
 # ~/.bashrc
 #
 
+# Autocomplete with sudo
+if [ "$PS1" ]; then
+    complete -cf sudo
+fi
+
+# Needed with i3
 if [ -n "$DESKTOP_SESSION" ];then
     eval $(gnome-keyring-daemon --start)
     export SSH_AUTH_SOCK
@@ -20,24 +26,32 @@ export EDITOR="$VISUAL"
 # --------------------------------------------------------------------
 
 # Admin
+alias pSyu="sudo pacman -Syu" # system upgrade
+alias aSyu="pacaur -Syu --aur" # system upgrade aur
+alias pD="sudo pacman -D" # control package install state with `--asdeps` or `--asexplicit`
 
-# NOTE Only run upgrades as root
-# NOTE The command is apt-get, as recommended in the man pages
-alias aguu="apt-get update && apt-get upgrade"
-alias agudu="apt-get update && apt-get dist-upgrade"
+alias pS="pacaur -S" # sync download
+alias pSs="sudo pacman -Ss" # query database for package
+alias ps="pacaur --search" # search aur
+alias pRs="pacaur -Rs" # remove unless conflicting deps
+alias pRnsc="sudo pacman -Rnsc" # remove recursively
+alias pRnscQqdt="sudo pacman -Rnsc $(pacman -Qqdt)" # remove orphans
 
-# NOTE Run as regular user
-alias ai="sudo apt install"
-alias ar="sudo apt remove"
-alias ap="sudo apt purge"
-alias aar="sudo apt autoremove"
-alias as="sudo apt search"
-alias ash="sudo apt show"
+alias pQi="sudo pacman -Qi" # see package details
+alias pQs="sudo pacman -Qs" # list packages based on query
+alias pQmq="sudo pacman -Qmq" # list foreign packages
+alias pQdt="sudo pacman -Qdt" # list orphans
 
-# TODO do they need sudo?
-alias acs="apt-cache search --names-only"
-alias acsfull="apt-cache search --full"
-alias acsh="apt-cache showpkg"
+alias pcache1="sudo paccache -rk 1" # remove cache except last item
+alias pcache0="sudo paccache -ruk0" # remove all cache
+
+# Admin - backups
+alias pQqback="sudo pacman -Qq > packages-all.txt"
+alias pQnqback="sudo pacman -Qnq > packages-native.txt"
+alias pQmqback="sudo pacman -Qmq > packages-foreign.txt"
+alias pQqeback="sudo pacman -Qqe > packages-explicit.txt"
+alias pQqdback="sudo pacman -Qqd > packages-deps.txt"
+alias pQqgback="sudo pacman -Qqg > packages-groups.txt"
 
 # Common configs
 alias bbb="vim ~/.bashrc"
@@ -82,11 +96,6 @@ alias bejsdev="bundle exec jekyll serve --config _config.yml,_config-dev.yml"
 alias rbbb="source ~/.bashrc"
 alias rxxx="xrdb -merge ~/.Xresources"
 
-# Sessions
-# FIXME check which one works in Debian
-alias xfcegui="exec startxfce4"
-alias xfceguinew="exec ck-launch-session startxfce4"
-
 # Tasks
 alias t="task"
 alias tl="task list"
@@ -101,11 +110,3 @@ alias ytmp3="youtube-dl -x --audio-format mp3 -o '~/Music/Youtube/%(title)s.%(ex
 
 # NOTE for i3
 alias fehbg="feh --bg-scale"
-
-# Packages
-alias debbackup="bash ~/bin/deb-backup.sh"
-
-# System restore
-# Requires apt-get install dselect
-# feed it the file: dpkg --set-selections < file
-# Install from file apt-get dselect-upgrade
