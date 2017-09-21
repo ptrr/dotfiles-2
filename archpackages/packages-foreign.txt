@@ -1,0 +1,10 @@
+cinnamon-sound-effects
+cower
+dtrx
+i3-gaps-git
+iso-flag-png
+lightdm-slick-greeter
+pacaur
+papirus-icon-theme-git
+polybar
+ttf-iosevka-term-ss04
