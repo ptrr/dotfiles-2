@@ -198,6 +198,20 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" Git status nerdtree
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "*",
+    \ "Staged"    : "+",
+    \ "Untracked" : "^",
+    \ "Renamed"   : "R",
+    \ "Unmerged"  : "/",
+    \ "Deleted"   : "D",
+    \ "Dirty"     : "x",
+    \ "Clean"     : "V",
+    \ 'Ignored'   : '~',
+    \ "Unknown"   : "?"
+    \ }
+
 " CtrlP
 " Ignore common directories
 let g:ctrlp_custom_ignore = {
