@@ -1,5 +1,7 @@
+abook
 accountsservice
 acl
+adapta-gtk-theme
 adwaita-icon-theme
 alsa-lib
 alsa-plugins
@@ -133,6 +135,7 @@ gettext
 giblib
 giflib
 gimp
+girara
 git
 glew
 glib-networking
@@ -141,6 +144,7 @@ glib2-docs
 glibc
 glibmm
 glu
+gmime
 gmp
 gnome-backgrounds
 gnome-calculator
@@ -186,6 +190,8 @@ hspell
 htop
 http-parser
 hunspell
+hunspell-el
+hunspell-en_GB
 hwids
 hyphen
 i3-gaps-git
@@ -338,6 +344,8 @@ libpulse
 libraqm
 libraw1394
 libreoffice-fresh
+libreoffice-fresh-el
+libreoffice-fresh-en-GB
 librevenge
 librsvg
 libsamplerate
@@ -354,6 +362,7 @@ libsoxr
 libspiro
 libssh
 libssh2
+libsynctex
 libsystemd
 libtasn1
 libteam
@@ -427,11 +436,11 @@ licenses
 lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
-lightdm-slick-greeter
 lilv
 linux
 linux-api-headers
 linux-firmware
+linux-headers
 linux-lts-headers
 llvm-libs
 lm_sensors
@@ -461,12 +470,12 @@ mpfr
 mpv
 mtdev
 muffin
-mutt
 nano
 ncmpcpp
 ncurses
 nemo
 nemo-fileroller
+neomutt-git
 neon
 netctl
 nettle
@@ -475,6 +484,7 @@ networkmanager
 newsbeuter
 nm-connection-editor
 nodejs
+notmuch-runtime
 noto-fonts
 npm
 npth
@@ -612,9 +622,11 @@ tdb
 tevent
 texinfo
 thin-provisioning-tools
+thunderbird
 transmission-gtk
 ttf-dejavu
 ttf-fira-sans
+ttf-hack
 ttf-iosevka-term-ss04
 ttf-liberation
 ttf-roboto
@@ -654,8 +666,10 @@ wpa_supplicant
 wxgtk-common
 wxgtk2
 x265
+xapian-core
 xapps
 xbitmaps
+xcalib
 xcb-proto
 xcb-util
 xcb-util-cursor
@@ -672,9 +686,9 @@ xf86-input-libinput
 xf86-video-ati
 xf86dgaproto
 xf86vidmodeproto
-xfce4-terminal
 xfconf
 xfsprogs
+xiccd
 xineramaproto
 xkeyboard-config
 xmlsec
@@ -732,6 +746,7 @@ yajl
 yelp-tools
 yelp-xsl
 youtube-dl
+zathura
 zenity
 zeromq
 zip

@@ -3,8 +3,10 @@ cower
 dtrx
 i3-gaps-git
 iso-flag-png
-lightdm-slick-greeter
+neomutt-git
 pacaur
 papirus-icon-theme-git
 polybar
 ttf-iosevka-term-ss04
+xcalib
+xiccd

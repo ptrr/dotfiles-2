@@ -1,5 +1,7 @@
+abook
 accountsservice
 acl
+adapta-gtk-theme
 adwaita-icon-theme
 alsa-lib
 alsa-plugins
@@ -130,6 +132,7 @@ gettext
 giblib
 giflib
 gimp
+girara
 git
 glew
 glib-networking
@@ -138,6 +141,7 @@ glib2-docs
 glibc
 glibmm
 glu
+gmime
 gmp
 gnome-backgrounds
 gnome-calculator
@@ -183,6 +187,8 @@ hspell
 htop
 http-parser
 hunspell
+hunspell-el
+hunspell-en_GB
 hwids
 hyphen
 i3blocks
@@ -333,6 +339,8 @@ libpulse
 libraqm
 libraw1394
 libreoffice-fresh
+libreoffice-fresh-el
+libreoffice-fresh-en-GB
 librevenge
 librsvg
 libsamplerate
@@ -349,6 +357,7 @@ libsoxr
 libspiro
 libssh
 libssh2
+libsynctex
 libsystemd
 libtasn1
 libteam
@@ -426,6 +435,7 @@ lilv
 linux
 linux-api-headers
 linux-firmware
+linux-headers
 linux-lts-headers
 llvm-libs
 lm_sensors
@@ -455,7 +465,6 @@ mpfr
 mpv
 mtdev
 muffin
-mutt
 nano
 ncmpcpp
 ncurses
@@ -469,6 +478,7 @@ networkmanager
 newsbeuter
 nm-connection-editor
 nodejs
+notmuch-runtime
 noto-fonts
 npm
 npth
@@ -603,9 +613,11 @@ tdb
 tevent
 texinfo
 thin-provisioning-tools
+thunderbird
 transmission-gtk
 ttf-dejavu
 ttf-fira-sans
+ttf-hack
 ttf-liberation
 ttf-roboto
 tzdata
@@ -644,6 +656,7 @@ wpa_supplicant
 wxgtk-common
 wxgtk2
 x265
+xapian-core
 xapps
 xbitmaps
 xcb-proto
@@ -662,7 +675,6 @@ xf86-input-libinput
 xf86-video-ati
 xf86dgaproto
 xf86vidmodeproto
-xfce4-terminal
 xfconf
 xfsprogs
 xineramaproto
@@ -722,6 +734,7 @@ yajl
 yelp-tools
 yelp-xsl
 youtube-dl
+zathura
 zenity
 zeromq
 zip
