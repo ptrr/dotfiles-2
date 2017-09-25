@@ -225,4 +225,4 @@ let g:goyo_height = '90%'
 " Theme
 set t_Co=256
 syntax enable
-colorscheme fortuna_dark
+colorscheme hyperion_dark

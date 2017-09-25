@@ -10,13 +10,14 @@ set $term urxvt
 set $browser firefox
 set $fm urxvt -e ranger
 set $rss urxvt -e newsbeuter
-set $mail urxvt -e mutt
+set $mail urxvt -e neomutt
 set $music urxvt -e ncmpcpp
 set $imged gimp
 set $calc urxvt -e calcurse
 
 # Colour scheme
-# Fortuna - https://protesilaos.com/fortuna
+# Hyperion theme
+# https://protesilaos.com/hyperion
 set $dbg #0a2d3c
 set $dhl #1a3d4c
 set $dt2 #8d9474
@@ -24,12 +25,12 @@ set $dt1 #9ebcc8
 set $lbg #f6f6f6
 set $lhl #e6e6e6
 set $lt2 #6a8ba9
-set $lt1 #5d654e
+set $lt1 #4d654e
 set $red #d94832
 set $ora #dc7d3a
 set $yel #dbac13
-set $gre #32a850
-set $cya #2ebad8
+set $gre #329c50
+set $cya #0eaac8
 set $blu #1d8fde
 set $vio #aa7deb
 set $mag #dc76aa
@@ -240,6 +241,7 @@ bindsym Mod1+7 exec $calc
 bindsym $mod+Return exec --no-startup-id rofi -show run
 
 # Application placement
+assign [class="^libreoffice"] $ws3
 assign [class="^Gimp"] $ws5
 assign [class="^Chromium"] $ws6
 
@@ -247,8 +249,10 @@ assign [class="^Chromium"] $ws6
 # ======================
 
 # Screenshot
-bindsym Print exec --no-startup-id scrot -u -z '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Desktop'
-bindsym Shift+Print exec --no-startup-id scrot -s -z '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Desktop'
+## Focused window
+bindsym Print exec --no-startup-id scrot -u -z '%Y-%m-%d_%H:%M:%S_$wx$h$n.png' -e 'mv $f ~/Desktop'
+## Full screen
+bindsym $mod+Print exec --no-startup-id scrot -z '%Y-%m-%d_%H:%M:%S_$wx$h.png' -e 'mv $f ~/Desktop'
 
 # Volume
 set $mute --no-startup-id amixer sset Master toggle
@@ -270,9 +274,9 @@ bindsym Mod1+d exec --no-startup-id mpc next
 exec_always --no-startup-id mpd
 exec --no-startup-id unclutter
 exec --no-startup-id compton -b
-exec --no-startup-id "setxkbmap -option compose:rctrl"
+exec_always --no-startup-id "setxkbmap -option compose:rwin"
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg   
 exec_always --no-startup-id "setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle'"
-exec --no-startup-id "/usr/bin/xcalib -d :0 /usr/share/color/icc/colord/Gamma5500K.icc"
+exec_always --no-startup-id "/usr/bin/xcalib -d :0 /usr/share/color/icc/colord/Gamma5500K.icc"
 exec --no-startup-id "eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
