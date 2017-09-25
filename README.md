@@ -4,7 +4,7 @@ These are some of the configuration files I use for my favourite programs on a G
 
 Sample of my current setup:
 
-![i3 sample](https://raw.githubusercontent.com/protesilaos/dotfiles/master/Pictures/i3-sample.png)
+![i3 sample](https://raw.githubusercontent.com/protesilaos/dotfiles/master/Pictures/i3-scrot.png)
 
 ## License
 
