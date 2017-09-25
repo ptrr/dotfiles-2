@@ -9,14 +9,22 @@
 ;=====================================================
 
 [colors]
-background = #0a2d3c
-background-alt = #1a3d4c
-foreground = #9ebcc8
-foreground-alt = #8d9474
-primary = #32a850
-secondary = #aa7deb
-alert = #d94832
-col = #1d8fde
+dbg = #0a2d3c
+dhl = #1a3d4c
+dt2 = #8d9474
+dt1 = #9ebcc8
+lbg = #f6f6f6
+lhl = #e6e6e6
+lt2 = #6a8ba9
+lt1 = #4d654e
+red = #d94832
+ora = #dc7d3a
+yel = #dbac13
+gre = #329c50
+cya = #0eaac8
+blu = #1d8fde
+vio = #aa7deb
+mag = #dc76aa
 
 [bar/example]
 width = 100%
@@ -26,11 +34,11 @@ height = 24
 ;radius = 6.0
 fixed-center = false
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = ${colors.dbg}
+foreground = ${colors.dt1}
 
 line-size = 3
-line-color = #f00
+line-color = ${colors.red}
 
 border-size = 0
 border-color = #00000000
@@ -46,57 +54,40 @@ font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-2 = siji:pixelsize=12;1
 
 modules-left = i3 mpd
-#modules-center = mpd
-modules-right = volume eth xkeyboard temperature date
+modules-right = volume pkg xkeyboard temperature date
 tray-position = right
 tray-padding = 0
-;tray-transparent = true
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
-
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 
 label-layout = %layout%
-label-layout-underline = #dc76aa
+label-layout-underline = ${colors.vio}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
 
 [module/bspwm]
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-background = ${colors.dhl}
+label-focused-underline= ${colors.gre}
 label-focused-padding = 1
 
 label-occupied = %index%
 label-occupied-padding = 1
 
 label-urgent = %index%!
-label-urgent-background = ${colors.alert}
+label-urgent-background = ${colors.red}
 label-urgent-padding = 1
 
 label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
+label-empty-foreground = ${colors.dt1}
 label-empty-padding = 1
 
 [module/i3]
@@ -106,11 +97,11 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+pin-workspaces = true
 
 label-mode-padding = 1
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-background = ${colors.gre}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
@@ -136,13 +127,8 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 [module/mpd]
 type = internal/mpd
 format-online = <label-song> <label-time> <toggle>
-format-online-underline = #1d8fde
+format-online-underline = ${colors.blu}
 
-;icon-prev = 
-;icon-stop = 
-;icon-play = 
-;icon-pause = 
-;icon-next = 
 icon-prev = <-
 icon-stop = X
 icon-play-prefix = #f00
@@ -150,12 +136,7 @@ icon-play = (Paused)
 icon-pause = 
 icon-next = ->
 
-;bar-progress-width = 45
-;bar-progress-indicator = |
-;bar-progress-fill = -
-;bar-progress-empty = -
-
-label-song-maxlen = 70
+label-song-maxlen = 100
 label-song-ellipsis = true
 
 [module/date]
@@ -165,8 +146,8 @@ interval = 5
 date = "%a, %b %d, %Y"
 time = "at %H:%M"
 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #dc7d3a
+format-prefix-foreground = ${colors.dt2}
+format-underline = ${colors.ora}
 
 label = %date% %time%
 
@@ -175,25 +156,32 @@ type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
-label-volume-foreground = ${root.foreground}
+label-volume-foreground = ${colors.dt1}
 
 format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
+format-muted-foreground = ${colors.dt2}
 label-muted = volume muted
 
 bar-volume-width = 20
-bar-volume-foreground-0 = #2ebad8
-bar-volume-foreground-1 = #2ebad8
-bar-volume-foreground-2 = #2ebad8
-bar-volume-foreground-3 = #dbac13
-bar-volume-foreground-4 = #dbac13
-bar-volume-foreground-5 = #d94832
-bar-volume-foreground-6 = #d94832
+bar-volume-foreground-0 = ${colors.cya}
+bar-volume-foreground-1 = ${colors.gre}
+bar-volume-foreground-2 = ${colors.yel}
+bar-volume-foreground-3 = ${colors.ora}
+bar-volume-foreground-4 = ${colors.red}
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+bar-volume-indicator-font = 0
+bar-volume-fill = —
+bar-volume-fill-font = 0
+bar-volume-empty = —
+bar-volume-empty-font = 0
+bar-volume-empty-foreground = ${colors.dt2}
+
+[module/pkg]
+type = custom/script
+interval = 1200
+format = <label>
+format-underline = ${colors.mag}
+label = "%output:0:30%"
+exec = .config/polybar/pkg.sh
+exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
