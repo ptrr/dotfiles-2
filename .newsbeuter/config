@@ -13,6 +13,11 @@ show-keymap-hint false
 swap-title-and-hints false
 browser firefox %u
 
+# Podcasts
+player mpv
+download-path "~/podcasts/%n"
+max-downloads 3
+
 # Key bindings ----------------------------------
 bind-key j next
 bind-key k prev
@@ -36,7 +41,7 @@ color listnormal_unread color14 color8
 color listfocus_unread color7 color2
 highlight article "^(Feed|Title|Author|Link|Date):.*" color11 color8
 
-## Light variant
+# # Light variant
 # color background color10 color15
 # color info color12 color7
 # color article color10 color15

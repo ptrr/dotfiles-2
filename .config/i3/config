@@ -13,7 +13,9 @@ set $rss urxvt -e newsbeuter
 set $mail urxvt -e neomutt
 set $music urxvt -e ncmpcpp
 set $imged gimp
-set $calc urxvt -e calcurse
+set $podcast urxvt -e podbeuter -a
+set $cal urxvt -e calcurse
+set $calc urxvt -e calc
 
 # Colour scheme
 # Hyperion theme
@@ -156,7 +158,7 @@ bindsym Ctrl+$mod+Mod1+9 move container to workspace $ws9, workspace $ws9
 bindsym Ctrl+$mod+Mod1+0 move container to workspace $ws10, workspace $ws10
 
 # Stop/hide everything
-bindsym Ctrl+Mod1+Delete workspace 10; exec $term -e htop; exec $term -e ranger
+bindsym Ctrl+Mod1+Delete workspace 0; exec $term -e htop; exec $term -e ranger
 
 # i3 window drawing and modalities
 # ================================
@@ -234,13 +236,16 @@ bindsym Mod1+2 exec $browser
 bindsym Mod1+3 exec $rss
 bindsym Mod1+4 exec $mail
 bindsym Mod1+5 exec $music
-bindsym Mod1+6 exec $imged
-bindsym Mod1+7 exec $calc
+bindsym Mod1+6 exec $podcast
+bindsym Mod1+7 exec $imged
+bindsym Mod1+8 exec $calc
+bindsym Mod1+9 exec $cal
 
 # App launcher menu
 bindsym $mod+Return exec --no-startup-id rofi -show run
 
 # Application placement
+assign [class="^Atom"] $ws2
 assign [class="^libreoffice"] $ws3
 assign [class="^Gimp"] $ws5
 assign [class="^Chromium"] $ws6

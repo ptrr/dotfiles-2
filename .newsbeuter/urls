@@ -25,6 +25,7 @@ http://mate-desktop.org/rss.xml "Linux DE"
 http://taskwarrior.org/feed.rss "Linux Apps CLI"
 https://www.neomutt.org/feed.xml "Linux Apps CLI"
 https://blog.qutebrowser.org/feeds/all.atom.xml "Linux Apps"
+http://libremusicproduction.com/feeds/articles-tutorials-news-full.xml "Linux Apps Audio"
 
 https://neovim.io/news.xml "Apps"
 
@@ -40,6 +41,7 @@ https://feeds.feedburner.com/d0od "Linux Community"
 https://opensource.com/feed "Linux Community"
 http://lunduke.com/feed/ "Linux Community"
 https://www.sudosatirical.com/articles/index.xml "Linux Community"
+https://latenightlinux.com/feed/mp3 "Linux Community"
 
 https://sfconservancy.org/feeds/news/ "Linux GPL"
 https://sfconservancy.org/feeds/news/ "Linux GPL"
@@ -53,6 +55,9 @@ http://static.fsf.org/fsforg/rss/news.xml "GNU GPL"
 # Official
 https://europa.eu/newsroom/highlights.xml_en "EU"
 https://europa.eu/newsroom/press-releases.xml_en "EU"
+
+# Parties
+http://www.progressivecaucus.eu/feed/ "EU Left"
 
 # Civil society
 http://gef.eu/feed/ "Greens"
@@ -68,6 +73,7 @@ http://bruegel.org/feed/ "EU Politics"
 
 # Media outlets
 https://www.project-syndicate.org/rss "Politics Economics"
+http://evonomics.com/feed/ "Politics Economics"
 
 # Blogs
 http://blogactiv.eu/feed/ "Politics"
@@ -94,6 +100,19 @@ http://samostudios.tumblr.com/rss "Music"
 # Testing
 https://protesilaos.com/feed.xml "Personal"
 https://protesilaos.com/codelog.xml "Personal"
+
+# Podcasts
+# -----------------------------------------------
+
+http://rss.acast.com/ft-news "Podcast Politics"
+http://rss.acast.com/ft-world-weekly "Podcast Politics"
+https://rss.acast.com/theeconomistallaudio "Podcast Politics"
+http://rss.acast.com/ft-politics "Podcast Politics"
+http://the-e-r-podcast.foreignpolicy.com/ "Podcast Politics"
+http://www.europarl.europa.eu/rss/podcast/eprs-plenary-podcast/or.xml "Podcast Politics"
+
+https://mintcast.org/category/mp3/feed/ "Podcast Linux"
+https://latenightlinux.com/feed/mp3 "Podcast Linux"
 
 # Filters
 # -----------------------------------------------
