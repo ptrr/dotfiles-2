@@ -81,6 +81,7 @@ http://ruitavares.net/feed "Politics"
 http://europa.fhenriques.eu/rss "Politics"
 http://stanislasjourdan.fr/feed "Politics"
 https://boycottholland.wordpress.com/feed/ "Politics Economics"
+http://www.rushkoff.com/feed/ "Poilitics Economics"
 
 # General
 # -----------------------------------------------
@@ -100,6 +101,8 @@ http://samostudios.tumblr.com/rss "Music"
 # Testing
 https://protesilaos.com/feed.xml "Personal"
 https://protesilaos.com/codelog.xml "Personal"
+https://protesilaos.com/greek.xml "Personal"
+https://protesilaos.com/master.xml "Personal"
 
 # Podcasts
 # -----------------------------------------------
@@ -110,6 +113,8 @@ https://rss.acast.com/theeconomistallaudio "Podcast Politics"
 http://rss.acast.com/ft-politics "Podcast Politics"
 http://the-e-r-podcast.foreignpolicy.com/ "Podcast Politics"
 http://www.europarl.europa.eu/rss/podcast/eprs-plenary-podcast/or.xml "Podcast Politics"
+
+http://feed.pippa.io/public/shows/teamhuman "Podcats Politics Culture"
 
 https://mintcast.org/category/mp3/feed/ "Podcast Linux"
 https://latenightlinux.com/feed/mp3 "Podcast Linux"
