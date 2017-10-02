@@ -1,5 +1,0 @@
-To activate the keyboard's compose key without rebooting, run
-
-```shell
-setxkbmap -option compose:rctrl
-```
