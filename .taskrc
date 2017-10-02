@@ -22,7 +22,7 @@ alias.ta=tag
 
 # Theme
 # include /usr/share/doc/task/rc/prot16-light.theme
-include /usr/share/doc/task/rc/prot16-dark.theme
+include ~/.task/themes/prot16-dark.theme
 
 # Colour coding
 color.tag.work=color15 on color5
