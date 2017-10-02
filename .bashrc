@@ -30,9 +30,12 @@ alias pSyu="sudo pacman -Syu" # system upgrade
 alias aSyu="pacaur -Syu --aur" # system upgrade aur
 alias pD="sudo pacman -D" # control package install state with `--asdeps` or `--asexplicit`
 
-alias pS="pacaur -S" # sync download
+alias pS="sudo pacman -S" # sync download
+alias pSa="pacaur -S --aur" # sync download AUR
+
 alias pSs="sudo pacman -Ss" # query database for package
 alias ps="pacaur --search" # search aur
+
 alias pRs="pacaur -Rs" # remove unless conflicting deps
 alias pRnsc="sudo pacman -Rnsc" # remove recursively
 alias pRnscQqdt="sudo pacman -Rnsc $(pacman -Qqdt)" # remove orphans
@@ -59,6 +62,7 @@ alias blocks="vim ~/.config/i3blocks/config"
 alias iii="vim ~/.config/i3/config"
 alias mmm="vim ~/.muttrc"
 alias nnn="vim ~/.newsbeuter/urls"
+alias qqq="vim .config/qutebrowser/qutebrowser.conf"
 alias sss="vim ~/.mutt/mails/signature"
 alias ttt="vim ~/.taskrc"
 alias vvv="vim ~/.vimrc"
