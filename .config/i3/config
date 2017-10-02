@@ -7,7 +7,7 @@ set $mod Mod4
 
 # Common tools
 set $term urxvt
-set $browser firefox
+set $browser firefox-nightly
 set $fm urxvt -e ranger
 set $rss urxvt -e newsbeuter
 set $mail urxvt -e neomutt

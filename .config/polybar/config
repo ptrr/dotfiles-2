@@ -68,8 +68,11 @@ blacklist-0 = num lock
 label-layout = %layout%
 label-layout-underline = ${colors.vio}
 
+label-indicator = %name%
 label-indicator-padding = 2
 label-indicator-margin = 1
+label-indicator-background = ${colors.red}
+label-indicator-foreground = ${colors.lbg}
 
 [module/bspwm]
 type = internal/bspwm
