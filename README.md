@@ -14,4 +14,6 @@ Unless otherwise noted, all code herein is distributed under the terms of the GN
 
 The wallpaper image file is courtesy of [Alena Aenami](https://www.artstation.com/aenamiart).
 
+The slick greeter background is courtesy of Photo by [Michael Fertig on Unsplash](https://unsplash.com/photos/DWWe3bhkj9k).
+
 All code herein is a combination of my own work, adaptations from others' contributions, man pages, and wiki articles.
