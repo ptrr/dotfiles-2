@@ -18,24 +18,24 @@ set $cal urxvt -e calcurse
 set $calc urxvt -e calc
 
 # Colour scheme
-# Hyperion theme
-# https://protesilaos.com/hyperion
-set $dbg #0a2d3c
-set $dhl #1a3d4c
-set $dt2 #8d9474
-set $dt1 #9ebcc8
-set $lbg #f6f6f6
-set $lhl #e6e6e6
-set $lt2 #6a8ba9
-set $lt1 #4d654e
-set $red #d94832
-set $ora #dc7d3a
-set $yel #dbac13
-set $gre #329c50
-set $cya #0eaac8
-set $blu #1d8fde
-set $vio #aa7deb
-set $mag #dc76aa
+# Noir theme
+# https://protesilaos.com/noir
+set $dbg #081614
+set $dhl #182624
+set $dt2 #7c7d59
+set $dt1 #728d8c
+set $lbg #191e18
+set $lhl #292e28
+set $lt2 #758c9b
+set $lt1 #758f74
+set $red #a2744a
+set $ora #90842a
+set $yel #76924c
+set $gre #358664
+set $cya #358092
+set $blu #4a78a6
+set $vio #7f7dad
+set $mag #a28d7c
 
 # Fonts
 font pango:DejaVu Sans Mono 8

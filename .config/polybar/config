@@ -9,22 +9,22 @@
 ;=====================================================
 
 [colors]
-dbg = #0a2d3c
-dhl = #1a3d4c
-dt2 = #8d9474
-dt1 = #9ebcc8
-lbg = #f6f6f6
-lhl = #e6e6e6
-lt2 = #6a8ba9
-lt1 = #4d654e
-red = #d94832
-ora = #dc7d3a
-yel = #dbac13
-gre = #329c50
-cya = #0eaac8
-blu = #1d8fde
-vio = #aa7deb
-mag = #dc76aa
+dbg = #081614
+dhl = #182624
+dt2 = #7c7d59
+dt1 = #728d8c
+lbg = #191e18
+lhl = #292e28
+lt2 = #758c9b
+lt1 = #758f74
+red = #a2744a
+ora = #90842a
+yel = #76924c
+gre = #358664
+cya = #358092
+blu = #4a78a6
+vio = #7f7dad
+mag = #a28d7c
 
 [bar/example]
 width = 100%
