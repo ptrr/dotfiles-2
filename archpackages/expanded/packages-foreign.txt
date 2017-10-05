@@ -1,0 +1,16 @@
+cinnamon-sound-effects
+cower
+dtrx
+firefox-nightly
+i3-gaps
+iso-flag-png
+lightdm-settings
+lightdm-slick-greeter
+neomutt-git
+pacaur
+papirus-icon-theme-git
+polybar
+ttf-font-awesome
+ttf-iosevka-term-ss04
+xcalib
+xiccd
