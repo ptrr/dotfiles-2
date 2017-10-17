@@ -17,10 +17,10 @@ rofi.lines: 10
 rofi.columns: 1
 
 !                    bg       fg      altbg    hlbg     hlfg
-rofi.color-normal: #0a2d3c, #9ebcc8, #1a3d4c, #329c50, #0a2d3c
-rofi.color-urgent: #0a2d3c, #9ebcc8, #1a3d4c, #329c50, #0a2d3c
-rofi.color-active: #0a2d3c, #9ebcc8, #1a3d4c, #329c50, #0a2d3c
-rofi.color-window: #0a2d3c, #0a2d3c
+rofi.color-normal: #17141A, #9eb0b5, #221a25, #8764C4, #f9f9f9
+rofi.color-urgent: #17141A, #9eb0b5, #221a25, #8764C4, #f9f9f9
+rofi.color-active: #17141A, #9eb0b5, #221a25, #8764C4, #f9f9f9
+rofi.color-window: #17141A, #17141A
 rofi.bw: 0
 rofi.location: 0
 rofi.padding: 50
@@ -29,27 +29,28 @@ rofi.fuzzy: false
 ! urxvt
 ! ============
 
-! Colours - Hyperion (Prot16)
-! https://protesilaos.com/hyperion
-URxvt*background: [90]#0a2d3c
-URxvt*foreground: #9ebcc8
-URxvt*cursorColor: #9ebcc8
-URxvt*color0: #1a3d4c
-URxvt*color1: #d94832
-URxvt*color2: #329c50
-URxvt*color3: #dbac13
-URxvt*color4: #1d8fde
-URxvt*color5: #dc76aa
-URxvt*color6: #0eaac8
-URxvt*color7: #e6e6e6
-URxvt*color8: #0a2d3c
-URxvt*color9: #dc7d3a
-URxvt*color10: #4d654e
-URxvt*color11: #8d9474
-URxvt*color12: #6a8ba9
-URxvt*color13: #aa7deb
-URxvt*color14: #9ebcc8
-URxvt*color15: #f6f6f6
+! Colours - Default website theme
+! https://protesilaos.com/
+! NOTE modified light base, the cyan and the yellow since I only use the dark for urxvt
+URxvt*background: [90]#07040A
+URxvt*foreground: #9eb0b5
+URxvt*cursorColor: #1A891C
+URxvt*color0: #221a25
+URxvt*color1: #DD3816
+URxvt*color2: #1A891C
+URxvt*color3: #b9a600
+URxvt*color4: #3575D4
+URxvt*color5: #DC3259
+URxvt*color6: #13a6c3
+URxvt*color7: #e9e9e9
+URxvt*color8: #07040A
+URxvt*color9: #BE5A14
+URxvt*color10: #5Aa33C
+URxvt*color11: #898440
+URxvt*color12: #4b8dab
+URxvt*color13: #8764C4
+URxvt*color14: #7eb0c5
+URxvt*color15: #f9f9f9
 
 ! Preferences
 URxvt.termName: rxvt-unicode

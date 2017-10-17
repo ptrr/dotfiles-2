@@ -17,7 +17,7 @@ fi
 [[ $- != *i* ]] && return
 
 # Custom prompt
-PS1="\[\e[32m\]\w\[\e[m\] \[\e[1;31m\]>\[\e[m\] "
+PS1="\[\e[32m\]\w\[\e[m\] \[\e[35m\]>\[\e[m\] "
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -82,13 +82,11 @@ alias gpgs="gpg -s -r"
 # Git
 alias gadd="git add"
 alias gall="git add -A"
-
 alias gcom="git commit -m"
-alias gtag="git tag -a"
-
 alias gch="git checkout"
 alias gchb="git checkout -b"
-
+alias gbd="git branch -d"
+alias gpd="git push origin --delete"
 alias gph="git push -u origin HEAD"
 alias gpm="git push -u origin master"
 
@@ -101,7 +99,6 @@ alias rbbb="source ~/.bashrc"
 alias rxxx="xrdb -merge ~/.Xresources"
 
 # Tasks
-alias t="task"
 alias tl="task list"
 alias ta="task add"
 alias td="task done"
@@ -112,5 +109,11 @@ alias tx="task delete"
 alias mp3="youtube-dl -x --audio-format mp3 -o '~/Music/%(title)s.%(ext)s'"
 alias ytmp3="youtube-dl -x --audio-format mp3 -o '~/Music/Youtube/%(title)s.%(ext)s'"
 
-# NOTE for i3
-alias fehbg="feh --bg-scale"
+# Enable colour output
+alias ls="ls --color=auto"
+alias dir="dir --color=auto"
+alias grep="grep --color=auto"
+alias dmesg='dmesg --color'
+
+# Certbot
+alias certm="sudo certbot certonly -a manual -d"

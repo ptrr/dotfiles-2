@@ -9,22 +9,22 @@
 ;=====================================================
 
 [colors]
-dbg = #081614
-dhl = #182624
-dt2 = #7c7d59
-dt1 = #728d8c
-lbg = #191e18
-lhl = #292e28
-lt2 = #758c9b
-lt1 = #758f74
-red = #a2744a
-ora = #90842a
-yel = #76924c
-gre = #358664
-cya = #358092
-blu = #4a78a6
-vio = #7f7dad
-mag = #a28d7c
+dbg = #07040A
+dhl = #221a25
+dt2 = #898440
+dt1 = #9eb0b5
+lbg = #f9f9f9
+lhl = #e9e9e9
+lt2 = #4b5d6b
+lt1 = #202819
+red = #DD3816
+ora = #BE5A14
+yel = #897600
+gre = #1A891C
+cya = #437E93
+blu = #3575D4
+vio = #8764C4
+mag = #DC3259
 
 [bar/example]
 width = 100%
@@ -124,7 +124,8 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${module/bspwm.label-urgent-background}
+label-urgent-background = ${colors.red}
+label-urgent-foreground = ${colors.dbg}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 [module/mpd]
@@ -132,22 +133,20 @@ type = internal/mpd
 format-online = <label-song> <label-time> <toggle>
 format-online-underline = ${colors.blu}
 
-icon-prev = <-
-icon-stop = X
-icon-play-prefix = #f00
-icon-play = (Paused)
-icon-pause = 
-icon-next = ->
+icon-play = ||
+icon-pause = oo
 
-label-song-maxlen = 100
+label-song = %artist% - %album% - %title%
+label-song-maxlen = 160
 label-song-ellipsis = true
+label-offline = ERR mpd is offline
 
 [module/date]
 type = internal/date
 interval = 5
 
-date = "%a, %b %d, %Y"
-time = "at %H:%M"
+date = "%a, %Y-%m-%d,"
+time = "%H:%M"
 
 format-prefix-foreground = ${colors.dt2}
 format-underline = ${colors.ora}
@@ -158,14 +157,14 @@ label = %date% %time%
 type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
+label-volume = §
 label-volume-foreground = ${colors.dt1}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.dt2}
 label-muted = volume muted
 
-bar-volume-width = 20
+bar-volume-width = 30
 bar-volume-foreground-0 = ${colors.cya}
 bar-volume-foreground-1 = ${colors.gre}
 bar-volume-foreground-2 = ${colors.yel}
@@ -178,7 +177,7 @@ bar-volume-fill = —
 bar-volume-fill-font = 0
 bar-volume-empty = —
 bar-volume-empty-font = 0
-bar-volume-empty-foreground = ${colors.dt2}
+bar-volume-empty-foreground = ${colors.dt1}
 
 [module/pkg]
 type = custom/script
