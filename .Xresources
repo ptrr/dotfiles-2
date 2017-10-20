@@ -11,21 +11,22 @@ Xft.lcdfilter: lcddefault
 ! Rofi
 ! ================================================
 rofi.modi: run
-rofi.font: Iosevka Term UltraLight 24
-rofi.width: 50
-rofi.lines: 8
-rofi.columns: 1
 rofi.hide-scrollbar: true
+rofi.sidebar-mode: false
+rofi.width: 800
+rofi.lines: 10
+rofi.columns: 1
+rofi.bw: 0
+rofi.location: 0
+rofi.padding: 50
+rofi.fuzzy: false
+rofi.font: Iosevka Term Light 18
 
 !                    bg       fg      altbg    hlbg     hlfg
 rofi.color-normal: #17141A, #9eb0b5, #221a25, #8764C4, #f9f9f9
 rofi.color-active: #17141A, #1A891C, #221a25, #8764C4, #1A891C
 rofi.color-urgent: #DD3816, #9eb0b5, #BE5A14, #b9a600, #f9f9f9
 rofi.color-window: #17141A, #17141A, #17141A
-rofi.bw: 0
-rofi.location: 0
-rofi.padding: 50
-rofi.fuzzy: false
 
 ! urxvt
 ! ================================================

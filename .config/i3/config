@@ -70,17 +70,17 @@ client.background $dhl
 for_window [class="^.*"] border pixel 2
 # new_window 1pixel
 smart_borders on
-gaps inner 15
-gaps outer 5
+gaps inner 10
+gaps outer 1
 
 # Use Mouse+Mod1 (Alt) to drag floating windows to their wanted position
 floating_modifier Mod1
 
-# split in horizontal orientation
-bindsym Mod1+h split h
-
 # split in vertical orientation
-bindsym Mod1+v split v
+bindsym $mod+s split v
+
+# split in horizontal orientation
+bindsym $mod+Shift+s split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
