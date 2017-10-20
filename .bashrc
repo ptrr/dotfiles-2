@@ -27,6 +27,9 @@ fi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# Default browser
+export BROWSER=firefox-nightly
+
 # Aliases
 # ====================================================================
 

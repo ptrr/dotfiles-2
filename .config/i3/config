@@ -9,10 +9,10 @@ set $mod Mod4
 set $term urxvt
 set $browser firefox-nightly
 set $fm urxvt -e ranger
-set $rss urxvt -e newsbeuter
+set $rss urxvt -e newsboat
 set $mail urxvt -e neomutt
 set $music urxvt -e ncmpcpp
-set $podcast urxvt -e podbeuter -a
+set $podcast urxvt -e podboat -a
 set $calc urxvt -e calc
 
 # Colour scheme
@@ -56,6 +56,7 @@ for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
+for_window [class="Pavucontrol"] floating enable
 
 # Window states
 # order: BORDER BACKGROUND FOREGROUND INDICATOR CHILD_BORDER
@@ -161,45 +162,6 @@ bindsym Ctrl+Mod1+Delete workspace 0; exec $term -e htop; exec $term -e ranger
 # i3 window drawing and modalities
 # ================================
 
-# Dynamic gaps
-set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: o = +5 / i=-5 / u = 0 (local), O = +5 / I = -5 / U = 0 (global)
-set $mode_gaps_inner Inner Gaps: o = +5 / i=-5 / u = 0 (local), O = +5 / I = -5 / U = 0 (global)
-
-mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-mode "$mode_gaps_inner" {
-        bindsym o  gaps inner current plus 5
-        bindsym i  gaps inner current minus 5
-        bindsym u  gaps inner current set 0
-
-        bindsym O  gaps inner all plus 5
-        bindsym I  gaps inner all minus 5
-        bindsym U  gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-mode "$mode_gaps_outer" {
-        bindsym o  gaps outer current plus 5
-        bindsym i  gaps outer current minus 5
-        bindsym u  gaps outer current set 0
-
-        bindsym O  gaps outer all plus 5
-        bindsym I  gaps outer all minus 5
-        bindsym U  gaps outer all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-bindsym $mod+g mode "$mode_gaps"
-
 # Dynamic window resize
 bindsym $mod+i resize shrink width 10 px or 10 ppt
 bindsym $mod+o resize grow width 10 px or 10 ppt
@@ -225,8 +187,8 @@ bindsym $mod+p mode "$mode_system"
 
 # Applications
 # ============
-bindsym $mod+w exec $term
-bindsym Mod1+w exec $term
+bindsym $mod+Return exec $term
+bindsym Mod1+Return exec $term
 
 # Application shortcuts
 bindsym Mod1+1 exec $fm
@@ -238,7 +200,7 @@ bindsym Mod1+6 exec $podcast
 bindsym Mod1+7 exec $calc
 
 # App launcher menu
-bindsym $mod+Return exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id rofi -show run
 
 # Application placement
 assign [class="^Atom"] $ws2
@@ -251,9 +213,9 @@ assign [class="^Chromium"] $ws6
 
 # Screenshot
 ## Focused window
-bindsym Print exec --no-startup-id scrot -u -z '%Y-%m-%d_%H:%M:%S_$wx$h$n.png' -e 'mv $f ~/Desktop'
+bindsym Print exec scrot -u -z '%Y-%m-%d_%H:%M:%S_$wx$h$n.png' -e 'mv $f ~/Desktop'
 ## Full screen
-bindsym $mod+Print exec --no-startup-id scrot -z '%Y-%m-%d_%H:%M:%S_$wx$h.png' -e 'mv $f ~/Desktop'
+bindsym $mod+Print exec scrot -z '%Y-%m-%d_%H:%M:%S_$wx$h.png' -e 'mv $f ~/Desktop'
 
 # Volume
 set $mute --no-startup-id amixer sset Master toggle
@@ -277,7 +239,7 @@ exec --no-startup-id unclutter
 exec --no-startup-id compton -b
 exec_always --no-startup-id "setxkbmap -option compose:rwin"
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.jpg   
+exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper.jpg   
 exec_always --no-startup-id "setxkbmap -layout 'us,gr' -option 'grp:alt_shift_toggle'"
 exec_always --no-startup-id "/usr/bin/xcalib -d :0 /usr/share/color/icc/colord/Gamma5500K.icc"
 exec --no-startup-id "eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
