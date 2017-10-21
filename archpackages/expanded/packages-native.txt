@@ -4,8 +4,6 @@ abook
 accountsservice
 acl
 adapta-gtk-theme
-adobe-source-code-pro-fonts
-adobe-source-sans-pro-fonts
 adwaita-icon-theme
 alsa-lib
 alsa-plugins
@@ -171,7 +169,6 @@ gnome-backgrounds
 gnome-calculator
 gnome-color-manager
 gnome-common
-gnome-disk-utility
 gnome-keyring
 gnome-screenshot
 gnome-system-monitor
@@ -399,7 +396,6 @@ libpng
 libproxy
 libpsl
 libpulse
-libpwquality
 libquicktime
 libraqm
 libraw1394
@@ -555,7 +551,6 @@ netctl
 nettle
 network-manager-applet
 networkmanager
-newsbeuter
 nm-connection-editor
 nodejs
 notmuch-runtime
@@ -759,6 +754,7 @@ transmission-gtk
 tslib
 ttf-dejavu
 ttf-fira-sans
+ttf-font-awesome
 ttf-hack
 ttf-liberation
 ttf-roboto
@@ -797,6 +793,7 @@ wget
 which
 wildmidi
 wireless_tools
+wmctrl
 wpa_actiond
 wpa_supplicant
 wxgtk-common

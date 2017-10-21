@@ -8,11 +8,12 @@ iso-flag-png
 libreoffice-impress-templates
 lightdm-settings
 lightdm-slick-greeter
+neofetch
 neomutt-git
+newsboat
 pacaur
 papirus-icon-theme-git
 polybar
-ttf-font-awesome
 ttf-iosevka-term-ss04
 xcalib
 xiccd
