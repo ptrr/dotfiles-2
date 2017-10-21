@@ -12,7 +12,8 @@ These are some of the configuration files I use for my favourite programs on a G
 - Text editor *vim*
 - File Manager *ranger*
 - Mail client *mutt*
-- Music player *ncmpcpp*
+- Music server *mpd*
+- Music client *ncmpcpp*
 - Program launcher *rofi*
 - PDF viewer *zathura*
 - Font *Iosevka Term*
