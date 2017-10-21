@@ -2,9 +2,9 @@
 
 ## Setup overview
 
-These are some of the configuration files I use for my favourite programs on a GNU/Linux machine.
+*Non-exhaustive list*
 
-- Operating System *Arch Linux*
+- Operating System *Arch Linux* (GNU/Linux)
 - Window manager *i3-gaps*
 - Bar *polybar*
 - Compositor *compton*
@@ -19,7 +19,7 @@ These are some of the configuration files I use for my favourite programs on a G
 - Font *Iosevka Term*
 - Icon font *Font Awesome*
 
-Sample of my current setup:
+## Sample of my current setup
 
 ![i3 sample](https://raw.githubusercontent.com/protesilaos/dotfiles/master/Pictures/i3-scrot.png)
 
