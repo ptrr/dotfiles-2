@@ -70,7 +70,7 @@ client.background $dhl
 for_window [class="^.*"] border pixel 2
 # new_window 1pixel
 smart_borders on
-gaps inner 10
+gaps inner 20
 gaps outer 1
 
 # Use Mouse+Mod1 (Alt) to drag floating windows to their wanted position
@@ -172,7 +172,7 @@ bindsym $mod+Shift+o resize grow height 10 px or 10 ppt
 set $mode_system System (l) lock, (s) switch users, (w) logout, (r) reboot, (q) shutdown
 
 mode "$mode_system" {
-    bindsym l exec --no-startup-id "bash ~/.config/i3/lock.sh"
+    bindsym l exec --no-startup-id ~/.config/i3/lock.sh
     bindsym s exec --no-startup-id "dm-tool switch-to-greeter"
     bindsym w exec --no-startup-id i3-msg exit, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"

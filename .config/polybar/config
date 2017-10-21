@@ -54,7 +54,7 @@ font-3 = siji:pixelsize=10;2
 
 modules-left = i3 mpd
 modules-center = date
-modules-right = xkeyboard volume pkg powermenu
+modules-right = pkg xkeyboard volume powermenu
 tray-position = right
 tray-padding = 0
 
@@ -219,7 +219,7 @@ menu-0-0 = "  Lock"
 menu-0-0-padding = 2
 menu-0-0-background = ${colors.cya}
 menu-0-0-foreground = ${colors.lbg}
-menu-0-0-exec = "bash ~/.config/i3/lock.sh"
+menu-0-0-exec = ~/.config/i3/lock.sh
 menu-0-1 = "  Switch Users"
 menu-0-1-padding = 2
 menu-0-1-background = ${colors.vio}
@@ -234,9 +234,9 @@ menu-0-3 = "  Reboot"
 menu-0-3-padding = 2
 menu-0-3-background = ${colors.yel}
 menu-0-3-foreground = ${colors.lbg}
-menu-0-3-exec = systemctl reboot, mode "default"
+menu-0-3-exec = systemctl reboot
 menu-0-4 = "  Power Off"
 menu-0-4-padding = 2
 menu-0-4-background = ${colors.red}
 menu-0-4-foreground = ${colors.lbg}
-menu-0-4-exec = systemctl poweroff -i, mode "default"
+menu-0-4-exec = systemctl poweroff
