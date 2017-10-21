@@ -28,34 +28,33 @@ mag = #DC3259
 
 [bar/example]
 width = 100%
-height = 28
+height = 24
 fixed-center = true
 override-redirect = false
 
 background = ${colors.dbg}
 foreground = ${colors.dt1}
 
-line-size = 3
+line-size = 1
 line-color = ${colors.red}
 
 border-size = 0
-border-color = #f00
+border-color = ${colors.dbg}
 
-padding-left = 0
-padding-right = 0
+padding-left = 1
+padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Iosevka Term:pixelsize=10:antialias=true;1
-font-1 = Iosevka Term Medium:pixelsize=9:antialias=true;1
-font-2 = Iosevka Term Light:pixelsize=12:antialias=true;1
-font-3 = unifont:fontformat=truetype:size=10:antialias=false;2
-font-4 = siji:pixelsize=10;2
+font-0 = FontAwesome:size=8;2
+font-1 = Iosevka Term:pixelsize=10:antialias=false;1
+font-2 = unifont:fontformat=truetype:size=10:antialias=false;2
+font-3 = siji:pixelsize=10;2
 
 modules-left = i3 mpd
 modules-center = date
-modules-right = volume xkeyboard pkg powermenu
+modules-right = xkeyboard volume pkg powermenu
 tray-position = right
 tray-padding = 0
 
@@ -67,7 +66,8 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 label-layout = %layout%
-label-layout-padding = 1
+label-layout-padding = 2
+label-layout-background = ${colors.dhl}
 label-layout-underline = ${colors.yel}
 
 label-indicator = %name%
@@ -82,18 +82,18 @@ type = internal/bspwm
 label-focused = %index%
 label-focused-background = ${colors.dhl}
 label-focused-underline= ${colors.gre}
-label-focused-padding = 1
+label-focused-padding = 2
 
 label-occupied = %index%
-label-occupied-padding = 1
+label-occupied-padding = 2
 
 label-urgent = %index%!
 label-urgent-background = ${colors.red}
-label-urgent-padding = 1
+label-urgent-padding = 2
 
 label-empty = %index%
 label-empty-foreground = ${colors.dt1}
-label-empty-padding = 1
+label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
@@ -134,27 +134,28 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 type = internal/mpd
 format-online = <icon-prev> <toggle> <icon-next> <label-song> <label-time>
 
-icon-prev = «
-icon-prev-padding = 1
+icon-prev = ""
+icon-prev-padding = 2
 icon-prev-background = ${colors.dhl}
 icon-prev-foreground = ${colors.dt1}
-icon-play = >
-icon-play-padding = 1
+icon-play = ""
+icon-play-padding = 2
 icon-play-background = ${colors.dhl}
 icon-play-foreground = ${colors.dt1}
-icon-pause = !
-icon-pause-padding = 1
+icon-pause = ""
+icon-pause-padding = 2
 icon-pause-background = ${colors.dhl}
 icon-pause-foreground = ${colors.dt1}
-icon-next = »
-icon-next-padding = 1
+icon-next = ""
+icon-next-padding = 2
 icon-next-background = ${colors.dhl}
 icon-next-foreground = ${colors.dt1}
 
-label-song = %title% - %artist% [%album%] 
+label-song = %title% - %artist%
+label-song-padding = 2
 label-song-maxlen = 60
 label-song-ellipsis = true
-label-offline = ERR mpd is offline
+label-offline = mpd is offline
 
 [module/date]
 type = internal/date
@@ -171,29 +172,26 @@ label = %date% %time%
 [module/volume]
 type = internal/volume
 
-format-volume = <label-volume> <bar-volume>
-label-volume = §
-label-volume-foreground = ${colors.dt1}
+format-volume = <ramp-volume> <label-volume>
+format-volume-padding = 2
+format-volume-background = ${colors.dhl}
+format-volume-underline = ${colors.vio}
+label-volume = %percentage%%
 
-format-muted-background = ${colors.dhl}
-format-muted-foreground = ${colors.dt1}
-format-muted-padding = 2
+format-muted = <label-muted>
 label-muted = Sound Muted
+label-muted-padding = 2
+label-muted-background = ${colors.dhl}
+label-muted-foreground = ${colors.dt1}
+label-muted-underline = ${colors.cya}
 
-bar-volume-width = 20
-bar-volume-foreground-0 = ${colors.cya}
-bar-volume-foreground-1 = ${colors.vio}
-bar-volume-foreground-2 = ${colors.ora}
-bar-volume-foreground-3 = ${colors.mag}
-bar-volume-foreground-4 = ${colors.red}
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = —
-bar-volume-fill-font = 2
-bar-volume-empty = —
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.dt1}
+ramp-volume-0 = "  "
+ramp-volume-1 = "  "
+ramp-volume-2 = "  "
+ramp-volume-3 = "  "
+ramp-volume-4 = "  "
+ramp-volume-5 = "  "
+ramp-volume-6 = "  "
 
 [module/pkg]
 type = custom/script
@@ -207,38 +205,37 @@ exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 [module/powermenu]
 type = custom/menu
-label-open = "Ø"
-label-open-font = 3
+label-open = "  "
 label-open-background = ${colors.dhl}
 label-open-foreground = ${colors.dt1}
 label-open-underline = ${colors.red}
 label-open-padding = 2
-label-close = "X"
+label-close = "  Stay"
 label-close-background = ${colors.dhl}
-label-close-foreground = ${colors.blu}
+label-close-foreground = ${colors.dt1}
 label-close-padding = 2
 
-menu-0-0 = "Lock"
+menu-0-0 = "  Lock"
 menu-0-0-padding = 2
 menu-0-0-background = ${colors.cya}
 menu-0-0-foreground = ${colors.lbg}
 menu-0-0-exec = "bash ~/.config/i3/lock.sh"
-menu-0-1 = "Switch Users"
+menu-0-1 = "  Switch Users"
 menu-0-1-padding = 2
 menu-0-1-background = ${colors.vio}
 menu-0-1-foreground = ${colors.lbg}
 menu-0-1-exec = "dm-tool switch-to-greeter"
-menu-0-2 = "Log Out"
+menu-0-2 = "  Log Out"
 menu-0-2-padding = 2
 menu-0-2-background = ${colors.ora}
 menu-0-2-foreground = ${colors.lbg}
 menu-0-2-exec = i3-msg exit, mode "default"
-menu-0-3 = "Reboot"
+menu-0-3 = "  Reboot"
 menu-0-3-padding = 2
 menu-0-3-background = ${colors.yel}
 menu-0-3-foreground = ${colors.lbg}
 menu-0-3-exec = systemctl reboot, mode "default"
-menu-0-4 = "Power Off"
+menu-0-4 = "  Power Off"
 menu-0-4-padding = 2
 menu-0-4-background = ${colors.red}
 menu-0-4-foreground = ${colors.lbg}
