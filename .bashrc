@@ -6,7 +6,11 @@
 # ====================================================================
 
 # Custom prompt
-PS1="\[\e[32m\]\w\[\e[m\] \[\e[35m\]>\[\e[m\] "
+if [ -n "$SSH_CONNECTION" ]; then
+export PS1="\n\[\e[0;34m\]┌─[\[\e[1;35m\u\e[0;34m\]]──[\e[1;32m\w\e[0;34m]──[\[\e[1;35m\]${HOSTNAME%%.*}\[\e[0;34m\]]\[\e[1;32m\]: \$\[\e[0;34m\]\n\[\e[0;34m\]└────╼ \[\e[1;36m\]>> \[\e[00;00m\]"
+else
+export PS1="\n\[\e[0;34m\]┌───[\e[1;32m\w\e[0;34m]: \$\[\e[0;34m\]\n\[\e[0;34m\]└────╼ \[\e[1;36m\]>> \[\e[00;00m\]"
+fi
 
 # Autocomplete with sudo
 if [ "$PS1" ]; then
@@ -34,7 +38,7 @@ export BROWSER=firefox-nightly
 # ====================================================================
 
 # Admin (Arch Linux)
-# -----------------------------------------------
+# ------------------------------------------------
 
 # General package management
 alias pSyu="sudo pacman -Syu" # system upgrade
@@ -76,7 +80,7 @@ alias pQqdback="sudo pacman -Qqd > packages-deps.txt"
 alias pQqgback="sudo pacman -Qqg > packages-groups.txt"
 
 # Helper shortcuts
-# -----------------------------------------------
+# ------------------------------------------------
 
 # Editor
 alias v="vim"
@@ -123,7 +127,7 @@ alias certm="sudo certbot certonly -a manual -d"
 alias neofetchwall="neofetch --w3m --source ~/.config/i3/wallpaper.jpg"
 
 # Git
-# -----------------------------------------------
+# ------------------------------------------------
 
 # Common commands
 alias gadd="git add"
@@ -139,7 +143,7 @@ alias gbd="git branch -d"
 alias gpd="git push origin --delete"
 
 # Jekyll
-# -----------------------------------------------
+# ------------------------------------------------
 
 # Bundler
 alias buibuu="bundle install && bundle update"
@@ -153,10 +157,43 @@ alias bejsdev="bundle exec jekyll serve --config _config.yml,_config-dev.yml"
 alias npmiu="npm install && npm update"
 
 # Miscellaneous
-# -----------------------------------------------
+# ------------------------------------------------
 
 # Enable colour output
 alias ls="ls --color=auto"
 alias dir="dir --color=auto"
 alias grep="grep --color=auto"
 alias dmesg='dmesg --color'
+
+# Functions
+# ================================================
+
+# Colour man pages
+man() {
+	env \
+		LESS_TERMCAP_mb=$(printf "\e[1;32m") \
+		LESS_TERMCAP_md=$(printf "\e[1;32m") \
+		LESS_TERMCAP_me=$(printf "\e[0m") \
+		LESS_TERMCAP_se=$(printf "\e[0m") \
+		LESS_TERMCAP_so=$(printf "\e[0;44;30m") \
+		LESS_TERMCAP_ue=$(printf "\e[0m") \
+		LESS_TERMCAP_us=$(printf "\e[1;35m") \
+			man "$@"
+}
+
+# Make directory and enter it
+function mkcd {
+  if [ ! -n "$1" ]; then
+    echo "Specify a name for this directory"
+  elif [ -d $1 ]; then
+    echo "\`$1' already exists"
+  else
+    mkdir $1 && cd $1
+  fi
+}
+
+# List items after entering a directory
+function cd()
+{
+ builtin cd "$*" && ls
+}
