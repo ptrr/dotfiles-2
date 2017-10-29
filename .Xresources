@@ -13,9 +13,9 @@ Xft.lcdfilter: lcddefault
 rofi.modi: run
 rofi.hide-scrollbar: true
 rofi.sidebar-mode: false
-rofi.width: 800
+rofi.width: 1200
 rofi.lines: 10
-rofi.columns: 1
+rofi.columns: 3
 rofi.bw: 0
 rofi.location: 0
 rofi.padding: 50
@@ -34,9 +34,9 @@ rofi.color-window: #17141A, #17141A, #17141A
 ! Colours - Default website theme
 ! https://protesilaos.com/
 ! NOTE modified light base, the cyan and the yellow since I only use the dark for urxvt
-URxvt*background: [90]#07040A
+URxvt*background: [95]#07040A
 URxvt*foreground: #9eb0b5
-URxvt*cursorColor: #1A891C
+URxvt*cursorColor: #f9f9f9
 URxvt*color0: #221a25
 URxvt*color1: #DD3816
 URxvt*color2: #1A891C
@@ -57,10 +57,12 @@ URxvt*color15: #f9f9f9
 ! Preferences
 URxvt.termName: rxvt-unicode
 URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
 URxvt.saveLines: 5000
 URxvt.intensityStyles: false
 URxvt.depth: 32
-URxvt.font: xft:Iosevka Term:size=13:antialias=true
+URxvt.font: xft:Source Code Pro:size=12:antialias=true
+URxvt.boldFont: xft:Source Code Pro:size=12:antialias=true:style=bold
 URxvt.allow_bold: true
 URxvt.letterSpace: -1
 URxvt.scrollBar: false
