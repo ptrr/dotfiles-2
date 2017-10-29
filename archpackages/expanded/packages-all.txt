@@ -4,6 +4,7 @@ abook
 accountsservice
 acl
 adapta-gtk-theme
+adobe-source-code-pro-fonts
 adwaita-icon-theme
 alsa-lib
 alsa-plugins
@@ -55,6 +56,7 @@ cairomm
 calc
 calcurse
 cantarell-fonts
+cantata
 caribou
 cblas
 cdparanoia
@@ -95,6 +97,7 @@ damageproto
 db
 dbus
 dbus-glib
+dcadec
 dconf
 desktop-file-utils
 device-mapper
@@ -125,6 +128,7 @@ faad2
 fakeroot
 feh
 ffmpeg
+ffmpeg2.8
 fftw
 file
 file-roller
@@ -316,9 +320,11 @@ libdiscid
 libdmx
 libdrm
 libdv
+libdvbpsi
 libdvdnav
 libdvdread
 libe-book
+libebml
 libedit
 libelf
 libepoxy
@@ -355,12 +361,14 @@ libimobiledevice
 libinput
 libixion
 libjpeg-turbo
+libkate
 libkeybinder3
 libksba
 liblangtag
 libldap
 liblqr
 libmad
+libmatroska
 libmediainfo
 libmm-glib
 libmms
@@ -374,6 +382,7 @@ libmpdclient
 libmpeg2
 libmspub
 libmtp
+libmusicbrainz5
 libmwaw
 libndp
 libnewt
@@ -409,7 +418,6 @@ libraw1394
 libreoffice-fresh
 libreoffice-fresh-el
 libreoffice-fresh-en-GB
-libreoffice-impress-templates
 librevenge
 librsvg
 libsamplerate
@@ -429,11 +437,13 @@ libssh
 libssh2
 libsynctex
 libsystemd
+libtar
 libtasn1
 libteam
 libthai
 libtheora
 libtiff
+libtiger
 libtirpc
 libtommath
 libtool
@@ -530,6 +540,7 @@ make
 man-db
 man-pages
 mdadm
+media-player-info
 mediainfo
 mesa
 mime-types
@@ -579,6 +590,7 @@ openal
 opencore-amr
 opencv
 openexr
+openjpeg
 openjpeg2
 openresolv
 openshot
@@ -706,6 +718,7 @@ readline
 recode
 recordproto
 redland
+reflector
 reiserfsprogs
 renderproto
 rest
@@ -740,7 +753,6 @@ sip
 slang
 smbclient
 snappy
-sonata
 sord
 sound-theme-freedesktop
 soundtouch
@@ -758,6 +770,7 @@ sysfsutils
 systemd
 systemd-sysvcompat
 taglib
+taglib-extras
 talloc
 tar
 task
@@ -796,6 +809,7 @@ vid.stab
 videoproto
 vim
 vim-runtime
+vlc
 volume_key
 vte-common
 vte3
@@ -839,7 +853,6 @@ xf86dgaproto
 xf86vidmodeproto
 xfconf
 xfsprogs
-xiccd
 xine-lib
 xineramaproto
 xkeyboard-config
@@ -899,6 +912,7 @@ yelp-tools
 yelp-xsl
 youtube-dl
 zathura
+zathura-pdf-poppler
 zenity
 zeromq
 zip
