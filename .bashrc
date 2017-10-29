@@ -7,9 +7,9 @@
 
 # Custom prompt
 if [ -n "$SSH_CONNECTION" ]; then
-export PS1="\n\[\e[0;34m\]┌─[\[\e[1;35m\u\e[0;34m\]]──[\e[1;32m\w\e[0;34m]──[\[\e[1;35m\]${HOSTNAME%%.*}\[\e[0;34m\]]\[\e[1;32m\]: \$\[\e[0;34m\]\n\[\e[0;34m\]└────╼ \[\e[1;36m\]>> \[\e[00;00m\]"
+export PS1="\n┌─[\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[\033[38;5;10m\]\h\[$(tput sgr0)\]]──[\[$(tput bold)\]\[\033[38;5;4m\]\w\[$(tput sgr0)\]]\n└─[\[$(tput bold)\]\[\033[38;5;9m\]\\$\[$(tput sgr0)\]] \[$(tput bold)\]>>> \[$(tput sgr0)\]"
 else
-export PS1="\n\[\e[0;34m\]┌───[\e[1;32m\w\e[0;34m]: \$\[\e[0;34m\]\n\[\e[0;34m\]└────╼ \[\e[1;36m\]>> \[\e[00;00m\]"
+export PS1="\n┌─────[\[$(tput bold)\]\[\033[38;5;4m\]\w\[$(tput sgr0)\]]\n└─[\[$(tput bold)\]\[\033[38;5;9m\]\\$\[$(tput sgr0)\]] \[$(tput bold)\]>>> \[$(tput sgr0)\]"
 fi
 
 # Autocomplete with sudo
