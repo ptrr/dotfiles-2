@@ -17,6 +17,7 @@
 - Music client *ncmpcpp*
 - Program launcher *rofi*
 - PDF viewer *zathura*
+- Notifications *danst*
 - Font *Iosevka Term*
 - Icon font *Font Awesome*
 
@@ -30,7 +31,7 @@ Unless otherwise noted, all code herein is distributed under the terms of the GN
 
 ## Credits
 
-The wallpaper image file is courtesy of [Paul Morris](https://unsplash.com/photos/PaNxe-QJwhE). Used under the terms of the Unsplash license.
+The wallpaper image file is courtesy of [Paul Morris on Unsplash](https://unsplash.com/photos/PaNxe-QJwhE). Used under the terms of the Unsplash license.
 
 The slick greeter background is courtesy of [Michael Fertig on Unsplash](https://unsplash.com/photos/DWWe3bhkj9k). Used under the terms of the Unsplash license.
 
