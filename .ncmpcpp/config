@@ -10,7 +10,7 @@ visualizer_sync_interval = 30
 visualizer_in_stereo = yes
 visualizer_type = spectrum
 visualizer_look = "+|"
-visualizer_color = blue, cyan, green, yellow, magenta, red
+visualizer_color = 14, 5, 7, 3, 4, 10, 6, 2
 
 # Playlist
 now_playing_prefix = "$b > "
@@ -18,7 +18,23 @@ now_playing_suffix = "$/b"
 playlist_display_mode = "classic" (classic/columns)
 
 # Bars
-progressbar_look = "—|—"
+#progressbar_look = "◾◾◽"
+#progressbar_look = "─⊙┄"
+#progressbar_look = "=>"
+#progressbar_look = "─- "
+#progressbar_look = "▒▒░"
+#progressbar_look = "┅┅┄"
+#progressbar_look = "─➞─"
+#progressbar_look = "─┅─"
+#progressbar_look = "▪▪▪"
+#progressbar_look = "▪▪▫"
+#progressbar_look = "───"
+#progressbar_look = "▁▁▁"
+#progressbar_look = "‒‒‒"
+#progressbar_look = "■◣ "
+#progressbar_look = "◈◆◇"
+#progressbar_look = "—|—"
+progressbar_look = "─╼ "
 titles_visibility = "no"
 header_visibility = "no"
 statusbar_visibility = "no"
@@ -34,12 +50,13 @@ color1 = "15"
 color2 = "12"
 main_window_highlight_color = "3"
 progressbar_color = "13"
-progressbar_elapsed_color = "5"
+progressbar_elapsed_color = "8"
 statusbar_color = "11"
 active_column_color = "11"
 
 # Others
 search_engine_display_mode = "columns" (classic/columns)
 
+# NOTE the notification is specified in i3 config to work even when ncmpcpp is not open
 # # Notifications (requires dunst)
-# execute_on_song_change = notify-send "Now Playing ♫" "$(mpc current)"
+# execute_on_song_change = notify-send "Now Playing" "$(mpc current)"

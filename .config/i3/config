@@ -37,8 +37,12 @@ set $browser firefox-nightly
 set $fm urxvt -e ranger
 set $rss urxvt -e newsboat
 set $mail urxvt -e neomutt
-set $music urxvt -e ncmpcpp
 set $podcast urxvt -e podboat -a
+
+# NOTE set custom bg for ncmpcpp
+# since I only use it for the visualiser
+# or some minor stuff
+set $music urxvt -bg [80]#000000 -e ncmpcpp
 
 # Window settings
 # ================================================
@@ -235,6 +239,10 @@ set $mute --no-startup-id amixer sset Master toggle
 set $volumeup --no-startup-id amixer set Master 5%+
 set $volumedown --no-startup-id amixer set Master 5%-
 
+set $mute --no-startup-id "~/.local/bin/volume-notify-dunst.sh mute"
+set $volumeup --no-startup-id "~/.local/bin/volume-notify-dunst.sh up"
+set $volumedown --no-startup-id "~/.local/bin/volume-notify-dunst.sh down"
+
 bindsym XF86AudioMute exec $mute
 bindsym XF86AudioLowerVolume exec $volumedown
 bindsym XF86AudioRaiseVolume exec $volumeup
@@ -249,16 +257,18 @@ bindsym Mod1+c exec $volumeup
 set $play --no-startup-id mpc toggle
 set $prev --no-startup-id mpc prev
 set $next --no-startup-id mpc next
+set $songnotify --no-startup-id notify-send "♫ Now Playing" "$(mpc current)"
 
 bindsym $mod+XF86AudioMute exec $play
-bindsym $mod+XF86AudioLowerVolume exec $prev
-bindsym $mod+XF86AudioRaiseVolume exec $next
+bindsym $mod+XF86AudioLowerVolume exec $prev; exec $songnotify
+bindsym $mod+XF86AudioRaiseVolume exec $next; exec $songnotify
 
 # NOTE the keys are just in close proximity
 # NOTE applies to volume keys on the upper row (z, x, c)
 bindsym Mod1+a exec $play
-bindsym Mod1+s exec $prev
-bindsym Mod1+d exec $next
+bindsym Mod1+s exec $prev; exec $songnotify
+bindsym Mod1+d exec $next; exec $songnotify
+
 
 # Autostart programs
 # ------------------------------------------------
