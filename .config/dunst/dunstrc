@@ -159,7 +159,7 @@
     max_icon_size = 32
 
     # Paths to default icons.
-    icon_folders = /usr/share/icons/Papirus-Adapta-Nokto/16x16/status/:/usr/share/icons/Papirus-Adapta-Nokto/16x16/devices/
+    icon_folders = /usr/share/icons/Papirus-Adapta-Nokto/32x32@2x/:/usr/share/icons/Papirus-Adapta-Nokto/32x32@2x/devices/
 
     ### History ###
 
@@ -243,14 +243,14 @@
     foreground = "#898440"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
-    icon = /usr/share/icons/Papirus-Adapta-Nokto/16x16/actions/help-info.svg
+    icon = /usr/share/icons/Papirus-Adapta-Nokto/32x32@2x/emblems/emblem-information.svg
 
 [urgency_normal]
     background = "#221a25"
     foreground = "#9eb0b5"
     timeout = 5
     # Icon for notifications with normal urgency, uncomment to enable
-    #icon = /path/to/icon
+    icon = /usr/share/icons/Papirus-Adapta-Nokto/32x32@2x/emblems/vcs-normal.svg
 
 [urgency_critical]
     background = "#07040A"
@@ -258,7 +258,7 @@
     frame_color = "#DD3816"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
-    icon = /usr/share/icons/Papirus-Adapta-Nokto/16x16/actions/edit-bomb.svg
+    icon = /usr/share/icons/Papirus-Adapta-Nokto/32x32@2x/emblems/vcs-conflicting.svg
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
