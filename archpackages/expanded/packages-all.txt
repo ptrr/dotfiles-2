@@ -256,7 +256,6 @@ json-glib
 jsoncpp
 kbd
 kbproto
-keepassxc
 keyutils
 kmod
 krb5
@@ -698,7 +697,6 @@ qt5-sensors
 qt5-svg
 qt5-webchannel
 qt5-webkit
-qt5-x11extras
 qt5-xmlpatterns
 qtpass
 randrproto
@@ -951,9 +949,6 @@ yajl
 yelp-tools
 yelp-xsl
 youtube-dl
-yubico-c
-yubico-c-client
-yubikey-personalization
 zathura
 zathura-pdf-poppler
 zenity
