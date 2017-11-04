@@ -1,6 +1,6 @@
 [Default Applications]
 image/png=ristretto.desktop
-text/plain=org.gnome.gedit.desktop
+text/plain=org.gnome.mousepad.desktop
 text/html=userapp-Firefox Nightly-834L7Y.desktop
 image/jpeg=ristretto.desktop
 x-scheme-handler/http=userapp-Firefox Nightly-834L7Y.desktop
@@ -36,11 +36,12 @@ image/svg+xml-compressed=eog.desktop
 image/vnd.wap.wbmp=eog.desktop
 application/ogg=mpv.desktop
 application/pdf=zathura-pdf-poppler.desktop
+text/markdown=mousepad.desktop
 
 [Added Associations]
 image/png=gthumb.desktop;org.gnome.gThumb.desktop;eog.desktop;ristretto.desktop;
-text/plain=org.gnome.gedit.desktop;
-text/html=org.gnome.gedit.desktop;userapp-Firefox Developer Edition-PE1D7Y.desktop;userapp-Firefox Nightly-834L7Y.desktop;
+text/plain=org.gnome.mousepad.desktop;
+text/html=org.gnome.mousepad.desktop;userapp-Firefox Developer Edition-PE1D7Y.desktop;userapp-Firefox Nightly-834L7Y.desktop;
 image/jpeg=gthumb.desktop;org.gnome.gThumb.desktop;ristretto.desktop;
 x-scheme-handler/http=exo-web-browser.desktop
 x-scheme-handler/https=exo-web-browser.desktop
@@ -75,3 +76,4 @@ image/svg+xml-compressed=eog.desktop;
 image/vnd.wap.wbmp=eog.desktop;
 application/ogg=mpv.desktop;
 application/pdf=zathura-pdf-poppler.desktop;
+text/markdown=org.gnome.mousepad.desktop;mousepad.desktop;
