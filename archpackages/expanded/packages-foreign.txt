@@ -1,10 +1,9 @@
-cinnamon-sound-effects
 corebird
 cower
 dtrx
+dunstify
 firefox-nightly
 i3-gaps
-iso-flag-png
 lightdm-settings
 lightdm-slick-greeter
 neofetch
