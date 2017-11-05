@@ -153,16 +153,16 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # Move focused container to workspace
-bindsym $mod+Mod1+1 move container to workspace $ws1; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 1"
-bindsym $mod+Mod1+2 move container to workspace $ws2; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 2"
-bindsym $mod+Mod1+3 move container to workspace $ws3; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 3"
-bindsym $mod+Mod1+4 move container to workspace $ws4; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 4"
-bindsym $mod+Mod1+5 move container to workspace $ws5; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 5"
-bindsym $mod+Mod1+6 move container to workspace $ws6; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 6"
-bindsym $mod+Mod1+7 move container to workspace $ws7; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 7"
-bindsym $mod+Mod1+8 move container to workspace $ws8; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 8"
-bindsym $mod+Mod1+9 move container to workspace $ws9; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 9"
-bindsym $mod+Mod1+0 move container to workspace $ws10; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 10"
+bindsym $mod+Mod1+1 move container to workspace $ws1; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to workspace 1"
+bindsym $mod+Mod1+2 move container to workspace $ws2; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to workspace 2"
+bindsym $mod+Mod1+3 move container to workspace $ws3; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to workspace 3"
+bindsym $mod+Mod1+4 move container to workspace $ws4; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to workspace 4"
+bindsym $mod+Mod1+5 move container to workspace $ws5; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to workspace 5"
+bindsym $mod+Mod1+6 move container to workspace $ws6; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to workspace 6"
+bindsym $mod+Mod1+7 move container to workspace $ws7; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to workspace 7"
+bindsym $mod+Mod1+8 move container to workspace $ws8; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to workspace 8"
+bindsym $mod+Mod1+9 move container to workspace $ws9; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to workspace 9"
+bindsym $mod+Mod1+0 move container to workspace $ws10; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to workspace 10"
 
 # Move focused container to workspace and switch to it
 bindsym Ctrl+$mod+Mod1+1 move container to workspace $ws1, workspace $ws1
@@ -177,7 +177,7 @@ bindsym Ctrl+$mod+Mod1+9 move container to workspace $ws9, workspace $ws9
 bindsym Ctrl+$mod+Mod1+0 move container to workspace $ws10, workspace $ws10
 
 # Dashboard
-bindsym Ctrl+Mod1+Delete workspace 0; exec $term -e ranger; exec $term -e htop; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/administration.svg -t 8 "Switched to Dashboard"
+bindsym Ctrl+Mod1+Delete workspace 0; exec $term -e ranger; exec $term -e htop; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/administration.svg -t 8 "Switched to dashboard"
 
 # i3 modalities
 # ================================================
@@ -211,13 +211,13 @@ bindsym $mod+Delete mode "$mode_system"; exec dunstify -I /usr/share/icons/Papir
 # NOTE thus Mod1+<Number> is scalable (whereas first letter is tricky)
 bindsym $mod+Return exec $term
 bindsym Mod1+Return exec $term
-bindsym Mod1+1 exec $fm; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/system-file-manager.svg -t 3 "File manager is running"
-bindsym Mod1+2 exec $browser; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/firefox-nightly.svg -t 5 "Internet browser is running"
-bindsym Mod1+3 exec $rss; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/RSS_feeds.svg -t 3 "Feed reader is running"
-bindsym Mod1+4 exec $mail; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/mail-client.svg -t 3 "Mail client is running"
-bindsym Mod1+5 exec $music; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/musique.svg -t 3 "Music player is running"
-bindsym Mod1+6 exec $podcast; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/podcast.svg -t 3 "Podcast player is running"
-bindsym Mod1+7 exec $imageeditor; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/gimp.svg -t 3 "Image editor is running"
+bindsym Mod1+1 exec $fm; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/system-file-manager.svg -t 3 "Launched file manager"
+bindsym Mod1+2 exec $browser; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/firefox-nightly.svg -t 5 "Launched internet browser"
+bindsym Mod1+3 exec $rss; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/RSS_feeds.svg -t 3 "Launched feed reader"
+bindsym Mod1+4 exec $mail; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/mail-client.svg -t 3 "Launched mail client"
+bindsym Mod1+5 exec $music; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/musique.svg -t 3 "Launched music player"
+bindsym Mod1+6 exec $podcast; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/podcast.svg -t 3 "Launched podcast player"
+bindsym Mod1+7 exec $imageeditor; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/gimp.svg -t 3 "Launched image editor"
 
 # App launcher menu
 bindsym $mod+d exec --no-startup-id rofi -show run
@@ -229,9 +229,9 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 # ------------------------------------------------
 
 # Focused window
-bindsym Print exec scrot -u -z '%Y-%m-%d_%H:%M:%S_$wx$h$n.png' -e 'mv $f ~/Desktop'; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/ksnapshot.svg -t 8 "Took Window Screenshot"
+bindsym Print exec scrot -u -z '%Y-%m-%d_%H:%M:%S_$wx$h$n.png' -e 'mv $f ~/Desktop'; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/ksnapshot.svg -t 8 "Took window screenshot"
 # Full screen
-bindsym $mod+Print exec scrot -z '%Y-%m-%d_%H:%M:%S_$wx$h.png' -e 'mv $f ~/Desktop'; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/ksnapshot.svg -t 8 "Took Screen Screenshot"
+bindsym $mod+Print exec scrot -z '%Y-%m-%d_%H:%M:%S_$wx$h.png' -e 'mv $f ~/Desktop'; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/ksnapshot.svg -t 8 "Took screen screenshot"
 
 # Music and sound
 # ------------------------------------------------

@@ -65,58 +65,43 @@ scroll-down = i3wm-wsprev
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-label-layout = %layout%
+label-layout = "  %layout%"
 label-layout-padding = 2
 label-layout-background = ${colors.dhl}
 label-layout-underline = ${colors.yel}
 
 label-indicator = %name%
-label-indicator-padding = 1
+label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.yel}
+label-indicator-background = ${colors.red}
 label-indicator-foreground = ${colors.lbg}
-
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.dhl}
-label-focused-underline= ${colors.gre}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.red}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.dt1}
-label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
-wrapping-scroll = false
+enable-click = true
+enable-scroll = true
+wrapping-scroll = true
+reverse-scroll = true
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
-label-mode-padding = 1
-label-mode-foreground = #000
+label-mode-padding = 2
+label-mode-foreground = ${colors.lbg}
 label-mode-background = ${colors.gre}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
+label-focused-background = ${colors.dhl}
+label-focused-underline = ${colors.gre}
+label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+label-unfocused-background = ${colors.dhl}
+label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
@@ -128,28 +113,30 @@ label-visible-padding = ${self.label-focused-padding}
 label-urgent = %index%
 label-urgent-background = ${colors.red}
 label-urgent-foreground = ${colors.dbg}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
+label-urgent-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online = <icon-prev> <toggle> <icon-next> <label-song> <label-time>
+format-online = <icon-prev> <toggle> <icon-next> <icon-random> <label-song> <label-time>
 
 icon-prev = ""
 icon-prev-padding = 2
 icon-prev-background = ${colors.dhl}
-icon-prev-foreground = ${colors.dt1}
 icon-play = ""
 icon-play-padding = 2
 icon-play-background = ${colors.dhl}
-icon-play-foreground = ${colors.dt1}
 icon-pause = ""
 icon-pause-padding = 2
 icon-pause-background = ${colors.dhl}
-icon-pause-foreground = ${colors.dt1}
 icon-next = ""
 icon-next-padding = 2
 icon-next-background = ${colors.dhl}
-icon-next-foreground = ${colors.dt1}
+icon-random = ""
+icon-random-padding = 2
+icon-random-background = ${colors.dhl}
+; icon-repeat = ""
+; icon-repeat-padding = 2
+; icon-repeat-background = ${colors.dhl}
 
 label-song = %title% ~ %artist% [%album%]
 label-song-padding = 2
@@ -161,13 +148,15 @@ label-offline = mpd is offline
 type = internal/date
 interval = 5
 
-date = "%a, %Y-%m-%d,"
+date = "%b %-d,"
 time = "%H:%M"
-
-format-prefix-foreground = ${colors.dt2}
-; format-underline = ${colors.ora}
+date-alt = "%A, %B %-d, %Y,"
+time-alt = "%H:%M"
 
 label = %date% %time%
+label-padding = 2
+label-background = ${colors.dhl}
+label-underline = ${colors.cya}
 
 [module/volume]
 type = internal/volume
