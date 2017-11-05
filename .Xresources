@@ -1,9 +1,9 @@
 ! Font settings
 ! ================================================
 Xft.dpi: 96
-Xft.antialias: true      
+Xft.antialias: true
 Xft.hinting: true
-Xft.rgba: rgb 
+Xft.rgba: rgb
 Xft.autohint: true
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
@@ -15,7 +15,7 @@ rofi.hide-scrollbar: true
 rofi.sidebar-mode: false
 rofi.width: 1200
 rofi.lines: 10
-rofi.columns: 3
+rofi.columns: 2
 rofi.bw: 0
 rofi.location: 0
 rofi.padding: 50
@@ -23,10 +23,10 @@ rofi.fuzzy: false
 rofi.font: Iosevka Term Light 18
 
 !                    bg       fg      altbg    hlbg     hlfg
-rofi.color-normal: #17141A, #9eb0b5, #221a25, #8764C4, #f9f9f9
-rofi.color-active: #17141A, #1A891C, #221a25, #8764C4, #1A891C
-rofi.color-urgent: #DD3816, #9eb0b5, #BE5A14, #b9a600, #f9f9f9
-rofi.color-window: #17141A, #17141A, #17141A
+rofi.color-normal: #17141a, #9eb0b5, #221a25, #058942, #e9e9e9
+rofi.color-active: #17141a, #1A891C, #221a25, #058942, #fbfbfb
+rofi.color-urgent: #e52530, #9eb0b5, #c65304, #b9a600, #e9e9e9
+rofi.color-window: #17141a, #17141a, #17141a
 
 ! urxvt
 ! ================================================
@@ -34,25 +34,25 @@ rofi.color-window: #17141A, #17141A, #17141A
 ! Colours - Default website theme
 ! https://protesilaos.com/
 ! NOTE modified light base, the cyan and the yellow since I only use the dark for urxvt
-URxvt*background: [95]#07040A
+URxvt*background: [90]#07040a
 URxvt*foreground: #9eb0b5
-URxvt*cursorColor: #f9f9f9
-URxvt*color0: #221a25
-URxvt*color1: #DD3816
-URxvt*color2: #1A891C
-URxvt*color3: #b9a600
-URxvt*color4: #3575D4
-URxvt*color5: #DC3259
-URxvt*color6: #13a6c3
+URxvt*cursorColor: #fbfbfb
+URxvt*color0: #07040a
+URxvt*color1: #e52530
+URxvt*color2: #058942
+URxvt*color3: #897600
+URxvt*color4: #1f7ac4
+URxvt*color5: #b25599
+URxvt*color6: #108294
 URxvt*color7: #e9e9e9
-URxvt*color8: #07040A
-URxvt*color9: #BE5A14
-URxvt*color10: #5Aa33C
+URxvt*color8: #221a25
+URxvt*color9: #c65304
+URxvt*color10: #202819
 URxvt*color11: #898440
-URxvt*color12: #4b8dab
-URxvt*color13: #8764C4
-URxvt*color14: #7eb0c5
-URxvt*color15: #f9f9f9
+URxvt*color12: #4b5d6b
+URxvt*color13: #8764c4
+URxvt*color14: #9eb0b5
+URxvt*color15: #fbfbfb
 
 ! Preferences
 URxvt.termName: rxvt-unicode

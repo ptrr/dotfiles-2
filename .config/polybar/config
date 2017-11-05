@@ -9,22 +9,22 @@
 ;=====================================================
 
 [colors]
-dbg = #07040A
+dbg = #07040a
 dhl = #221a25
 dt2 = #898440
 dt1 = #9eb0b5
-lbg = #f9f9f9
+lbg = #fbfbfb
 lhl = #e9e9e9
 lt2 = #4b5d6b
 lt1 = #202819
-red = #DD3816
-ora = #BE5A14
+red = #e52530
+ora = #c65304
 yel = #897600
-gre = #1A891C
-cya = #437E93
-blu = #3575D4
-vio = #8764C4
-mag = #DC3259
+gre = #058942
+cya = #108294
+blu = #1f7ac4
+vio = #8764c4
+mag = #b25599
 
 [bar/example]
 width = 100%
@@ -151,9 +151,9 @@ icon-next-padding = 2
 icon-next-background = ${colors.dhl}
 icon-next-foreground = ${colors.dt1}
 
-label-song = %title% - %artist%
+label-song = %title% ~ %artist% [%album%]
 label-song-padding = 2
-label-song-maxlen = 60
+label-song-maxlen = 100
 label-song-ellipsis = true
 label-offline = mpd is offline
 
@@ -165,7 +165,7 @@ date = "%a, %Y-%m-%d,"
 time = "%H:%M"
 
 format-prefix-foreground = ${colors.dt2}
-format-underline = ${colors.ora}
+; format-underline = ${colors.ora}
 
 label = %date% %time%
 
@@ -211,32 +211,38 @@ label-open-foreground = ${colors.dt1}
 label-open-underline = ${colors.red}
 label-open-padding = 2
 label-close = "  Stay"
-label-close-background = ${colors.dhl}
-label-close-foreground = ${colors.dt1}
-label-close-padding = 2
+label-close-background = ${colors.blu}
+label-close-foreground = ${colors.lbg}
+label-close-padding = 4
+label-close-margin = 1
 
 menu-0-0 = "  Lock"
-menu-0-0-padding = 2
-menu-0-0-background = ${colors.cya}
+menu-0-0-padding = 4
+menu-0-0-margin = 1
+menu-0-0-background = ${colors.yel}
 menu-0-0-foreground = ${colors.lbg}
 menu-0-0-exec = ~/.config/i3/lock.sh
 menu-0-1 = "  Switch Users"
-menu-0-1-padding = 2
-menu-0-1-background = ${colors.vio}
+menu-0-1-padding = 4
+menu-0-1-margin = 1
+menu-0-1-background = ${colors.gre}
 menu-0-1-foreground = ${colors.lbg}
 menu-0-1-exec = "dm-tool switch-to-greeter"
 menu-0-2 = "  Log Out"
-menu-0-2-padding = 2
+menu-0-2-padding = 4
+menu-0-2-margin = 1
 menu-0-2-background = ${colors.ora}
 menu-0-2-foreground = ${colors.lbg}
 menu-0-2-exec = i3-msg exit, mode "default"
 menu-0-3 = "  Reboot"
-menu-0-3-padding = 2
-menu-0-3-background = ${colors.yel}
+menu-0-3-padding = 4
+menu-0-3-margin = 1
+menu-0-3-background = ${colors.mag}
 menu-0-3-foreground = ${colors.lbg}
 menu-0-3-exec = systemctl reboot
 menu-0-4 = "  Power Off"
-menu-0-4-padding = 2
+menu-0-4-padding = 4
+menu-0-4-margin = 1
 menu-0-4-background = ${colors.red}
 menu-0-4-foreground = ${colors.lbg}
 menu-0-4-exec = systemctl poweroff

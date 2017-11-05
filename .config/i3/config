@@ -13,22 +13,22 @@ bindsym $mod+Mod1+r restart
 # Colour scheme
 # ------------------------------------------------
 # Default website theme https://protesilaos.com/
-set $dbg #07040A
+set $dbg #07040a
 set $dhl #221a25
 set $dt2 #898440
 set $dt1 #9eb0b5
-set $lbg #f9f9f9
+set $lbg #fbfbfb
 set $lhl #e9e9e9
 set $lt2 #4b5d6b
 set $lt1 #202819
-set $red #DD3816
-set $ora #BE5A14
+set $red #e52530
+set $ora #c65304
 set $yel #897600
-set $gre #1A891C
-set $cya #437E93
-set $blu #3575D4
-set $vio #8764C4
-set $mag #DC3259
+set $gre #058942
+set $cya #108294
+set $blu #1f7ac4
+set $vio #8764c4
+set $mag #b25599
 
 # Common applications
 # ------------------------------------------------
@@ -77,7 +77,7 @@ floating_modifier Mod1
 # ------------------------------------------------
 
 # order: BORDER BACKGROUND FOREGROUND INDICATOR CHILD_BORDER
-client.focused $dhl $dbg $dt2 $red $dt1
+client.focused $dhl $dbg $dt2 $red $lhl
 client.unfocused $dbg $dbg $lt1 $dbg $dbg
 client.focused_inactive $dbg $dbg $lt2 $dbg $dbg
 client.urgent $red $red $dhl $red $red
@@ -153,16 +153,16 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # Move focused container to workspace
-bindsym $mod+Mod1+1 move container to workspace $ws1
-bindsym $mod+Mod1+2 move container to workspace $ws2
-bindsym $mod+Mod1+3 move container to workspace $ws3
-bindsym $mod+Mod1+4 move container to workspace $ws4
-bindsym $mod+Mod1+5 move container to workspace $ws5
-bindsym $mod+Mod1+6 move container to workspace $ws6
-bindsym $mod+Mod1+7 move container to workspace $ws7
-bindsym $mod+Mod1+8 move container to workspace $ws8
-bindsym $mod+Mod1+9 move container to workspace $ws9
-bindsym $mod+Mod1+0 move container to workspace $ws10
+bindsym $mod+Mod1+1 move container to workspace $ws1; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 1"
+bindsym $mod+Mod1+2 move container to workspace $ws2; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 2"
+bindsym $mod+Mod1+3 move container to workspace $ws3; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 3"
+bindsym $mod+Mod1+4 move container to workspace $ws4; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 4"
+bindsym $mod+Mod1+5 move container to workspace $ws5; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 5"
+bindsym $mod+Mod1+6 move container to workspace $ws6; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 6"
+bindsym $mod+Mod1+7 move container to workspace $ws7; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 7"
+bindsym $mod+Mod1+8 move container to workspace $ws8; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 8"
+bindsym $mod+Mod1+9 move container to workspace $ws9; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 9"
+bindsym $mod+Mod1+0 move container to workspace $ws10; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-magenta.svg -t 8 "Moved window to Workspace 10"
 
 # Move focused container to workspace and switch to it
 bindsym Ctrl+$mod+Mod1+1 move container to workspace $ws1, workspace $ws1
@@ -177,7 +177,7 @@ bindsym Ctrl+$mod+Mod1+9 move container to workspace $ws9, workspace $ws9
 bindsym Ctrl+$mod+Mod1+0 move container to workspace $ws10, workspace $ws10
 
 # Dashboard
-bindsym Ctrl+Mod1+Delete workspace 0; exec $term -e htop; exec $term -e ranger
+bindsym Ctrl+Mod1+Delete workspace 0; exec $term -e ranger; exec $term -e htop; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/administration.svg -t 8 "Switched to Dashboard"
 
 # i3 modalities
 # ================================================
@@ -229,9 +229,9 @@ bindsym $mod+d exec --no-startup-id rofi -show run
 # ------------------------------------------------
 
 # Focused window
-bindsym Print exec scrot -u -z '%Y-%m-%d_%H:%M:%S_$wx$h$n.png' -e 'mv $f ~/Desktop'
+bindsym Print exec scrot -u -z '%Y-%m-%d_%H:%M:%S_$wx$h$n.png' -e 'mv $f ~/Desktop'; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/ksnapshot.svg -t 8 "Took Window Screenshot"
 # Full screen
-bindsym $mod+Print exec scrot -z '%Y-%m-%d_%H:%M:%S_$wx$h.png' -e 'mv $f ~/Desktop'
+bindsym $mod+Print exec scrot -z '%Y-%m-%d_%H:%M:%S_$wx$h.png' -e 'mv $f ~/Desktop'; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/ksnapshot.svg -t 8 "Took Screen Screenshot"
 
 # Music and sound
 # ------------------------------------------------
@@ -241,6 +241,7 @@ bindsym $mod+Print exec scrot -z '%Y-%m-%d_%H:%M:%S_$wx$h.png' -e 'mv $f ~/Deskt
 # set $volumeup --no-startup-id amixer set Master 5%+
 # set $volumedown --no-startup-id amixer set Master 5%-
 
+# NOTE `dunstify` actions are set in the script
 set $mute --no-startup-id "~/.local/bin/volume-notify-dunst.sh mute"
 set $volumeup --no-startup-id "~/.local/bin/volume-notify-dunst.sh up"
 set $volumedown --no-startup-id "~/.local/bin/volume-notify-dunst.sh down"
