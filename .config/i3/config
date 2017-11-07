@@ -39,11 +39,13 @@ set $rss urxvt -e newsboat
 set $mail urxvt -e neomutt
 set $podcast urxvt -e podboat -a
 set $imageeditor gimp
+set $music urxvt -e ncmpcpp
 
-# NOTE set custom bg for ncmpcpp
-# since I only use it for the visualiser
-# or some minor stuff
-set $music urxvt -bg [60]#000000 -e ncmpcpp -s visualizer
+# NOTE neat idea but I prefer setting a ncmpcpp slave screen
+# # NOTE set custom bg for ncmpcpp
+# # since I only use it for the visualiser
+# # or some minor stuff
+# set $music urxvt -bg [60]#000000 -e ncmpcpp -s visualizer
 
 # Window settings
 # ================================================

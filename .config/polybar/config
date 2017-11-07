@@ -53,8 +53,8 @@ font-2 = unifont:fontformat=truetype:size=10:antialias=false;2
 font-3 = siji:pixelsize=10;2
 
 modules-left = i3 mpd
-modules-center = date
-modules-right = pkg xkeyboard volume powermenu
+; modules-center = date
+modules-right = pkg xkeyboard volume date powermenu
 tray-position = right
 tray-padding = 0
 
@@ -140,7 +140,7 @@ icon-random-background = ${colors.dhl}
 
 label-song = %title% ~ %artist% [%album%]
 label-song-padding = 2
-label-song-maxlen = 100
+label-song-maxlen = 160
 label-song-ellipsis = true
 label-offline = mpd is offline
 
@@ -148,10 +148,10 @@ label-offline = mpd is offline
 type = internal/date
 interval = 5
 
-date = "%b %-d,"
+date = "%b %d,"
 time = "%H:%M"
-date-alt = "%A, %B %-d, %Y,"
-time-alt = "%H:%M"
+date-alt = "%A, %B %-d, %Y (Week %W),"
+time-alt = "%H:%M (%Z %z)"
 
 label = %date% %time%
 label-padding = 2
@@ -235,3 +235,15 @@ menu-0-4-margin = 1
 menu-0-4-background = ${colors.red}
 menu-0-4-foreground = ${colors.lbg}
 menu-0-4-exec = systemctl poweroff
+
+; [module/appmenu]
+; type = custom/text
+; content = "Menu"
+
+; content-background = ${colors.dhl}
+; content-underline =  ${colors.blu}
+; content-padding = 2
+
+; click-left = rofi -show run
+; click-middle = thunar
+; click-right = lxappearance
