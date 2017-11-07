@@ -148,7 +148,7 @@ label-offline = mpd is offline
 type = internal/date
 interval = 5
 
-date = "%b %d,"
+date = "%b %-d,"
 time = "%H:%M"
 date-alt = "%A, %B %-d, %Y (Week %W),"
 time-alt = "%H:%M (%Z %z)"
