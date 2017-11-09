@@ -1,12 +1,4 @@
 ; vim:ft=dosini
-;=====================================================
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
-;=====================================================
 
 [colors]
 dbg = #07040a
@@ -25,6 +17,9 @@ cya = #108294
 blu = #1f7ac4
 vio = #8764c4
 mag = #b25599
+
+; Custom colour for toggle active state
+active = #6ca482
 
 [bar/example]
 width = 100%
@@ -148,16 +143,13 @@ icon-repeat = ""
 icon-repeat-padding = 2
 icon-repeat-background = ${colors.dhl}
 
-toggle-on-foreground = ${colors.ora}
+toggle-on-foreground = ${colors.active}
 toggle-off-foreground = ${colors.dt2}
 
-label-song = %title% ~ %artist% ~ %album%
+label-song = %artist% ~ %title%
 label-song-padding = 2
 label-song-maxlen = 100
 label-song-ellipsis = true
-
-label-time-font = 3
-label-time-foreground = ${colors.lt2}
 
 [module/date]
 type = internal/date
@@ -201,11 +193,14 @@ ramp-volume-6 = "  "
 type = custom/script
 interval = 1200
 format = <label>
-format-underline = ${colors.mag}
+format-background = ${colors.dhl}
+format-underline = ${colors.blu}
 label = "%output:0:30%"
-label-padding = 1
+label-padding = 2
 exec = .config/polybar/pkg.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
+click-left = urxvt -e sudo pacman -Syu &
+click-right = urxvt -e pacaur -Syu --aur &
 
 [module/powermenu]
 type = custom/menu
