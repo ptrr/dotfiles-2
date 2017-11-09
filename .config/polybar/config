@@ -49,12 +49,13 @@ module-margin-right = 1
 
 font-0 = FontAwesome:size=8;2
 font-1 = Iosevka Term:pixelsize=10:antialias=false;1
-font-2 = unifont:fontformat=truetype:size=10:antialias=false;2
-font-3 = siji:pixelsize=10;2
+font-2 = Iosevka Term Heavy:pixelsize=10:antialias=false;1
+font-3 = unifont:fontformat=truetype:size=10:antialias=false;2
+font-4 = siji:pixelsize=10;2
 
-modules-left = i3 mpd
+modules-left = i3 mpdclient mpd
 ; modules-center = date
-modules-right = pkg xkeyboard volume date powermenu
+modules-right = pkg date volume xkeyboard powermenu
 tray-position = right
 tray-padding = 0
 
@@ -68,7 +69,7 @@ blacklist-0 = num lock
 label-layout = "  %layout%"
 label-layout-padding = 2
 label-layout-background = ${colors.dhl}
-label-layout-underline = ${colors.yel}
+label-layout-underline = ${colors.mag}
 
 label-indicator = %name%
 label-indicator-padding = 2
@@ -90,17 +91,19 @@ pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = ${colors.lbg}
-label-mode-background = ${colors.gre}
+label-mode-background = ${colors.ora}
 
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.dhl}
 label-focused-underline = ${colors.gre}
 label-focused-padding = 2
+label-focused-font = 3
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
 label-unfocused-background = ${colors.dhl}
+label-unfocused-foreground = ${colors.dt2}
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
@@ -117,32 +120,44 @@ label-urgent-padding = 2
 
 [module/mpd]
 type = internal/mpd
-format-online = <icon-prev> <toggle> <icon-next> <icon-random> <label-song> <label-time>
+format-offline = <label-offline>
+label-offline = MPD is offline
+; format-online = <label-song> <label-time>
+format-online = <icon-prev> <toggle> <icon-next> <icon-random> <icon-repeat> <label-song> <label-time>
 
 icon-prev = ""
 icon-prev-padding = 2
 icon-prev-background = ${colors.dhl}
+; icon-prev-foreground = ${colors.dt2}
 icon-play = ""
 icon-play-padding = 2
 icon-play-background = ${colors.dhl}
+; icon-play-foreground = ${colors.dt2}
 icon-pause = ""
 icon-pause-padding = 2
 icon-pause-background = ${colors.dhl}
+; icon-pause-foreground = ${colors.dt2}
 icon-next = ""
 icon-next-padding = 2
 icon-next-background = ${colors.dhl}
+; icon-next-foreground = ${colors.dt2}
 icon-random = ""
 icon-random-padding = 2
 icon-random-background = ${colors.dhl}
-; icon-repeat = ""
-; icon-repeat-padding = 2
-; icon-repeat-background = ${colors.dhl}
+icon-repeat = ""
+icon-repeat-padding = 2
+icon-repeat-background = ${colors.dhl}
 
-label-song = %title% ~ %artist% [%album%]
+toggle-on-foreground = ${colors.ora}
+toggle-off-foreground = ${colors.dt2}
+
+label-song = %title% ~ %artist% ~ %album%
 label-song-padding = 2
-label-song-maxlen = 160
+label-song-maxlen = 100
 label-song-ellipsis = true
-label-offline = mpd is offline
+
+label-time-font = 3
+label-time-foreground = ${colors.lt2}
 
 [module/date]
 type = internal/date
@@ -241,9 +256,21 @@ menu-0-4-exec = systemctl poweroff
 ; content = "Menu"
 
 ; content-background = ${colors.dhl}
-; content-underline =  ${colors.blu}
+; content-underline =  ${colors.gre}
 ; content-padding = 2
 
 ; click-left = rofi -show run
 ; click-middle = thunar
 ; click-right = lxappearance
+
+[module/mpdclient]
+type = custom/text
+content = ""
+
+content-background = ${colors.dhl}
+content-underline =  ${colors.yel}
+content-padding = 2
+
+click-left = cantata &
+click-middle = urxvt -e ncmpcpp &
+click-right = urxvt -e ncmpcpp &
