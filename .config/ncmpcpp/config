@@ -29,12 +29,12 @@ playlist_disable_highlight_delay = 2
 playlist_separate_albums = "no"
 
 # Bars
-# progressbar_look = "▪▪▫"
 # progressbar_look = "=>"
-# progressbar_look = "┅┅┄"
 # progressbar_look = "—|—"
 # progressbar_look = "─┅─"
-progressbar_look = "─╼ "
+# progressbar_look = "─╼ "
+# progressbar_look = "▪▪▫"
+progressbar_look = "┅┅┄"
 titles_visibility = "no"
 header_visibility = "no"
 statusbar_visibility = "yes"
@@ -49,8 +49,8 @@ current_item_suffix = "$/r$(end)"
 color1 = "15"
 color2 = "12"
 statusbar_color = "6"
-progressbar_color = "13"
-progressbar_elapsed_color = "8"
+progressbar_color = "6"
+progressbar_elapsed_color = "14"
 
 # Others
 search_engine_display_mode = "columns" (classic/columns)
