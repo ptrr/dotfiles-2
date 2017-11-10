@@ -71,6 +71,7 @@ for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 for_window [class="Pavucontrol"] floating enable
+for_window [class="Simplescreenrecorder"] floating enable
 
 # Use Mouse+Mod1 (Alt) to drag floating windows
 floating_modifier Mod1
@@ -222,8 +223,8 @@ bindsym Mod1+6 exec $podcast; exec dunstify -I /usr/share/icons/Papirus-Adapta-N
 bindsym Mod1+7 exec $imageeditor; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/gimp.svg -t 3 "Launched image editor"
 
 # App launcher menu
-bindsym $mod+d exec --no-startup-id rofi -show run -display-run "  Run program"
-bindsym Mod1+Tab exec --no-startup-id rofi -show window -display-window "  Windows per workspace"
+bindsym $mod+d exec --no-startup-id rofi -show drun -display-drun "  Run app"
+bindsym Mod1+Tab exec --no-startup-id rofi -show window -display-window "  App switch"
 
 # Controls and utilities
 # ================================================

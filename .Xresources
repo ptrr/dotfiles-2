@@ -10,16 +10,19 @@ Xft.lcdfilter: lcddefault
 
 ! Rofi
 ! ================================================
-rofi.modi: run
+rofi.modi: drun
+rofi.show-icons: true
 rofi.hide-scrollbar: true
 rofi.sidebar-mode: false
-rofi.width: 1200
+rofi.fullscreen: true
+rofi.width: 50
+rofi.padding: 300
 rofi.lines: 10
+rofi.line-margin: 10
 rofi.columns: 2
 rofi.bw: 0
 rofi.location: 0
-rofi.padding: 300
-rofi.fuzzy: false
+rofi.fuzzy: true
 rofi.font: Iosevka Term Light 24
 
 ! NOTE rofi has deprecated below themes settings
@@ -27,11 +30,11 @@ rofi.font: Iosevka Term Light 24
 ! Example themes:
 ! https://github.com/DaveDavenport/rofi-themes/tree/master/Official%20Themes
 
-!                     bg        fg       altbg      hlbg       hlfg
-rofi.color-normal: #00000000, #9eb0b5, #00000000, #00000000, #058942
-rofi.color-urgent: #00000000, #1A891C, #00000000, #00000000, #fbfbfb
-rofi.color-active: #00000000, #058942, #00000000, #00000000, #058942
-rofi.color-window: #ec07040a, #ec07040a, #0007040a
+!                       bg         fg           altbg          hlbg       hlfg
+rofi.color-normal: argb:00000000, #9eb0b5, argb:00000000, argb:de058942, #fbfbfb
+rofi.color-urgent: argb:00000000, #e52530, argb:00000000, argb:dee52530, #fbfbfb
+rofi.color-active: argb:00000000, #1f7ac4, argb:00000000, argb:de1f7ac4, #fbfbfb
+rofi.color-window: argb:de07040a, argb:de07040a, argb:de07040a
 
 ! urxvt
 ! ================================================
