@@ -1,0 +1,22 @@
+! Colours - Default website theme
+! https://protesilaos.com/
+! NOTE modified color10 color12 to work better with dark bg
+URxvt*background: [90]#07040a
+URxvt*foreground: #9eb0b5
+URxvt*cursorColor: #fbfbfb
+URxvt*color0: #221a25
+URxvt*color1: #e52530
+URxvt*color2: #058942
+URxvt*color3: #897600
+URxvt*color4: #1f7ac4
+URxvt*color5: #b25599
+URxvt*color6: #108294
+URxvt*color7: #e9e9e9
+URxvt*color8: #07040a
+URxvt*color9: #c65304
+URxvt*color10: #5aa33c
+URxvt*color11: #898440
+URxvt*color12: #4b8dab
+URxvt*color13: #8764c4
+URxvt*color14: #9eb0b5
+URxvt*color15: #fbfbfb
