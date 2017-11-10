@@ -16,7 +16,7 @@
 - Music server *mpd*. Music Player Daemon works in the background, enabling all sorts of clients to interface with it.
 - Music client *ncmpcpp*. Console based MPD interface.
 - GUI Music client *Cantata*. Qt app to interface with MPD. Fully featured.
-- Program launcher *rofi*. Actually the program is quite more than that, but I only use for launching programs.
+- Program launcher *rofi*. Actually the program is quite more than that, but I mostly use it for launching programs.
 - PDF viewer *zathura*. Vi-like keybindings for document viewing.
 - Notifications *dunst*. Highly customisable notifications daemon. Gets the job done.
 - Fonts *DejaVu Sans Mono*, *Iosevka Term*, and *Source Code Pro*. I love them all.
