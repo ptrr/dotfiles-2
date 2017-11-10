@@ -69,10 +69,13 @@ URxvt.cursorUnderline: true
 URxvt.saveLines: 5000
 URxvt.intensityStyles: false
 URxvt.depth: 32
-URxvt.font: xft:Source Code Pro:size=12:antialias=true
-URxvt.boldFont: xft:Source Code Pro:size=12:antialias=true:style=bold
 URxvt.allow_bold: true
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=16
+URxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=16:bold
+URxvt.italicFont: xft:DejaVu Sans Mono:pixelsize=16:italic
+URxvt.bolditalicFont: xft:DejaVu Sans Mono:pixelsize=16:bold:italic
 URxvt.letterSpace: -1
+URxvt.lineSpace: 3
 URxvt.scrollBar: false
 Urxvt.secondaryScroll: true
 URxvt.perl-ext-common: default,matcher,selection-to-clipboard
