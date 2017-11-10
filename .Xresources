@@ -54,7 +54,7 @@ URxvt.font: xft:DejaVu Sans Mono:pixelsize=16
 URxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=16:bold
 URxvt.italicFont: xft:DejaVu Sans Mono:pixelsize=16:italic
 URxvt.bolditalicFont: xft:DejaVu Sans Mono:pixelsize=16:bold:italic
-URxvt.letterSpace: -1
+URxvt.letterSpace: 0
 URxvt.lineSpace: 3
 URxvt.scrollBar: false
 Urxvt.secondaryScroll: true
