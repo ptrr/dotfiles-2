@@ -42,16 +42,15 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = FontAwesome:size=8;2
-font-1 = Iosevka Term:pixelsize=10:antialias=false;1
-font-2 = Iosevka Term Heavy:pixelsize=10:antialias=false;1
-font-3 = unifont:fontformat=truetype:size=10:antialias=false;2
-font-4 = siji:pixelsize=10;2
+font-0 = FontAwesome:pixelsize=8;2
+font-1 = DejaVu Sans Condensed Bold:pixelsize=9:antialias=false;2
+font-2 = unifont:fontformat=truetype:size=10:antialias=false;2
+font-3 = siji:pixelsize=10;2
 
 modules-left = i3 mpdclient mpd
 ; modules-center = date
 modules-right = pkg date volume xkeyboard powermenu
-tray-position = right
+tray-position = center
 tray-padding = 0
 
 scroll-up = i3wm-wsnext
@@ -93,7 +92,6 @@ label-focused = %index%
 label-focused-background = ${colors.dhl}
 label-focused-underline = ${colors.gre}
 label-focused-padding = 2
-label-focused-font = 3
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
