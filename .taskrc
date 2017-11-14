@@ -2,7 +2,7 @@
 data.location=~/.task
 
 # General
-editor=nvim
+editor=vim
 list.all.projects=yes
 fontunderline=off
 
@@ -27,4 +27,4 @@ include ~/.task/themes/prot16-dark.theme
 # Colour coding
 color.tag.work=color15 on color5
 color.tag.important=color15 on color3
-color.project.website=color13 on color0
+color.project.website=color13 on color8

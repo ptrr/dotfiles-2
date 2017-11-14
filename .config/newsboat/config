@@ -32,14 +32,14 @@ bind-key K prev article
 # Tested with Xfce4 terminal using Prot16 schemes <https://protesilaos.com/schemes>
 
 # Dark variant
-color background color14 color8
-color info color10 color8
-color article color14 color8
-color listnormal color14 color8
+color background color14 color0
+color info color10 color0
+color article color14 color0
+color listnormal color14 color0
 color listfocus color7 color2
-color listnormal_unread color14 color8
+color listnormal_unread color14 color0
 color listfocus_unread color7 color2
-highlight article "^(Feed|Title|Author|Link|Date):.*" color11 color8
+highlight article "^(Feed|Title|Author|Link|Date):.*" color11 color0
 
 # # Light variant
 # color background color10 color15
