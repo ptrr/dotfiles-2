@@ -31,6 +31,7 @@ babl
 bash
 bash-completion
 bc
+bdf-unifont
 binutils
 bison
 blas
@@ -50,7 +51,6 @@ ca-certificates-utils
 cairo
 cairomm
 calc
-calcurse
 cantarell-fonts
 cantata
 caribou
@@ -73,7 +73,6 @@ colord-gtk
 compositeproto
 compton
 confuse
-corebird
 coreutils
 cower
 cracklib
@@ -141,6 +140,7 @@ gawk
 gc
 gcc
 gcc-libs
+gconf
 gcr
 gd
 gdbm
@@ -689,6 +689,7 @@ python2-ptyprocess
 python2-pyinotify
 python2-xdg
 qrencode
+qt4
 qt5-base
 qt5-declarative
 qt5-location
@@ -740,6 +741,8 @@ serd
 shadow
 shared-color-targets
 shared-mime-info
+signal-desktop-bin
+simplescreenrecorder
 sip
 slang
 smbclient
@@ -767,6 +770,7 @@ talloc
 tar
 task
 tdb
+terminus-font
 tevent
 texinfo
 thin-provisioning-tools

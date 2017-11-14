@@ -1,9 +1,9 @@
-corebird
 cower
 dtrx
 dunstify
 firefox-nightly
 i3-gaps
+libxfont
 lightdm-settings
 lightdm-slick-greeter
 neofetch
@@ -11,5 +11,6 @@ neomutt-git
 pacaur
 papirus-icon-theme-git
 polybar
+signal-desktop-bin
 ttf-iosevka-term-ss04
 xcalib
