@@ -19,8 +19,10 @@
 - Program launcher *rofi*. Actually the program is quite more than that, but I mostly use it for launching programs.
 - PDF viewer *zathura*. Vi-like keybindings for document viewing.
 - Notifications *dunst*. Highly customisable notifications daemon. Gets the job done.
-- Fonts *DejaVu Sans Mono*, *Iosevka Term*, and *Source Code Pro*. I love them all.
+- Fonts *DejaVu Sans Mono* and *DejaVu Sans*.
 - Icon font *Font Awesome*. For adding some visual flair to the system bar.
+- GTK Theme *Adapta*.
+- GTK Icon theme *Papirus*.
 
 ## Sample of my current setup
 
