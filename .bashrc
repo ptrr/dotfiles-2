@@ -7,10 +7,12 @@
 
 # Custom prompt
 if [ -n "$SSH_CONNECTION" ]; then
-export PS1="\n┌─[\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[\033[38;5;10m\]\h\[$(tput sgr0)\]]──[\[$(tput bold)\]\[\033[38;5;4m\]\w\[$(tput sgr0)\]]\n└─[\[$(tput bold)\]\[\033[38;5;9m\]\\$\[$(tput sgr0)\]] \[$(tput bold)\]>>> \[$(tput sgr0)\]"
+export PS1="\n[\[\e[32m\]\u\[\e[m\]] [\[\e[36m\]\h\[\e[m\]] [\[\e[34m\]\w\[\e[m\]]\n\[\e[35m\]$ >\[\e[m\] "
 else
-export PS1="\n┌─────[\[$(tput bold)\]\[\033[38;5;4m\]\w\[$(tput sgr0)\]]\n└─[\[$(tput bold)\]\[\033[38;5;9m\]\\$\[$(tput sgr0)\]] \[$(tput bold)\]>>> \[$(tput sgr0)\]"
+export PS1="\n[\[\e[34m\]\w\[\e[m\]] \[\e[35m\]$ >\[\e[m\] "
 fi
+
+
 
 # Autocomplete with sudo
 if [ "$PS1" ]; then
@@ -88,6 +90,7 @@ alias v="vim"
 # Common configs
 alias bbb="vim ~/.bashrc"
 alias iii="vim ~/.config/i3/config"
+alias kkk="vim ~/.config/kitty/kitty.conf"
 alias mmm="vim ~/.muttrc"
 alias nnn="vim ~/.newsboat/urls"
 alias ppp="vim ~/.config/polybar/config"
