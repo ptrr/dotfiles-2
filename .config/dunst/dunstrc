@@ -51,20 +51,20 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 8
+    separator_height = 10
 
     # Padding between text and separator.
-    padding = 12
+    padding = 20
 
     # Horizontal padding.
-    horizontal_padding = 12
+    horizontal_padding = 10
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
     frame_width = 1
 
     # Defines color of the frame around the notification window.
-    frame_color = "#322a35"
+    frame_color = "#120a15"
 
     # Define a color for the separator.
     # possible values are:
@@ -168,12 +168,12 @@
     sticky_history = yes
 
     # Maximum amount of notifications kept in history
-    history_length = 20
+    history_length = 40
 
     ### Misc/Advanced ###
 
-    # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
+    # # dmenu path.
+    # dmenu = /usr/bin/dmenu -p dunst:
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/firefox-nightly -new-tab
