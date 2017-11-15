@@ -10,7 +10,6 @@ alsa-lib
 alsa-plugins
 alsa-utils
 apm
-arc-icon-theme
 archlinux-keyring
 asciidoc
 aspell
@@ -159,7 +158,6 @@ glibmm
 glu
 gmime
 gmp
-gnome-backgrounds
 gnome-calculator
 gnome-color-manager
 gnome-common
@@ -721,7 +719,6 @@ scrot
 sdl
 sdl2
 sdl_image
-seahorse
 sed
 semver
 serd
@@ -829,6 +826,7 @@ xcb-util-renderutil
 xcb-util-wm
 xcb-util-xrm
 xclip
+xdelta3
 xdg-user-dirs
 xdg-user-dirs-gtk
 xdg-utils

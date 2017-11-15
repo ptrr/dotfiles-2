@@ -1,7 +1,6 @@
 cower
 dtrx
 dunstify
-firefox-nightly
 i3-gaps
 libxfont
 lightdm-settings
