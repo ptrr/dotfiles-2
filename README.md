@@ -28,6 +28,8 @@
 
 ![i3 sample](https://raw.githubusercontent.com/protesilaos/dotfiles/master/Pictures/i3-scrot.png)
 
+'Fake busy' screenshot.
+
 ## License
 
 Unless otherwise noted, all code herein is distributed under the terms of the GNU General Public License v3.0. In cases where that cannot apply (e.g. a picture), the Creative Commons Attribution-ShareAlike 4.0 License shall be used instead.
