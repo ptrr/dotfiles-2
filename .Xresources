@@ -40,7 +40,8 @@ rofi.color-window: argb:de07040a, argb:de07040a, argb:de07040a
 ! ================================================
 
 ! Colours
-#include </home/prot/.urxvt-themes/protesilaos.Xcolors>
+! #include </home/prot/.urxvt-themes/protesilaos-light.Xcolors>
+#include </home/prot/.urxvt-themes/protesilaos-dark.Xcolors>
 
 ! Preferences
 URxvt.termName: rxvt-unicode
