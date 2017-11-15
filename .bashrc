@@ -7,7 +7,7 @@
 
 # Custom prompt
 if [ -n "$SSH_CONNECTION" ]; then
-export PS1="\n[\[\e[32m\]\u\[\e[m\]] [\[\e[36m\]\h\[\e[m\]] [\[\e[34m\]\w\[\e[m\]]\n\[\e[35m\]$ >\[\e[m\] "
+export PS1="\n\[\e[32m\]\u\[\e[m\]] [\[\e[36m\]\h\[\e[m\]] [\[\e[34m\]\w\[\e[m\]]\n\[\e[35m\]$ >\[\e[m\] "
 else
 export PS1="\n[\[\e[34m\]\w\[\e[m\]] \[\e[35m\]$ >\[\e[m\] "
 fi
@@ -34,7 +34,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # Default browser
-export BROWSER=firefox-nightly
+export BROWSER=firefox
 
 # Aliases
 # ====================================================================
@@ -89,6 +89,7 @@ alias v="vim"
 
 # Common configs
 alias bbb="vim ~/.bashrc"
+alias ddd="vim ~/.config/dunst/dunstrc"
 alias iii="vim ~/.config/i3/config"
 alias kkk="vim ~/.config/kitty/kitty.conf"
 alias mmm="vim ~/.muttrc"
@@ -102,6 +103,7 @@ alias xxx="vim ~/.Xresources"
 
 # Reload config files
 alias rbbb="source ~/.bashrc"
+alias rddd="killall dunst && eval $(dbus-launch)"
 alias rxxx="xrdb -merge ~/.Xresources"
 
 # Curl
