@@ -3,12 +3,12 @@
 [colors]
 dbg = #07040a
 dhl = #221a25
-dt2 = #898440
-dt1 = #9eb0b5
-lbg = #fbfbfb
-lhl = #e9e9e9
-lt2 = #4b5d6b
-lt1 = #202819
+dt2 = #7e7662
+dt1 = #587d80
+lbg = #ffffff
+lhl = #e6e9ed
+lt2 = #557b96
+lt1 = #6c7a6d
 red = #e52530
 ora = #c65304
 yel = #897600
@@ -17,9 +17,6 @@ cya = #108294
 blu = #1f7ac4
 vio = #8764c4
 mag = #b25599
-
-; Custom colour for toggle active state
-active = #6ca482
 
 [bar/example]
 width = 100%
@@ -69,7 +66,7 @@ label-indicator = %name%
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.red}
-label-indicator-foreground = ${colors.lbg}
+label-indicator-foreground = ${colors.dbg}
 
 [module/i3]
 type = internal/i3
@@ -84,7 +81,7 @@ reverse-scroll = true
 pin-workspaces = true
 
 label-mode-padding = 2
-label-mode-foreground = ${colors.lbg}
+label-mode-foreground = ${colors.dbg}
 label-mode-background = ${colors.ora}
 
 ; focused = Active workspace on focused monitor
@@ -141,7 +138,7 @@ icon-repeat = ""
 icon-repeat-padding = 2
 icon-repeat-background = ${colors.dhl}
 
-toggle-on-foreground = ${colors.active}
+toggle-on-foreground = ${colors.vio}
 toggle-off-foreground = ${colors.dt2}
 
 label-song = %artist% ~ %title%
@@ -209,7 +206,7 @@ label-open-underline = ${colors.red}
 label-open-padding = 2
 label-close = "  Stay"
 label-close-background = ${colors.blu}
-label-close-foreground = ${colors.lbg}
+label-close-foreground = ${colors.dbg}
 label-close-padding = 4
 label-close-margin = 1
 
@@ -217,31 +214,31 @@ menu-0-0 = "  Lock"
 menu-0-0-padding = 4
 menu-0-0-margin = 1
 menu-0-0-background = ${colors.yel}
-menu-0-0-foreground = ${colors.lbg}
+menu-0-0-foreground = ${colors.dbg}
 menu-0-0-exec = ~/.config/i3/lock.sh
 menu-0-1 = "  Switch Users"
 menu-0-1-padding = 4
 menu-0-1-margin = 1
 menu-0-1-background = ${colors.gre}
-menu-0-1-foreground = ${colors.lbg}
+menu-0-1-foreground = ${colors.dbg}
 menu-0-1-exec = "dm-tool switch-to-greeter"
 menu-0-2 = "  Log Out"
 menu-0-2-padding = 4
 menu-0-2-margin = 1
 menu-0-2-background = ${colors.ora}
-menu-0-2-foreground = ${colors.lbg}
+menu-0-2-foreground = ${colors.dbg}
 menu-0-2-exec = i3-msg exit, mode "default"
 menu-0-3 = "  Reboot"
 menu-0-3-padding = 4
 menu-0-3-margin = 1
 menu-0-3-background = ${colors.mag}
-menu-0-3-foreground = ${colors.lbg}
+menu-0-3-foreground = ${colors.dbg}
 menu-0-3-exec = systemctl reboot
 menu-0-4 = "  Power Off"
 menu-0-4-padding = 4
 menu-0-4-margin = 1
 menu-0-4-background = ${colors.red}
-menu-0-4-foreground = ${colors.lbg}
+menu-0-4-foreground = ${colors.dbg}
 menu-0-4-exec = systemctl poweroff
 
 ; [module/appmenu]
