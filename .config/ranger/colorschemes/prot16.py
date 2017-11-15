@@ -31,9 +31,9 @@ class prot16(ColorScheme):
         elif context.in_browser:
             if context.selected:
                 fg = 14
-                bg = 0
+                bg = 8
             if context.empty or context.error:
-                fg = 8
+                fg = 0
                 bg = 9
             if context.border:
                 fg = 10
@@ -57,18 +57,18 @@ class prot16(ColorScheme):
                 fg = 3
                 attr |= bold
             if context.fifo or context.device:
-                fg = 10
+                fg = 12
                 if context.device:
                     attr |= bold
             if context.link:
                 fg = context.good and 7 or 8
-                bg = 8
+                bg = 0
             if context.bad:
                 fg = 1
             if context.tag_marker and not context.selected:
                 attr |= bold
                 if fg in (7, 8):
-                    fg = 8
+                    fg = 0
                 else:
                     fg = 1
             if not context.selected and (context.cut or context.copied):
@@ -79,7 +79,7 @@ class prot16(ColorScheme):
                     fg = 2
                 if context.marked:
                     attr |= bold
-                    fg = 9
+                    fg = 13
             if context.badinfo:
                 if attr & reverse:
                     bg = 1
@@ -89,28 +89,28 @@ class prot16(ColorScheme):
         elif context.in_titlebar:
             attr |= normal
             if context.hostname:
-                fg = 10
-                bg = 8
+                fg = 5
+                bg = 0
             elif context.directory:
-                fg = 8
+                fg = 4
             elif context.tab:
                 if context.good:
-                    fg = 8
+                    fg = 0
                     bg = 4
             elif context.link:
-                fg = 4
+                fg = 6
 
         elif context.in_statusbar:
             if context.permissions:
                 if context.good:
                     fg = 2
-                    bg = 0
+                    bg = 8
                 elif context.bad:
                     fg = 1
-                    bg = 0
+                    bg = 8
             if context.marked:
                 attr |= bold | reverse
-                fg = 8
+                fg = 13
             if context.message:
                 if context.bad:
                     attr |= bold
@@ -121,7 +121,7 @@ class prot16(ColorScheme):
                 fg = 10
                 attr &= ~bold
             if context.vcscommit:
-                fg = 5
+                fg = 6
                 attr &= ~bold
 
 
@@ -131,7 +131,7 @@ class prot16(ColorScheme):
 
         if context.in_taskview:
             if context.title:
-                fg = 8
+                fg = 12
 
             if context.selected:
                 attr |= reverse
@@ -148,13 +148,13 @@ class prot16(ColorScheme):
             if context.vcsconflict:
                 fg = 1
             elif context.vcschanged:
-                fg = 2
+                fg = 5
             elif context.vcsunknown:
                 fg = 3
             elif context.vcsstaged:
-                fg = 4
+                fg = 2
             elif context.vcssync:
-                fg = 12
+                fg = 4
             elif context.vcsignored:
                 fg = 10
 
