@@ -1,6 +1,7 @@
-! Colour scheme: protesilaos (dark variant)
+! Colour scheme: Default website syntax theme with some modifications (dark variant)
+! WCAG AA compliant
 ! By Protesilaos Stavrou
-! https://protesilaos.com/protesilaos
+! https://protesilaos.com
 URxvt*background: #07040a
 URxvt*foreground: #587d80
 URxvt*cursorColor: #587d80
