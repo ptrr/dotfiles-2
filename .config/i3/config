@@ -80,7 +80,7 @@ floating_modifier Mod1
 # ------------------------------------------------
 
 # order: BORDER BACKGROUND FOREGROUND INDICATOR CHILD_BORDER
-client.focused $dhl $dbg $dt2 $mag $blu
+client.focused $dhl $dbg $dt2 $mag $vio
 client.unfocused $dbg $dbg $lt1 $dbg $dbg
 client.focused_inactive $dbg $dbg $lt2 $dbg $dbg
 client.urgent $red $red $dhl $red $red
@@ -92,8 +92,18 @@ client.background $dhl
 # Resizing
 bindsym $mod+i resize shrink width 10 px or 10 ppt
 bindsym $mod+o resize grow width 10 px or 10 ppt
+
 bindsym $mod+Shift+i resize shrink height 10 px or 10 ppt
 bindsym $mod+Shift+o resize grow height 10 px or 10 ppt
+
+# Change gap size
+bindsym $mod+Mod1+o gaps inner all plus 5; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-green.svg -t 3 -r 2600 "Increased all inner gaps by 5"
+bindsym $mod+Mod1+i gaps inner all minus 5; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-green.svg -t 3 -r 2600 "Decreased all inner gaps by 5"
+bindsym $mod+Mod1+u gaps inner all set 0; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-green.svg -t 3 -r 2600 "Reset all inner gaps to 0"
+
+bindsym $mod+Mod1+Ctrl+o gaps outer all plus 5; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-yellow.svg -t 3 -r 2601 "Increased all outer gaps by 5"
+bindsym $mod+Mod1+Ctrl+i gaps outer all minus 5; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-yellow.svg -t 3 -r 2601 "Decreased all outer gaps by 5"
+bindsym $mod+Mod1+Ctrl+u gaps outer all set 0; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/places/user-desktop-yellow.svg -t 3 -r 2601 "Reset all outer gaps to 0"
 
 # Vertical split 
 bindsym $mod+s split v
@@ -214,13 +224,13 @@ bindsym $mod+Delete mode "$mode_system"; exec dunstify -I /usr/share/icons/Papir
 # NOTE thus Mod1+<Number> is scalable (whereas first letter is tricky)
 bindsym $mod+Return exec $term
 bindsym Mod1+Return exec $term
-bindsym Mod1+1 exec $fm; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/system-file-manager.svg -t 3 "Launched file manager"
-bindsym Mod1+2 exec $browser; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/firefox.svg -t 5 "Launched internet browser"
-bindsym Mod1+3 exec $rss; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/RSS_feeds.svg -t 3 "Launched feed reader"
-bindsym Mod1+4 exec $mail; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/mail-client.svg -t 3 "Launched mail client"
-bindsym Mod1+5 exec $music; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/musique.svg -t 3 "Launched music player"
-bindsym Mod1+6 exec $podcast; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/podcast.svg -t 3 "Launched podcast player"
-bindsym Mod1+7 exec $imageeditor; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/gimp.svg -t 3 "Launched image editor"
+bindsym Mod1+1 exec $fm; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/system-file-manager.svg -t 3 "Launching file manager"
+bindsym Mod1+2 exec $browser; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/firefox.svg -t 5 "Launching internet browser"
+bindsym Mod1+3 exec $rss; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/RSS_feeds.svg -t 3 "Launching feed reader"
+bindsym Mod1+4 exec $mail; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/mail-client.svg -t 3 "Launching mail client"
+bindsym Mod1+5 exec $music; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/musique.svg -t 3 "Launching music player"
+bindsym Mod1+6 exec $podcast; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/podcast.svg -t 3 "Launching podcast player"
+bindsym Mod1+7 exec $imageeditor; exec dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/gimp.svg -t 3 "Launching image editor"
 
 # App launcher menu
 bindsym $mod+a exec --no-startup-id rofi -show drun -display-drun "  Run app"
@@ -264,7 +274,7 @@ bindsym Mod1+c exec $volumeup
 set $play --no-startup-id mpc toggle
 set $prev --no-startup-id mpc prev
 set $next --no-startup-id mpc next
-set $songnotify --no-startup-id dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/musique.svg -t 16 "Now Playing" "$(mpc --format '%title% ~ %artist% \[%album%\]' current)"
+set $songnotify --no-startup-id dunstify -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/musique.svg -t 16 -r 2602 "Now Playing" "$(mpc --format '%title% ~ %artist% \[%album%\]' current)"
 
 bindsym $mod+XF86AudioMute exec $play
 bindsym $mod+XF86AudioLowerVolume exec $prev; exec $songnotify
@@ -293,7 +303,7 @@ exec --no-startup-id unclutter
 exec --no-startup-id compton -b
 
 # FIXME mpd does not seem to start without `exec_always`
-# FIXME need to restart i3 at first launch for it to work
+# FIXME I need to restart i3 at first launch for it to work
 exec_always --no-startup-id mpd
 
 # Keyboard settings
