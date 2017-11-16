@@ -4,7 +4,7 @@
 # basic colours --------------------------------------------------------
 color error color8 color1
 color search color8 color5
-color indicator color14 color0
+color indicator color14 color8
 color tree color3 color0
 
 # defaults
