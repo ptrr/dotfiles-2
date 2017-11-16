@@ -1,5 +1,5 @@
 #!/bin/bash
-# Display speaker volume change notifications using dunst
+# Display microphone volume change notifications using dunst
 # Based on https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a
 
     # This program is free software: you can redistribute it and/or modify
@@ -21,42 +21,42 @@
 # $./path/to/script.sh mute
 
 function get_volume {
-    amixer get Master | grep % -m 1 | awk '{print $5}' | sed 's/[^0-9\%]//g'
+    amixer get Capture | grep % -m 1 | awk '{print $5}' | sed 's/[^0-9\%]//g'
 }
 
 function is_mute {
-    amixer get Master | grep '%' | grep -oE '[^ ]+$' | grep off > /dev/null
+    amixer get Capture | grep '%' | grep -oE '[^ ]+$' | grep off > /dev/null
 }
 
 function send_notification {
     volume=`get_volume`
 
     # Print volume status
-    status=$(amixer get Master | grep % -m 1 | awk '{print $5}' | sed 's/[^0-9\%]//g')
+    status=$(amixer get Capture | grep % -m 1 | awk '{print $5}' | sed 's/[^0-9\%]//g')
 
     # Send the notification
-    dunstify -r 2000 -I /usr/share/icons/Papirus-Adapta-Nokto/64x64/devices/audio-speakers.svg -t 3000 -u normal "Speaker volume" "Sound level at $status"
+    dunstify -r 3000 -I /usr/share/icons/Papirus-Adapta-Nokto/64x64/devices/audio-input-microphone.svg -t 3000 -u normal "Microphone volume" "Sound level at $status"
 }
 
 # Either increase or decrease will turn the volume on if it was muted
 case $1 in
     up)
 	# Increase the volume (+ 5%)
-	amixer -D pulse set Master on > /dev/null
-	amixer -D pulse sset Master 5%+ > /dev/null
+	amixer -D pulse set Capture on > /dev/null
+	amixer -D pulse sset Capture 5%+ > /dev/null
 	send_notification
 	;;
     down)
 	# Decrease the volume (+ 5%)
-	amixer -D pulse set Master on > /dev/null
-	amixer -D pulse sset Master 5%- > /dev/null
+	amixer -D pulse set Capture on > /dev/null
+	amixer -D pulse sset Capture 5%- > /dev/null
 	send_notification
 	;;
     mute)
     # Toggle mute
-	amixer -D pulse set Master 1+ toggle > /dev/null
+	amixer -D pulse set Capture 1+ toggle > /dev/null
 	if is_mute ; then
-	    dunstify -r 2000 -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/xfpm-suspend.svg -t 1000 -u normal "Speaker volume" "Sound Muted"
+	    dunstify -r 3000 -I /usr/share/icons/Papirus-Adapta-Nokto/64x64@2x/apps/xfpm-suspend.svg -t 1000 -u normal "Microphone volume" "Sound Muted"
 	else
 	    send_notification
 	fi
