@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdcommenter'
   Plug 'ervandew/supertab'
   Plug 'protesilaos/prot16-vim'
+  Plug 'protesilaos/tempus-themes-vim'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'qpkorr/vim-renamer'
@@ -89,6 +90,7 @@ vno <up> <Nop>
 
 " Visual block remap
 nmap <leader>vb <C-V>
+nmap <c-s-v> <C-V>
 
 " File actions
 nmap <leader>w :w!<cr>
@@ -97,37 +99,44 @@ nmap <leader>x :x!<cr>
 nmap <leader>xa :xa!<cr>
 nmap <leader>q :q!<cr>
 nmap <leader>qa :qa!<cr>
+nmap <c-s-w> :w!<cr>
+nmap <c-s-q> :q!<cr>
+nmap <c-s-x> :x!<cr>
 
 " Remap escape for insert mode
 inoremap jk <Esc>
 
 " Navigate vsplits
-nmap <silent> <leader>l <c-w>l
-nmap <silent> <leader>h <c-w>h
+nnoremap <c-s-j> <c-w><c-j>
+nnoremap <c-s-k> <c-w><c-k>
+nnoremap <c-s-l> <c-w><c-l>
+nnoremap <c-s-h> <c-w><c-h>
 
-" Navigate and maximise splits
-nmap <silent> <leader>j <C-W>j<C-W>_
-nmap <silent> <leader>k <C-W>k<C-W>_
+" " Navigate and maximise splits
+" nmap <silent> <leader>j <C-W>j<C-W>_
+" nmap <silent> <leader>k <C-W>k<C-W>_
+" nmap <silent> <c-s-j> <C-W>j<C-W>_
+" nmap <silent> <c-s-k> <C-W>k<C-W>_
 
 " Manage tabs
-nmap <S-T> :tabnew<cr>
-nmap <S-D> :tabclose<cr>
-nmap <S-H> gT
-nmap <S-L> gt
+nmap <s-t> :tabnew<cr>
+nmap <s-q> :tabclose<cr>
+nmap <s-h> gT
+nmap <s-l> gt
 
 " Move lines
-noremap <silent> <S-J> :m +1<CR>
-noremap <silent> <S-K> :m -2<CR>
+noremap <silent> <s-j> :m +1<cr>
+noremap <silent> <s-k> :m -2<cr>
 
 " Clear the search highlight
-nmap <silent> \ :silent nohlsearch<CR>
+nmap <silent> \ :silent nohlsearch<cr>
 
 " Toggle letter casing
 " Inverting case of character with ~
-nmap <leader>uu guu
-nmap <leader>UU gUU
+nmap <leader>u guu
+nmap <leader>U gUU
 
-" Quick jump to last modification
+" Quick jump to last modification point or start of line
 nmap <leader>` `.
 nmap <leader>' '.
 
@@ -137,30 +146,27 @@ nmap <silent> <leader>sp :set spell!<CR>
 " Word Count
 nmap <leader>wc g<C-g>
 
-" Visually select the text that was last edited/pasted
-nmap <silent> <leader>v `[v`]
+" " Visually select the text that was last edited/pasted
+" nmap <silent> <leader>v `[v`]
 
 " Visual wrappings
 :vmap [ "zdi[<C-R>z]<Esc>
 :vmap ( "zdi(<C-R>z)<Esc>
 :vmap { "zdi{<C-R>z}<Esc>
 :vmap ` "zdi`<C-R>z`<Esc>
-:vmap <leader>< "zdi<<C-R>z><Esc>
-
-" resize splits
-map <silent> <leader>= :exe "resize " . (winheight(0) * 3/2)<CR>
-map <silent> <leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+:vmap <leader>< "zdi<<C-R>z><Esc> " Cannot use without a modified. Screws adding < indentation
 
 " Toggle invisibles
 nnoremap <leader>i :set list!<cr>
 
 " Toggle Nerd Tree
 map <leader>n :NERDTreeToggle<CR>
+map <c-s-n> :NERDTreeToggle<CR>
 
 " Invoke CtrlP
 " ff is mnemonic for Fuzzy Finder.
 nnoremap <leader>ff :CtrlP<cr>
-nnoremap <leader>ft :CtrlPTag<cr>
+nnoremap <leader>ft :CtrlPTag<cradding < >
 nnoremap <leader>fb :CtrlPBuffer<cr>
 
 " Toggle Goyo
@@ -219,10 +225,10 @@ let g:ctrlp_custom_ignore = {
    \ }
 
 " Goyo
-let g:goyo_width = 100
+let g:goyo_width = 80
 let g:goyo_height = '90%'
 
 " Theme
 set t_Co=256
 syntax enable
-colorscheme noir_dark
+colorscheme tempus_winter
