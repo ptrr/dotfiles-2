@@ -5,3 +5,4 @@
 .newsboat/cache.db.lock
 .newsboat/history.cmdline
 .newsboat/history.search
+*.swp
