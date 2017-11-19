@@ -29,17 +29,30 @@ bind-key J next article
 bind-key K prev article
 
 # Colours ----------------------------------------
-# Tested with Xfce4 terminal using Prot16 schemes <https://protesilaos.com/schemes>
+# Tempus themes
+# By Protesilaos Stavrou
+# https://github.com/protesilaos/tempus-themes
 
-# Dark variant
-color background color14 color0
-color info color10 color0
-color article color14 color0
-color listnormal color14 color0
-color listfocus color7 color2
-color listnormal_unread color14 color0
-color listfocus_unread color7 color2
-highlight article "^(Feed|Title|Author|Link|Date):.*" color11 color0
+color background color15 color0
+color info color7 color8
+color article color15 color0
+color listnormal color15 color0
+color listfocus color8 color7
+color listnormal_unread color15 color0
+color listfocus_unread color8 color7
+highlight article "^(Feed|Title|Author|Link|Date):.*" color7 color0
+
+# # Prot16 themes <https://protesilaos.com/schemes>
+
+# # Dark variant
+# color background color14 color0
+# color info color10 color0
+# color article color14 color0
+# color listnormal color14 color0
+# color listfocus color7 color2
+# color listnormal_unread color14 color0
+# color listfocus_unread color7 color2
+# highlight article "^(Feed|Title|Author|Link|Date):.*" color11 color0
 
 # # Light variant
 # color background color10 color15
