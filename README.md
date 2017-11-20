@@ -21,7 +21,7 @@
 - Notifications *dunst*. Highly customisable notifications daemon. Gets the job done.
 - Fonts *IBM Plex* family, as well as *DejaVu Sans Mono* and *DejaVu Sans*.
 - Icon font *Font Awesome*. For adding some visual flair to the system bar.
-- GTK Theme *Adapta*.
+- GTK Theme *Adwaita dark*.
 - GTK Icon theme *Papirus*.
 
 ## Samples of my current setup
