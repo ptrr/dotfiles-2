@@ -333,6 +333,7 @@ exec --no-startup-id unclutter
 exec --no-startup-id compton -b
 
 # Start the Music Player Daemon
+# NOTE Do not use this together with the systemd autostart method
 exec_always --no-startup-id mpd
 
 # Keyboard settings
