@@ -13,6 +13,7 @@ bindsym $mod+Mod1+r restart
 # Colour scheme
 # ------------------------------------------------------------------------------------------------------------
 # Tempus winter
+# Tempus themes: https://github.com/protesilaos/tempus-themes
 # By Protesilaos Stavrou https://protesilaos.com
 set $col0 #202427 
 set $col1 #ca7162 

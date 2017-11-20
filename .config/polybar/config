@@ -1,6 +1,9 @@
 ; vim:ft=dosini
 
 [colors]
+; Tempus winter
+; Tempus themes: https://github.com/protesilaos/tempus-themes
+; By Protesilaos Stavrou https://protesilaos.com
 col0=#202427 
 col1=#ca7162 
 col2=#589584 
