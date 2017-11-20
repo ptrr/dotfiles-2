@@ -332,8 +332,7 @@ exec --no-startup-id unclutter
 # Compositor for transparency and no screen tearing
 exec --no-startup-id compton -b
 
-# FIXME mpd does not seem to start without `exec_always`
-# FIXME I need to restart i3 at first launch for it to work
+# Start the Music Player Daemon
 exec_always --no-startup-id mpd
 
 # Keyboard settings
