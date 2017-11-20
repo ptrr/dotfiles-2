@@ -122,6 +122,8 @@ firefox
 fixesproto
 flac
 flex
+fltk
+fluidsynth
 fontconfig
 fontsproto
 freetype2
@@ -217,6 +219,7 @@ hunspell
 hunspell-el
 hunspell-en_GB
 hwids
+hydrogen
 hyphen
 i3blocks
 i3lock
@@ -331,6 +334,7 @@ libical
 libice
 libid3tag
 libidn
+libidn2
 libiec61883
 libimobiledevice
 libinput
@@ -343,9 +347,11 @@ libksba
 liblangtag
 libldap
 liblqr
+liblrdf
 libmad
 libmatroska
 libmediainfo
+libmikmod
 libmm-glib
 libmms
 libmng
@@ -503,6 +509,7 @@ linux-headers
 lirc
 llvm-libs
 lm_sensors
+lmms
 logrotate
 lpsolve
 lsb-release
@@ -521,6 +528,7 @@ mdadm
 media-player-info
 mediainfo
 mesa
+meson
 mime-types
 minizip
 mjpegtools
@@ -548,6 +556,7 @@ nettle
 network-manager-applet
 networkmanager
 newsboat
+ninja
 nm-connection-editor
 nodejs
 notmuch-runtime
@@ -628,6 +637,7 @@ python-configobj
 python-cryptography
 python-dbus
 python-dbus-common
+python-distutils-extra
 python-future
 python-gobject
 python-httplib2
@@ -719,6 +729,7 @@ scrot
 sdl
 sdl2
 sdl_image
+sdl_sound
 sed
 semver
 serd
@@ -729,6 +740,7 @@ simplescreenrecorder
 sip
 slang
 smbclient
+smpeg
 snappy
 sord
 sound-theme-freedesktop

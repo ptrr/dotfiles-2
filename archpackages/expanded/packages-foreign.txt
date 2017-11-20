@@ -11,5 +11,7 @@ pacaur
 papirus-icon-theme-git
 polybar
 signal-desktop-bin
+tasksh
+ttf-ibm-plex-git
 ttf-iosevka-term-ss04
 xcalib
