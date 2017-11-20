@@ -29,6 +29,7 @@ rofi.font: IBM Plex Sans Light 24
 ! The new path ~/.config/rofi/config.rasi
 ! Example themes:
 ! https://github.com/DaveDavenport/rofi-themes/tree/master/Official%20Themes
+! TODO write new theme
 
 !                       bg         fg           altbg          hlbg       hlfg
 rofi.color-normal: argb:00000000, #9eb0b5, argb:00000000, argb:de058942, #fbfbfb
