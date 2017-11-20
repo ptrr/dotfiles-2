@@ -24,11 +24,16 @@
 - GTK Theme *Adapta*.
 - GTK Icon theme *Papirus*.
 
-## Sample of my current setup
+## Samples of my current setup
 
-![i3 sample](https://raw.githubusercontent.com/protesilaos/dotfiles/master/Pictures/i3-scrot.png)
+'Fake busy'.  
+![i3 sample fake busy](https://raw.githubusercontent.com/protesilaos/dotfiles/master/Pictures/i3-sample-fake-busy.png)
 
-'Fake busy' screenshot.
+Actual busy.  
+![i3 sample busy](https://raw.githubusercontent.com/protesilaos/dotfiles/master/Pictures/i3-sample-busy.png)
+
+Clean desktop with dunst notification.  
+![i3 sample clean desktop](https://raw.githubusercontent.com/protesilaos/dotfiles/master/Pictures/i3-sample-clean-dunst.png)
 
 ## License
 
